@@ -19,10 +19,12 @@ const CardContainer = styled.div`
 const CardDate = styled.div`
    display: flex;
    justify-content: space-between;
-   font-size: 34px;
+    & h3 {
+       font-size: 34px;
+    }
    
     @media only screen and (min-width: 1080px) {
-      & h4 {
+      & h3 {
          font-size: 20px;
       }
    }
@@ -88,6 +90,10 @@ const RefButton = styled.button`
     padding: 7px 20px;
     min-width: 132px;
     font-size: 32px;
+    
+    @media only screen and (min-width: 1080px) {
+   font-size: 18px;
+  }
 `;
 
 export default function Card(props) {
@@ -109,7 +115,8 @@ export default function Card(props) {
             {
               meeting.button &&
               <RefContainer>
-                <RefButton onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ?  "Închide" : meeting.button}`}</RefButton>
+                <RefButton
+                  onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ? "Închide" : meeting.button}`}</RefButton>
                 <div className={`tooltip ${meeting.refOpen === true ? "is-active" : ""}`}>
                   <SmallText>{meeting.referenceNote}</SmallText>
                 </div>
@@ -122,7 +129,8 @@ export default function Card(props) {
               </a>
             </VideoContainer>
           </CardContainer>
-        )})}
+        )
+      })}
     </CardHolder>
   );
 }

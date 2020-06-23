@@ -43,6 +43,8 @@ const Logo = styled.div`
   }
 `;
 const Menu = styled.ul`
+  margin: 40px 0;
+  
   & li {
     display: inline-block;
     
