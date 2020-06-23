@@ -6,7 +6,7 @@ import VideoImg from '../img/videoImg.jpg'
 // Styles
 const CardContainer = styled.div`
   box-shadow: 0px 0px 7px 0px #C9C9C9;
-  padding: 20px;
+  padding: 40px;
   margin: 40px 0;
    
   @media only screen and (min-width: 1080px) {
@@ -38,9 +38,13 @@ const VideoContainer = styled.div`
 `;
 const VideoImage = styled.img`
   width: 100%;
-  max-width: 480px;
-  max-height: 300px;
+  max-width: 680px;
+  max-height: 500px;
   margin: 40px auto 0;
+    @media only screen and (min-width: 1080px) {
+    max-width: 480px;
+    max-height: 300px;
+  }
 `;
 const VideoBtn = styled.span`
 top: 50%;
@@ -69,7 +73,7 @@ const RefContainer = styled.div`
     position: relative;
 `;
 const SmallText = styled.p`
-    font-size: 28px;
+    font-size: 30px;
     
   @media only screen and (min-width: 1080px) {
    font-size: 14px;
@@ -83,7 +87,7 @@ const RefButton = styled.button`
     outline: 0;
     padding: 7px 20px;
     min-width: 132px;
-    font-size: 28px;
+    font-size: 32px;
 `;
 
 export default function Card(props) {

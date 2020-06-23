@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // Styles
 const FooterContainer = styled.footer`
   text-align: center;
-  padding: 24px;
+  padding: 40px;
   margin-top: 40px;
   
    @media only screen and (min-width: 1080px) {

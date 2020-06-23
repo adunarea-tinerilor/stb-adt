@@ -29,7 +29,7 @@ const Logo = styled.div`
   
   & h4 {
     text-align: left;
-    font-size: 30px;
+    font-size: 40px;
          
      @media only screen and (min-width: 1080px) {
      font-size: 16px;
@@ -48,10 +48,12 @@ const Menu = styled.ul`
     
     & a {
       padding: 4px 15px;
-      font-size: 32px;
+      font-size: 40px;
+      margin-top: 40px;
          
      @media only screen and (min-width: 1080px) {
      font-size: 18px;
+     margin-top: 0;
      }
     }
   }
