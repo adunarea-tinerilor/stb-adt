@@ -69,14 +69,14 @@ img {
 .tooltip {
   display: none;
   position: absolute;
-  top: 55px;
+  top: 58px;
   z-index: 3;
   background: white;
   width: 100%;
   max-width: 700px;
   border: 1px solid teal;
   padding: 24px;
-  max-height: 360px;
+  max-height: 450px;
   overflow-y:scroll;
   -webkit-overflow-scrolling:touch;
 }
@@ -103,8 +103,8 @@ img {
 
 @media only screen and (min-width: 1080px) {
 .tooltip {
-  top: 35px;
-  max-height: 160px;
+  top: 42px;
+  max-height: 190px;
   max-width: 550px;
 }
 }

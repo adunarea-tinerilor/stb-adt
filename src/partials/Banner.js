@@ -32,7 +32,11 @@ const BannerText = styled.div`
   };
   
   & h2 {
-    font-size: 26x;
+    font-size: 32px;
+    
+    @media only screen and (min-width: 1080px) {
+      font-size: 26x;
+    };
   }
 `;
 
