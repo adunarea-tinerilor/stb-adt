@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Global styles */
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: whitesmoke;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6,
+p, li, a, button, span {
+  font-family: 'Poppins', sans-serif;
+}
+
+p, h4 {
+  margin: 0;
+}
+
+p, li {
+  font-size: 18px;
+}
+
+a,
+a:visited {
+  color: #292929;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a.active {
+  color: teal;
+}
+
+ul {
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  object-fit: cover;
+}
+
+
+/*App*/
+.App {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.component {
+  background: white;
+}
+
+@media only screen and (min-width: 1080px) {
+  .App {
+    max-width: 1280px;
+    margin: 80px auto;
+  }
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  top: 55px;
+  z-index: 3;
+  background: white;
+  width: 100%;
+  max-width: 550px;
+  border: 1px solid teal;
+  padding: 24px;
+  max-height: 160px;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling:touch;
+}
+.tooltip::-webkit-scrollbar {
+  width: 5px;
+}
+
+.tooltip::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #dadada;
+  border-radius: 10px;
+}
+
+.tooltip::-webkit-scrollbar-thumb {
+  background: teal;
+}
+
+.tooltip::-webkit-scrollbar-thumb:hover {
+  background: teal;
+}
+
+.is-active {
+  display: block;
+}
+
+@media only screen and (min-width: 1080px) {
+.tooltip {
+  top: 35px;
+}
 }
