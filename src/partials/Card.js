@@ -20,7 +20,7 @@ const CardDate = styled.div`
    display: flex;
    justify-content: space-between;
     & h3 {
-       font-size: 34px;
+       font-size: 42px;
     }
    
     @media only screen and (min-width: 1080px) {
@@ -89,7 +89,8 @@ const RefButton = styled.button`
     outline: 0;
     padding: 7px 20px;
     min-width: 132px;
-    font-size: 32px;
+    font-size: 34px;
+    margin-top: 20px;
     
     @media only screen and (min-width: 1080px) {
    font-size: 14px;

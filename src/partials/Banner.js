@@ -29,14 +29,14 @@ const BannerText = styled.div`
   
   @media only screen and (min-width: 1080px) {
     padding: 40px;
-  };
+  }
   
   & h2 {
     font-size: 32px;
     
     @media only screen and (min-width: 1080px) {
       font-size: 26x;
-    };
+    }
   }
 `;
 

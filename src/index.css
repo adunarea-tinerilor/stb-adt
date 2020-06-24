@@ -77,9 +77,10 @@ img {
   border: 1px solid teal;
   padding: 24px;
   max-height: 450px;
-  overflow-y:scroll;
-  -webkit-overflow-scrolling:touch;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
+
 .tooltip::-webkit-scrollbar {
   width: 5px;
 }
@@ -102,9 +103,9 @@ img {
 }
 
 @media only screen and (min-width: 1080px) {
-.tooltip {
-  top: 42px;
-  max-height: 190px;
-  max-width: 550px;
-}
+  .tooltip {
+    top: 42px;
+    max-height: 190px;
+    max-width: 550px;
+  }
 }

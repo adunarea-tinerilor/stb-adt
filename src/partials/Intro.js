@@ -81,6 +81,7 @@ export default function Intro(props) {
         <p>Se solicită o parolă pentru întâlnire</p>
         <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul adunării</a></p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
+        {props.note && <p>{props.note} <a href={props.noteLink}>{props.noteLinkTxt}</a></p>}
       </IntroCardContainer>
 
 

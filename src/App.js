@@ -12,6 +12,9 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
+      note: "Sâmbătă, 27 Iunie - adunare pentru copii, ",
+      noteLinkTxt: "vezi ora",
+      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
       //next meeting card
       nextMeetingDate: "25 Iunie",
       nextMeetingSubject: [
@@ -21,6 +24,11 @@ export default class App extends React.Component {
 
       archiveList: [
         //add last meeting details
+        {
+          subjectLabel: "Adunare de experiențe",
+          date: "18.06.2020",
+          videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
+        },
         {
           subjectLabel: "Întrebări discutate:",
           date: "11.06.2020",
@@ -87,6 +95,9 @@ export default class App extends React.Component {
           <Header/>
           <Route exact path="/" render={() =>
             <Home
+              note={this.state.note}
+              noteLink={this.state.noteLink}
+              noteLinkTxt={this.state.noteLinkTxt}
               bannerQuote={this.state.bannerQuote}
               bannerVerse={this.state.bannerVerse}
               zoomLink={this.state.zoomLink}
