@@ -20,8 +20,13 @@ const CardDate = styled.div`
    display: flex;
    justify-content: space-between;
    
-   h3:first-child {
-    padding-right: 10px;
+   h3 {
+   
+   &:first-child {
+      padding-right: 10px;
+      width: 70%;
+      word-break: break-word;
+     }
    }
 `;
 const VideoContainer = styled.div`
@@ -44,20 +49,31 @@ const VideoImage = styled.img`
   }
 `;
 const VideoBtn = styled.span`
-top: 50%;
-    left: 51%;
-    width: 0;
-    height: 0;
-    z-index: 2;
-    position: absolute;
-    transform: translate(-50%, -50%);
+  top: 50%;
+  left: 51%;
+  width: 0;
+  height: 0;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all .2s linear;
+  border-top: 20px solid transparent;
+  border-left: 45px solid white;
+  border-bottom: 20px solid transparent;
+ 
+  &:hover {
+     border-left: 45px solid teal;
+  }
+  
+  @media only screen and (min-width: 1080px) {
     border-top: 25px solid transparent;
-    transition: all .2s linear;
     border-left: 50px solid white;
     border-bottom: 25px solid transparent;
+     
     &:hover {
-       border-left: 50px solid teal;
+      border-left: 50px solid teal;
     }
+  }
 `;
 const CardHolder = styled.section`
   @media only screen and (min-width: 1080px) {

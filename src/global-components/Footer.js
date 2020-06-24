@@ -8,7 +8,8 @@ const FooterContainer = styled.footer`
   margin-top: 40px;
   
   & a {
-  color: teal
+  color: teal;
+  word-break: break-all;
   }
 `;
 
