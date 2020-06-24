@@ -15,7 +15,6 @@ export default class App extends React.Component {
       note: "Sâmbătă, 27 Iunie - adunare pentru copii, ",
       noteLinkTxt: "vezi ora",
       noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
-      //next meeting card
       nextMeetingDate: "25 Iunie",
       nextMeetingSubject: [
         "Pot fi puși copiii să îndeplineasă unele lucrări în casă sau gospodarie? Cum trebuie educați în privința curățeniei, vremii de afară?",
@@ -27,6 +26,7 @@ export default class App extends React.Component {
         {
           subjectLabel: "Adunare de experiențe",
           date: "18.06.2020",
+          questionList: [],
           videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
         },
         {
