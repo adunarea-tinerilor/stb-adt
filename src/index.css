@@ -13,14 +13,6 @@ p, li, a, button, span {
   font-family: 'Poppins', sans-serif;
 }
 
-p, h4 {
-  margin: 0;
-}
-
-p, li {
-  font-size: 18px;
-}
-
 a,
 a:visited {
   color: #292929;
@@ -42,6 +34,14 @@ ul {
 
 ul li {
   list-style: none;
+}
+
+ol {
+  padding-left: 22px;
+}
+
+li, p {
+  font-size: 18px;
 }
 
 img {
@@ -69,14 +69,13 @@ img {
 .tooltip {
   display: none;
   position: absolute;
-  top: 58px;
+  top: 56px;
   z-index: 3;
   background: white;
   width: 100%;
-  max-width: 700px;
   border: 1px solid teal;
   padding: 24px;
-  max-height: 450px;
+  max-height: 280px;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
@@ -104,8 +103,6 @@ img {
 
 @media only screen and (min-width: 1080px) {
   .tooltip {
-    top: 42px;
-    max-height: 190px;
-    max-width: 550px;
+    max-height: 200px;
   }
 }

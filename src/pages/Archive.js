@@ -4,7 +4,7 @@ import Card from "../partials/Card";
 
 // Styles
 const ArchiveContainer = styled.section`
-  padding: 40px;
+  padding: 24px;
   margin: 40px 0;
   
   @media only screen and (min-width: 1080px) {

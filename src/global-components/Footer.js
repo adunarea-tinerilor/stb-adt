@@ -7,10 +7,6 @@ const FooterContainer = styled.footer`
   padding: 40px;
   margin-top: 40px;
   
-   @media only screen and (min-width: 1080px) {
-    padding: 40px;
-  }
-  
   & a {
   color: teal
   }

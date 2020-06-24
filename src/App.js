@@ -23,6 +23,7 @@ export default class App extends React.Component {
 
       archiveList: [
         //add last meeting details
+        //always include  questionList: [], if no content leave it empty
         {
           subjectLabel: "Adunare de experiențe",
           date: "18.06.2020",
@@ -41,11 +42,11 @@ export default class App extends React.Component {
           subjectLabel: "Întrebări discutate:",
           date: "4.06.2020",
           questionList: [
-            "Cum armonizăm fraza de mai jos cu practica noastră de generații deja? Vol. 6 pag. 521"
+            "Cum putem influenta, educa, creste mai avantajos copii in conditiile imperfecte din prezent?"
           ],
           refOpen: false,
           button: "Vezi Referința",
-          referenceNote: "\"În timp ce mintea Noii Creaturi înţelege speranţele făgăduinţele şi idealurile spirituale şi caută în mod cuvenit să le imprime asupra tuturor celor pe care Domnul Dumnezeul nostru îi va chema prin adevărul şi harul Său caută în mod special să dezvolte copii ai lui Dumnezeu totuşi dacă dintr-un motiv oarecare intră într-o legătură matrimonială şi consideră înţelept să procreeze o familie umană aceştia au mare avantaj în această privinţă comparativ cu bărbatul natural şi cu femeia naturală.\"",
+          referenceNote: "Vol. 6 pag. 521: \"În timp ce mintea Noii Creaturi înţelege speranţele făgăduinţele şi idealurile spirituale şi caută în mod cuvenit să le imprime asupra tuturor celor pe care Domnul Dumnezeul nostru îi va chema prin adevărul şi harul Său caută în mod special să dezvolte copii ai lui Dumnezeu totuşi dacă dintr-un motiv oarecare intră într-o legătură matrimonială şi consideră înţelept să procreeze o familie umană aceştia au mare avantaj în această privinţă comparativ cu bărbatul natural şi cu femeia naturală.\"",
           videoSrc: "https://www.youtube.com/watch?v=m_HWlMmS8EI&feature=emb_title"
         },
         {

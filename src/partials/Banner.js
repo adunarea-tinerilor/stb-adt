@@ -5,7 +5,7 @@ import BannerImg from '../img/banner3.jpg'
 
 // Styles
 const BannerContainer = styled.section`
-   height: 400px;
+   height: 440px;
    position: relative;
    background: black;
 `;
@@ -27,17 +27,18 @@ const BannerText = styled.div`
   color: white;
   text-align: center;
   
-  @media only screen and (min-width: 1080px) {
-    padding: 40px;
+  h3 {
+    font-size: 20px;
   }
   
-  & h2 {
-    font-size: 32px;
+  @media only screen and (min-width: 1080px) {
+    padding: 40px;
     
-    @media only screen and (min-width: 1080px) {
-      font-size: 26x;
+    h3 {
+      font-size: 22px;
     }
   }
+ 
 `;
 
 export default function Banner(props) {
@@ -46,7 +47,7 @@ export default function Banner(props) {
     <BannerContainer className="component">
       <BannerImage src={BannerImg} alt="Young people holding hands" />
       <BannerText>
-        <h2>{props.bannerQuote}</h2>
+        <h3>{props.bannerQuote}</h3>
         <p>{props.bannerVerse}</p>
       </BannerText>
     </BannerContainer>

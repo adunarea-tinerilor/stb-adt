@@ -6,7 +6,7 @@ import VideoImg from '../img/videoImg.jpg'
 // Styles
 const CardContainer = styled.div`
   box-shadow: 0px 0px 7px 0px #C9C9C9;
-  padding: 40px;
+  padding: 24px;
   margin: 40px 0;
    
   @media only screen and (min-width: 1080px) {
@@ -19,14 +19,9 @@ const CardContainer = styled.div`
 const CardDate = styled.div`
    display: flex;
    justify-content: space-between;
-    & h3 {
-       font-size: 42px;
-    }
    
-    @media only screen and (min-width: 1080px) {
-      & h3 {
-         font-size: 20px;
-      }
+   h3:first-child {
+    padding-right: 10px;
    }
 `;
 const VideoContainer = styled.div`
@@ -74,13 +69,6 @@ const CardHolder = styled.section`
 const RefContainer = styled.div`
     position: relative;
 `;
-const SmallText = styled.p`
-    font-size: 30px;
-    
-  @media only screen and (min-width: 1080px) {
-   font-size: 14px;
-  }
-`;
 const RefButton = styled.button`
     color: teal;
     background: white;
@@ -89,12 +77,11 @@ const RefButton = styled.button`
     outline: 0;
     padding: 7px 20px;
     min-width: 132px;
-    font-size: 34px;
     margin-top: 20px;
-    
-    @media only screen and (min-width: 1080px) {
-   font-size: 14px;
-  }
+    font-size: 14px;
+`;
+const SmallText = styled.p`
+font-size: 16px;
 `;
 
 export default function Card(props) {

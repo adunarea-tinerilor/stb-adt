@@ -6,14 +6,14 @@ import LogoImg from "../img/CC-logo.png"
 // Styles
 const HeaderContainer = styled.header`
   text-align: center;
-  padding: 35px;
+  padding: 24px;
   margin-bottom: 40px;
   
   @media only screen and (min-width: 1080px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 40px;
+    padding: 40px;
   }
 `;
 const Logo = styled.div`
@@ -22,42 +22,35 @@ const Logo = styled.div`
     align-items: center;
     justify-content: center;
     
-      &:hover {
+    &:hover {
       text-decoration: none;
-      }
+    }
   }
   
-  & h4 {
+  & h3 {
     text-align: left;
-    font-size: 40px;
-         
-     @media only screen and (min-width: 1080px) {
-     font-size: 16px;
-     }
+    margin: 0;
   }
   
   & img {
-    height: 80px;
+    height: 60px;
     position: relative;
     left: -7px
   }
 `;
 const Menu = styled.ul`
-  margin: 40px 0;
-  
+  margin: 45px 0 0;
+    
   & li {
     display: inline-block;
-    
-    & a {
-      padding: 4px 15px;
-      font-size: 40px;
-      margin-top: 40px;
-         
-     @media only screen and (min-width: 1080px) {
-     font-size: 18px;
-     margin-top: 0;
-     }
+  
+  & a {
+    padding: 4px 15px;         
     }
+  }
+  
+  @media only screen and (min-width: 1080px) {
+    margin-top: 0;
   }
 `;
 
@@ -69,8 +62,8 @@ export default function Header() {
         <Link to="/">
           <img src={LogoImg} alt="Bible Students Logo: Cross & Crown"/>
           <div>
-            <h4>Studenții Bibliei</h4>
-            <h4>Adunarea Tinerilor</h4>
+            <h3>Studenții Bibliei</h3>
+            <h3>Adunarea Tinerilor</h3>
           </div>
         </Link>
       </Logo>
