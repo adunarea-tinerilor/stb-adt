@@ -17,14 +17,10 @@ export default class App extends React.Component {
       noteLinkTxt: "vezi ora",
       noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
       // next meeting
-      nextMeetingDate: "25 Iunie",
+      nextMeetingDate: "25 Iunie, Volumul 6",
       nextMeetingSubject: [
-        "Cum trebuie să aibă grijă părinții de comportamentul copiilor lor față de alți copii?",
-        "Pot fi puși copiii să îndeplineasă unele lucrări în casă sau gospodarie? Cum trebuie educați în privința curățeniei, vremii de afară?",
-        "Dacă am întârziat în educarea corectă neavând instrucțiunile corecte sau din cauza neglijenței, ce mai putem face?",
-        "Ce se întâmplă dacă un copil când crește nu vrea să se consacreze și să urmeze calea Domnului?",
-        "Ce calități trebuie învățați copii?",
-        "Ne putem mândri cu copiii noștri?"
+        "Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? Pag. 524 p. 1, 2",
+        "Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. Pag. 525 p. 1, 2"
   ],
 
       archiveList: [

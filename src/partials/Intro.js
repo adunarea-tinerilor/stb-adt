@@ -21,6 +21,7 @@ const IntroContainer = styled.section`
       width: 38%;
       margin: 0 40px 0 0;
       text-align: center;
+      align-self: flex-start;
     }
     
      & > div:last-child {

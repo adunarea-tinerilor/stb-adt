@@ -20,6 +20,8 @@ const FooterContainer = styled.footer`
 const FooterEmail = styled.a`
   display: block;
   padding: 5px;
+  width: fit-content;
+  margin: auto;
   
   @media only screen and (max-width:370px) {
     font-size: 15px;
