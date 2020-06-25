@@ -62,12 +62,15 @@ const LinkMeeting = styled.p`
     
     @media only screen and (min-width: 1080px) {
      height: 16px;
- }
+    }
   }
 `;
 const CardTitle = styled.h2`
   border-bottom: 1px solid lightgray;
   padding-bottom: 24px;
+`;
+const InfoNote = styled.p`
+  font-weight: bold;
 `;
 
 export default function Intro(props) {
@@ -80,7 +83,7 @@ export default function Intro(props) {
         <p>Se solicită o parolă pentru întâlnire</p>
         <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul adunării</a></p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
-        {props.note && <p>{props.note} <a href={props.noteLink}>{props.noteLinkTxt}</a></p>}
+        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank">{props.noteLinkTxt}</a></InfoNote>}
       </IntroCardContainer>
 
 

@@ -12,14 +12,20 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      note: "Sâmbătă, 27 Iunie - adunare pentru copii, ",
+      // announcement notes
+      note: "Sâmbătă, 27 Iunie - adunare pentru copii. Tema: Luca 15:11-32 Pilda Fiului Risipitor, ",
       noteLinkTxt: "vezi ora",
       noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
+      // next meeting
       nextMeetingDate: "25 Iunie",
       nextMeetingSubject: [
+        "Cum trebuie să aibă grijă părinții de comportamentul copiilor lor față de alți copii?",
         "Pot fi puși copiii să îndeplineasă unele lucrări în casă sau gospodarie? Cum trebuie educați în privința curățeniei, vremii de afară?",
-        "Dacă am întârziat în educarea corectă neavând instrucțiunile corecte sau din cauza neglijenței, ce mai putem face?"
-      ],
+        "Dacă am întârziat în educarea corectă neavând instrucțiunile corecte sau din cauza neglijenței, ce mai putem face?",
+        "Ce se întâmplă dacă un copil când crește nu vrea să se consacreze și să urmeze calea Domnului?",
+        "Ce calități trebuie învățați copii?",
+        "Ne putem mândri cu copiii noștri?"
+  ],
 
       archiveList: [
         //add last meeting details
@@ -34,7 +40,7 @@ export default class App extends React.Component {
           subjectLabel: "Întrebări discutate:",
           date: "11.06.2020",
           questionList: [
-            "Cum trebuie să avem grijă de hrana și sănătatea copiilor noștri? Vol. 6 pag. 522 - 523 "
+            "Cum trebuie să avem grijă de hrana și sănătatea copiilor noștri? Vol. 6 pag. 522 - 523 [ 23:44 ]"
           ],
           videoSrc: "https://m.youtube.com/watch?v=2Y8YjhPFXj4"
         },
@@ -42,7 +48,7 @@ export default class App extends React.Component {
           subjectLabel: "Întrebări discutate:",
           date: "4.06.2020",
           questionList: [
-            "Cum putem influenta, educa, creste mai avantajos copii in conditiile imperfecte din prezent?"
+            "Cum putem influența, educa, crește copii mai avantajos în condițiile imperfecte din prezent? [ 19:20 ]"
           ],
           refOpen: false,
           button: "Vezi Referința",
@@ -53,8 +59,9 @@ export default class App extends React.Component {
           subjectLabel: "Întrebări discutate:",
           date: "28.05.2020",
           questionList: [
-            "Rolul reproducerii în viața omenirii și a Noii creații? - Vol. 6 pag. 519 par. 1",
-            "Responsabilitatea noastră și a Domnului în creșterea urmașilor - Vol. 6 pag. 220 - 222"
+            "Program copii - poezii & cântări [ 10:32 ]",
+            "Rolul reproducerii în viața omenirii și a Noii creații? - Vol. 6 pag. 520 par. 2 [ 1:09:54 ]",
+            "Responsabilitatea noastră și a Domnului în creșterea urmașilor."
           ],
           videoSrc: "https://www.youtube.com/watch?v=Tna0fxadpNA&feature=emb_title"
         },
@@ -62,8 +69,8 @@ export default class App extends React.Component {
           subjectLabel: "Întrebări discutate:",
           date: "21.05.2020",
           questionList: [
-            "Decizia de a avea copiii sau nu.",
-            "Câți copii să avem?"
+            "Decizia de a avea copii sau nu. [ 13:54 ]",
+            "Câți copii să avem? [ 1:34:18 ]"
           ],
           videoSrc: "https://www.youtube.com/watch?v=gnwQ7HpVqR0&feature=emb_title"
         }
@@ -74,7 +81,7 @@ export default class App extends React.Component {
       meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Entalnirea+Tinerilor&iso=20200625T20&p1=49",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15"
-    }
+    };
 
     //bind this
     this.handleArchiveButton = this.handleArchiveButton.bind(this);

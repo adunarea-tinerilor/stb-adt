@@ -84,6 +84,7 @@ const CardHolder = styled.section`
 `;
 const RefContainer = styled.div`
     position: relative;
+    margin-top: 20px;
 `;
 const RefButton = styled.button`
     color: teal;
@@ -92,9 +93,9 @@ const RefButton = styled.button`
     cursor: pointer;
     outline: 0;
     padding: 7px 20px;
-    min-width: 132px;
-    margin-top: 20px;
+    min-width: 132px;   
     font-size: 14px;
+    height: 37px;
 `;
 const SmallText = styled.p`
 font-size: 16px;

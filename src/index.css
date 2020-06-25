@@ -1,4 +1,5 @@
 /* Global styles */
+/* Small Up */
 * {
   box-sizing: border-box;
 }
@@ -70,6 +71,8 @@ img {
   display: none;
   position: absolute;
   z-index: 3;
+  top: 36px;
+  left: 0;
   background: white;
   width: 100%;
   border: 1px solid teal;
@@ -98,10 +101,4 @@ img {
 
 .is-active {
   display: block;
-}
-
-@media only screen and (min-width: 1080px) {
-  .tooltip {
-    max-height: 200px;
-  }
 }

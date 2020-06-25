@@ -22,7 +22,7 @@ const BannerText = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
-  max-width: 930px;
+  max-width: 860px;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;

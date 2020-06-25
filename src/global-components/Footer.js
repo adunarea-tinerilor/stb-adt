@@ -11,13 +11,26 @@ const FooterContainer = styled.footer`
   color: teal;
   word-break: break-all;
   }
+  
+  @media only screen and (max-width:400px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+`;
+const FooterEmail = styled.a`
+  display: block;
+  padding: 5px;
+  
+  @media only screen and (max-width:370px) {
+    font-size: 15px;
+  }
 `;
 
 export default function Footer() {
 
   return (
     <FooterContainer className="component">
-      <p>Pentru a afla parola sau răspuns la alte întrebări, te rugăm să ne scrii un email: <a href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</a>.</p>
+      <p>Pentru a afla răspuns la alte întrebări, te rugăm să ne scrii un email  <FooterEmail href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail></p>
     </FooterContainer>
   );
 }
