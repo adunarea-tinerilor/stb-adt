@@ -12,23 +12,48 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
+      // general
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200702T10&p1=202",
+
       // announcement notes
-      note: "Sâmbătă, 27 Iunie - adunare pentru copii. Tema: Luca 15:11-32 Pilda Fiului Risipitor, ",
-      noteLinkTxt: "vezi ora",
-      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
+      // note: "Sâmbătă, 27 Iunie - adunare pentru copii. Tema: Luca 15:11-32 Pilda Fiului Risipitor, ",
+      // noteLinkTxt: "vezi ora",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
+
       // next meeting
-      nextMeetingDate: "25 Iunie, Volumul 6",
+      nextMeetingDate: "Joi, 2 Iulie",
+      nextDiscussedTitle: "Volumul 6, Obligațiile Părintești ale Noii Creații",
+      nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingSubject: [
-        "Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? Pag. 524 p. 1, 2",
-        "Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. Pag. 525 p. 1, 2"
-  ],
+        "Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. Pag. 525 p. 1, 2",
+        "Cum să aibă grijă părinţii atunci când corectează pe copii prin cuvânt sau faptă? Pag. 526 p. 1"
+      ],
+
+      // archive list
+      //add last meeting details
+      //always include  questionList: [], if no content leave it empty
+      // {
+      //   subjectLabel: "Întrebări discutate:",
+      //     date: "date.month.year",
+      //   questionList: [
+      //   "Question  [ start time ]"
+      // ],
+      //   refOpen: false,
+      //   button: "Vezi Referința",
+      //   referenceNote: "Reference text",
+      //   videoSrc: "Video Link"
+      // }
 
       archiveList: [
-        //add last meeting details
-        //always include  questionList: [], if no content leave it empty
         {
-          subjectLabel: "Adunare de experiențe",
+          date: "25.06.2020",
+          subjectLabel: "Întrebări discutate:",
+          questionList: ["Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? Pag. 524 p. 1, 2 [ 1:17:03 ]"],
+          videoSrc: "https://www.youtube.com/watch?v=Xtt-TKpBGkc"
+        },
+        {
           date: "18.06.2020",
+          subjectLabel: "Adunare de experiențe",
           questionList: [],
           videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
         },
@@ -46,9 +71,6 @@ export default class App extends React.Component {
           questionList: [
             "Cum putem influența, educa, crește copii mai avantajos în condițiile imperfecte din prezent? [ 19:20 ]"
           ],
-          refOpen: false,
-          button: "Vezi Referința",
-          referenceNote: "Vol. 6 pag. 521: \"În timp ce mintea Noii Creaturi înţelege speranţele făgăduinţele şi idealurile spirituale şi caută în mod cuvenit să le imprime asupra tuturor celor pe care Domnul Dumnezeul nostru îi va chema prin adevărul şi harul Său caută în mod special să dezvolte copii ai lui Dumnezeu totuşi dacă dintr-un motiv oarecare intră într-o legătură matrimonială şi consideră înţelept să procreeze o familie umană aceştia au mare avantaj în această privinţă comparativ cu bărbatul natural şi cu femeia naturală.\"",
           videoSrc: "https://www.youtube.com/watch?v=m_HWlMmS8EI&feature=emb_title"
         },
         {
@@ -74,7 +96,6 @@ export default class App extends React.Component {
 
       // general info
       zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Entalnirea+Tinerilor&iso=20200625T20&p1=49",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15"
     };
@@ -108,6 +129,8 @@ export default class App extends React.Component {
               meetingHour={this.state.meetingHour}
               nextMeetingDate={this.state.nextMeetingDate}
               nextMeetingSubject={this.state.nextMeetingSubject}
+              nextDiscussedTitle={this.state.nextDiscussedTitle}
+              nextDiscussedLink={this.state.nextDiscussedLink}
             />}
           />
           <Route path="/arhiva" render={() =>

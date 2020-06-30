@@ -70,6 +70,12 @@ const CardTitle = styled.h2`
   border-bottom: 1px solid lightgray;
   padding-bottom: 24px;
 `;
+const DiscussedTitle = styled.h3`
+  text-align: center;
+  & a {
+    color: teal;
+  }  
+`;
 const InfoNote = styled.p`
   font-weight: bold;
 `;
@@ -89,8 +95,9 @@ export default function Intro(props) {
 
 
       <IntroCardContainer>
-        <CardTitle>Următoarea întâlnire va fi Joi, 25 Iunie</CardTitle>
-        <h2>Discuții Studiu</h2>
+        <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
+        <h2>Discuții Studiu {props.nextDiscussedVol}</h2>
+        <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer" target="_blank">{props.nextDiscussedTitle}</a></DiscussedTitle>
         <ol>
           {props.nextMeetingSubject.map((subject, index) => {
             return <li key={index}><p>{subject}</p></li>

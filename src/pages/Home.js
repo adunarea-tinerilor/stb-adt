@@ -17,6 +17,8 @@ export default function Home(props) {
         meetingHour={props.meetingHour}
         nextMeetingDate={props.nextMeetingDate}
         nextMeetingSubject={props.nextMeetingSubject}
+        nextDiscussedTitle={props.nextDiscussedTitle}
+        nextDiscussedLink={props.nextDiscussedLink}
       />
     </div>
   );
