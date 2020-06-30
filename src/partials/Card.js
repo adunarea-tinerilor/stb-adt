@@ -105,7 +105,7 @@ export default function Card(props) {
 
   return (
     <CardHolder>
-      {props.archiveList.map((meeting, index) => {
+      {props.filteredList && props.filteredList.map((meeting, index) => {
         return (
           <CardContainer key={index}>
             <CardDate>

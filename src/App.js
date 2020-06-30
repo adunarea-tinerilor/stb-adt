@@ -48,7 +48,8 @@ export default class App extends React.Component {
         {
           date: "25.06.2020",
           subjectLabel: "Întrebări discutate:",
-          questionList: ["Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? Pag. 524 p. 1, 2 [ 1:17:03 ]"],
+          questionList: ["Program copii - poezii & cântări [ 18:52 ]",
+            "Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? Pag. 524 p. 1, 2 [ 1:17:03 ]"],
           videoSrc: "https://www.youtube.com/watch?v=Xtt-TKpBGkc"
         },
         {
@@ -93,24 +94,44 @@ export default class App extends React.Component {
           videoSrc: "https://www.youtube.com/watch?v=gnwQ7HpVqR0&feature=emb_title"
         }
       ],
+      filteredList: [],
 
       // general info
       zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
-      bannerVerse: "2 Timotei 2:15"
+      bannerVerse: "2 Timotei 2:15",
+      value: ""
     };
-
-    //bind this
-    this.handleArchiveButton = this.handleArchiveButton.bind(this);
   }
 
-  handleArchiveButton(index) {
+  componentDidMount() {
+    this.setState({
+      filteredList: this.state.archiveList
+    })
+  }
+
+  // Toggle Reference button
+  handleArchiveButton = index => {
     let list = this.state.archiveList
     list[index].refOpen = !list[index].refOpen;
     this.setState({
       list
     });
-  }
+  };
+
+
+  handleInput = e => {
+    let archiveList = this.state.archiveList;
+
+    let filteredList = archiveList.filter(function (item) {
+      return item.questionList.toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "").includes(e.target.value.toLowerCase())
+    });
+
+    this.setState({
+      filteredList: filteredList,
+      value: e.target.value
+    });
+  };
 
 
   render() {
@@ -135,8 +156,10 @@ export default class App extends React.Component {
           />
           <Route path="/arhiva" render={() =>
             <Archive
-              archiveList={this.state.archiveList}
+              filteredList={this.state.filteredList}
               handleArchiveButton={this.handleArchiveButton}
+              value={this.state.value}
+              handleInput={this.handleInput}
             />}
           />
           <Footer/>
