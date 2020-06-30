@@ -54,8 +54,8 @@ export default class App extends React.Component {
         },
         {
           date: "18.06.2020",
-          subjectLabel: "Adunare de experiențe",
-          questionList: [],
+          subjectLabel: "Discuții",
+          questionList: ["Adunare de experiențe"],
           videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
         },
         {
