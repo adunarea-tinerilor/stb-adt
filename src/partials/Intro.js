@@ -51,7 +51,6 @@ const IntroCardContainer = styled.div`
  }
    
  @media only screen and (min-width: 1080px) {
-   width: 48%;
    margin: 0 0 40px;
  }
 `;
@@ -90,20 +89,36 @@ export default function Intro(props) {
         <p>Se solicită o parolă pentru întâlnire</p>
         <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul adunării</a></p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
-        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank">{props.noteLinkTxt}</a></InfoNote>}
+        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
+                                                 target="_blank">{props.noteLinkTxt}</a></InfoNote>}
       </IntroCardContainer>
 
+      <div>
+        <IntroCardContainer>
+          <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
+          <h2>Discuții Studiu {props.nextDiscussedVol}</h2>
+          <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer"
+                             target="_blank">{props.nextDiscussedTitle}</a></DiscussedTitle>
+          <ol>
+            {props.nextMeetingSubject.map((subject, index) => {
+              return <li key={index}><p>{subject}</p></li>
+            })}
+          </ol>
+        </IntroCardContainer>
 
-      <IntroCardContainer>
-        <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
-        <h2>Discuții Studiu {props.nextDiscussedVol}</h2>
-        <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer" target="_blank">{props.nextDiscussedTitle}</a></DiscussedTitle>
-        <ol>
-          {props.nextMeetingSubject.map((subject, index) => {
-            return <li key={index}><p>{subject}</p></li>
-          })}
-        </ol>
-      </IntroCardContainer>
+        {props.childrenMeeting.map((meeting, index) => {
+          return (
+            <IntroCardContainer>
+              <h2>{meeting.title}</h2>
+              {
+                meeting.subject.map((subj, index) => {
+                  return <p key={index}>{subj}</p>
+                })}
+            </IntroCardContainer>
+          )
+        })}
+      </div>
+
     </IntroContainer>
   );
 }

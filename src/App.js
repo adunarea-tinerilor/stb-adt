@@ -13,20 +13,38 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200702T10&p1=202",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200709T10&p1=202",
 
-      // announcement notes
-      // note: "Sâmbătă, 27 Iunie - adunare pentru copii. Tema: Luca 15:11-32 Pilda Fiului Risipitor, ",
-      // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200627T18&p1=49",
 
       // next meeting
-      nextMeetingDate: "Joi, 2 Iulie",
+      nextMeetingDate: "Joi, 9 Iulie",
       nextDiscussedTitle: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingSubject: [
-        "Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. Pag. 525 p. 1, 2",
-        "Cum să aibă grijă părinţii atunci când corectează pe copii prin cuvânt sau faptă? Pag. 526 p. 1"
+        "Cum să discute părinţii creştini cu copiii lor şi să-i ajute să înţeleagă cerinţele divine şi necesitatea pentru disciplină? Pag. 526 p. 2",
+        "Cât de devreme poate un copil să aprecieze principiile dreptăţii şi când trebuie să înceapă un părinte clădirea caracterului în copil? Pag. 527 p. 1",
+        "Care este lucrul atotimportant să ni-l amintim în educarea unui copil? Pag. 528 p. 1"
+      ],
+
+
+      // announcement notes
+      note: "Sâmbătă, 11 iulie - Adunare cu Copiii, ",
+      noteLinkTxt: "vezi ora",
+      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200711T18&p1=49",
+
+      // Adunare Copii INFO
+      childrenMeeting : [
+        {
+          title: "Adunare cu Copiii",
+          subject: ["Copii să spună o experiență când au ales să asculte de părinți/ bunici/ învățător, sau nu, sau când au ales să asculte de Domnul sau nu.",
+            "Experiențele să includă: Cuprinsul (istorisirea experienței). Principiul de care s-a condus (a ascultat de părinți/ de Domnul, sau nu). Rezultatul, concluzia.",
+            "Temă de discuție: 1 Samuel capitolul 3",
+            "⦁ Care a fost atitudinea lui Samuel când a fost chemat de Domnul? Argumentat cu dovezi biblice.",
+            "⦁ Cum am putea și noi vedea/ înțelege când Domnul ne-ar cheama? Cum am putea răspunde?",
+            "⦁ Ce i-a spus Dumnezeu lui Samuel să facă? Care este atitudinea lui Dumnezeu față de rău?",
+            "⦁ De ce este Samuel un exemplu pentru noi?"
+          ]
+        }
       ],
 
       // archive list
@@ -45,6 +63,13 @@ export default class App extends React.Component {
       // }
 
       archiveList: [
+        {
+          date: "02.07.2020",
+          subjectLabel: "Întrebări discutate:",
+          questionList: ["Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. Vol. 6 Pag. 525 p. 1, 2\n [ 23:22 ]",
+            "Cum să aibă grijă părinţii atunci când corectează pe copii prin cuvânt sau faptă? Vol. 6 Pag. 526 p. 1 [ 1:47:00 ]"],
+          videoSrc: "https://www.youtube.com/watch?v=Sela3kKs8ng"
+        },
         {
           date: "25.06.2020",
           subjectLabel: "Întrebări discutate:",
@@ -142,12 +167,17 @@ export default class App extends React.Component {
           <Route exact path="/" render={() =>
             <Home
               note={this.state.note}
+              childrenMeeting={this.state.childrenMeeting}
+
               noteLink={this.state.noteLink}
               noteLinkTxt={this.state.noteLinkTxt}
+
               bannerQuote={this.state.bannerQuote}
               bannerVerse={this.state.bannerVerse}
+
               zoomLink={this.state.zoomLink}
               meetingHour={this.state.meetingHour}
+
               nextMeetingDate={this.state.nextMeetingDate}
               nextMeetingSubject={this.state.nextMeetingSubject}
               nextDiscussedTitle={this.state.nextDiscussedTitle}
