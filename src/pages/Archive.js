@@ -5,7 +5,7 @@ import Search from "../partials/Search";
 
 // Styles
 const ArchiveContainer = styled.section`
-  padding: 24px;
+  padding: 20px;
   margin: 40px 0;
   
   @media only screen and (min-width: 1080px) {
@@ -31,7 +31,8 @@ export default function Archive(props) {
       <PageHeading>
         <PageTitle>Arhivă Studii - Video</PageTitle>
         <Search value={props.value}
-                handleInput={props.handleInput}/>
+                handleInput={props.handleInput}
+                handleClearSearch={props.handleClearSearch}/>
       </PageHeading>
       <div>
         <Card

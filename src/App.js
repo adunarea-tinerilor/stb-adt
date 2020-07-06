@@ -28,7 +28,7 @@ export default class App extends React.Component {
 
 
       // announcement notes
-      note: "Adunare cu Copiii - Sâmbătă, 11 Iulie, ",
+      note: "Adunare cu Copiii - Sâmbătă, 11 Iulie - ",
       noteLinkTxt: "vezi ora",
       noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200711T18&p1=49",
 
@@ -150,6 +150,14 @@ export default class App extends React.Component {
     });
   };
 
+  handleClearSearch = () => {
+    console.log("test")
+    this.setState({
+      filteredList: this.state.archiveList,
+      value: ""
+    });
+  };
+
 
   render() {
     return (
@@ -182,6 +190,7 @@ export default class App extends React.Component {
               handleArchiveButton={this.handleArchiveButton}
               value={this.state.value}
               handleInput={this.handleInput}
+              handleClearSearch={this.handleClearSearch}
             />}
           />
           <Footer/>

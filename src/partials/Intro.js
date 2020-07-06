@@ -5,7 +5,7 @@ import ZoomLogo from "../img/zoom-logo.png"
 
 // Styles
 const IntroContainer = styled.section`
-  padding: 24px;
+  padding: 20px;
   margin: 40px 0;
   
    & > div:first-child {

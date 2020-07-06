@@ -2,11 +2,25 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Styles
-const SearchContainer = styled.div`
- 
+const SearchContainer = styled.div` 
+  position: relative;
+
   @media only screen and (min-width: 1080px) {
   width: 320px;
   }
+`;
+const Icon = styled.span` 
+  position: absolute;
+  padding: 1px 10px;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  background: white;
+  cursor: pointer;
+  
+  &:hover {
+    color: teal;
+ }
 `;
 const SearchInput = styled.input`
  width: 100%;
@@ -42,6 +56,7 @@ export default function Search(props) {
       value={props.value}
       onChange={props.handleInput}
       />
+      <Icon onClick={props.handleClearSearch} title="Șterge">✕</Icon>
     </SearchContainer>
   );
 }
