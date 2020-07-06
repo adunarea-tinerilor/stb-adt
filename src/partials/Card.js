@@ -10,9 +10,9 @@ const CardContainer = styled.div`
   margin: 40px 0;
    
   @media only screen and (min-width: 1080px) {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    width: 48%;
+    align-items: center;
     margin: 0 0 40px;
   }
 `;
@@ -35,18 +35,23 @@ const VideoContainer = styled.div`
     text-align: center;
     
     @media only screen and (min-width: 1080px) {
-      margin-top: auto
+      margin: 0 40px 0 0;
+      order: -1;
    }
 `;
 const VideoImage = styled.img`
   width: 100%;
+  height: 100%;
   max-width: 680px;
   max-height: 500px;
   margin: 40px auto 0;
-    @media only screen and (min-width: 1080px) {
-    max-width: 480px;
-    max-height: 300px;
-  }
+  
+  @media only screen and (min-width: 1080px) {
+    margin: 0;
+    max-width: none;
+    max-height: none;
+    width: 250px;
+}
 `;
 const VideoBtn = styled.span`
   top: 50%;
@@ -100,6 +105,11 @@ const RefButton = styled.button`
 const SmallText = styled.p`
 font-size: 16px;
 `;
+const TextContainer = styled.div`
+  @media only screen and (min-width: 1080px) {
+    width: 100%;
+  }
+`;
 
 export default function Card(props) {
 
@@ -108,25 +118,27 @@ export default function Card(props) {
       {props.filteredList && props.filteredList.map((meeting, index) => {
         return (
           <CardContainer key={index}>
-            <CardDate>
-              <h3>{meeting.subjectLabel}</h3>
-              <h3>{meeting.date}</h3>
-            </CardDate>
-            <ul>{
-              meeting.questionList.map((meeting, index) => {
-                return <li key={index}>{meeting}</li>
-              })}
-            </ul>
-            {
-              meeting.button &&
-              <RefContainer>
-                <RefButton
-                  onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ? "Închide" : meeting.button}`}</RefButton>
-                <div className={`tooltip ${meeting.refOpen === true ? "is-active" : ""}`}>
-                  <SmallText>{meeting.referenceNote}</SmallText>
-                </div>
-              </RefContainer>
-            }
+            <TextContainer>
+              <CardDate>
+                <h3>{meeting.subjectLabel}</h3>
+                <h3>{meeting.date}</h3>
+              </CardDate>
+              <ul>{
+                meeting.questionList.map((meeting, index) => {
+                  return <li key={index}>{meeting}</li>
+                })}
+              </ul>
+              {
+                meeting.button &&
+                <RefContainer>
+                  <RefButton
+                    onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ? "Închide" : meeting.button}`}</RefButton>
+                  <div className={`tooltip ${meeting.refOpen === true ? "is-active" : ""}`}>
+                    <SmallText>{meeting.referenceNote}</SmallText>
+                  </div>
+                </RefContainer>
+              }
+            </TextContainer>
             <VideoContainer>
               <VideoImage src={VideoImg} alt="Open Bible"/>
               <a href={meeting.videoSrc} rel="noopener noreferrer" target="_blank">
