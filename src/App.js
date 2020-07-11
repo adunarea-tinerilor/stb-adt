@@ -13,36 +13,39 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200709T10&p1=202",
+      footerUpdateDate: "10.07.2020",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200716T10&p1=202",
 
 
       // next meeting
-      nextMeetingDate: "Joi, 9 Iulie",
+      nextMeetingDate: "Joi, 16 Iulie",
       nextDiscussedTitle: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingSubject: [
-        "Cum să discute părinţii creştini cu copiii lor şi să-i ajute să înţeleagă cerinţele divine şi necesitatea pentru disciplină? Pag. 526 p. 2",
-        "Cât de devreme poate un copil să aprecieze principiile dreptăţii şi când trebuie să înceapă un părinte clădirea caracterului în copil? Pag. 527 p. 1",
-        "Care este lucrul atotimportant să ni-l amintim în educarea unui copil? Pag. 528 p. 1"
+        "Care element ar trebui să caracterizeze în principal atmosfera unui cămin, oricât de sărac ar fi? Pag. 529 p.1",
+        "Ce se poate aştepta de la un copil educat în mod potrivit în ceea ce priveşte consacrarea faţă de Domnul? Pag. 529 p.2",
+        "Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Pag. 530 p.1, 2"
       ],
 
 
       // announcement notes
-      note: "Adunare cu Copiii - Sâmbătă, 11 Iulie - ",
+      note: "Adunare pentru Copii & Tineri - Sâmbătă, 11 Iulie - ",
       noteLinkTxt: "vezi ora",
       noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200711T18&p1=49",
 
       // Adunare Copii INFO
       childrenMeeting : [
         {
-          title: "Program pentru Adunarea Copiilor",
-          subject: ["Copiii să spună o experiență când au ales să asculte de părinți/ bunici/ învățător, sau nu, sau când au ales să asculte de Domnul sau nu.",
-            "Experiențele să includă: Cuprinsul (istorisirea experienței). Principiul de care s-a condus (a ascultat de părinți/ de Domnul, sau nu). Rezultatul, concluzia.",
+          title: "Program pentru Copii & Tineri - Sâmbătă, 11 Iulie",
+          subject: ["Copiii să spună o experiență când au ales să asculte de părinți / bunici / învățător, sau nu, sau când au ales să asculte de Domnul sau nu.",
+            "Experiențele să includă: Cuprinsul (istorisirea experienței). Principiul de care s-a condus (a ascultat de părinți / de Domnul, sau nu). Rezultatul, concluzia.",
             "Temă de discuție: 1 Samuel capitolul 3",
             "⦁ Care a fost atitudinea lui Samuel când a fost chemat de Domnul? Argumentat cu dovezi biblice.",
-            "⦁ Cum am putea și noi vedea/ înțelege când Domnul ne-ar cheama? Cum am putea răspunde?",
+            "⦁ Cum am putea și noi vedea / înțelege când Domnul ne-ar cheama? Cum am putea răspunde?",
             "⦁ Ce i-a spus Dumnezeu lui Samuel să facă? Care este atitudinea lui Dumnezeu față de rău?",
-            "⦁ De ce este Samuel un exemplu pentru noi?"
+            "⦁ De ce este Samuel un exemplu pentru noi?",
+            "Tinerii mai mari de 15 ani să se pregătescă pe tema:",
+            "Cum alegi să-ți petreci timpul? Principii, experiențe personale, versete despre cum ar trebui să ne petrecem timpul în mod potrivit."
           ]
         }
       ],
@@ -63,6 +66,16 @@ export default class App extends React.Component {
       // }
 
       archiveList: [
+        {
+          date: "09.07.2020",
+          subjectLabel: "Întrebări discutate:",
+          questionList: [
+           "[ 28:04 ] Cum să discute părinţii creştini cu copiii lor şi să-i ajute să înţeleagă cerinţele divine şi necesitatea pentru disciplină? (Vol. 6 pag. 526 p. 2)",
+           "[ 1:08:39 ] Cât de devreme poate un copil să aprecieze principiile dreptăţii şi când trebuie să înceapă un părinte clădirea caracterului în copil? (Vol. 6 pag. 527 p. 1)",
+           "[ 1:43:50 ] Care este lucrul atotimportant să ni-l amintim în educarea unui copil? (Vol. 6 pag. 528 p. 1)",
+           "[ 1:59:50 ] Care va fi pierderea precum şi experienţa amară a părinţilor care nu reuşesc să-şi educe copiii în mod potrivit? (Vol. 6 pag. 528 p. 2)"],
+          videoSrc: "https://www.youtube.com/watch?v=56H5N9KfpXo"
+        },
         {
           date: "02.07.2020",
           subjectLabel: "Întrebări discutate:",
@@ -114,7 +127,8 @@ export default class App extends React.Component {
       filteredList: [],
 
       // general info
-      zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
+      zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
+      // zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
       value: ""
@@ -193,7 +207,7 @@ export default class App extends React.Component {
               handleClearSearch={this.handleClearSearch}
             />}
           />
-          <Footer/>
+          <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>
       </HashRouter>
     );
