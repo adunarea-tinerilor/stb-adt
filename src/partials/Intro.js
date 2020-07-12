@@ -106,7 +106,7 @@ export default function Intro(props) {
           </ol>
         </IntroCardContainer>
 
-        {props.childrenMeeting.map((meeting, index) => {
+        {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
           return (
             <IntroCardContainer>
               <h2>{meeting.title}</h2>

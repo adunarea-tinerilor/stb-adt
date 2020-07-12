@@ -13,7 +13,7 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      footerUpdateDate: "10.07.2020",
+      footerUpdateDate: "12.07.2020",
       meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200716T10&p1=202",
 
 
@@ -29,26 +29,17 @@ export default class App extends React.Component {
 
 
       // announcement notes
-      note: "Adunare pentru Copii & Tineri - Sâmbătă, 11 Iulie - ",
-      noteLinkTxt: "vezi ora",
-      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200711T18&p1=49",
+      // note: "Adunare pentru Copii & Tineri - Sâmbătă, 11 Iulie - ",
+      // noteLinkTxt: "vezi ora",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200711T18&p1=49",
 
       // Adunare Copii INFO
-      childrenMeeting : [
-        {
-          title: "Program pentru Copii & Tineri - Sâmbătă, 11 Iulie",
-          subject: ["Copiii să spună o experiență când au ales să asculte de părinți / bunici / învățător, sau nu, sau când au ales să asculte de Domnul sau nu.",
-            "Experiențele să includă: Cuprinsul (istorisirea experienței). Principiul de care s-a condus (a ascultat de părinți / de Domnul, sau nu). Rezultatul, concluzia.",
-            "Temă de discuție: 1 Samuel capitolul 3",
-            "⦁ Care a fost atitudinea lui Samuel când a fost chemat de Domnul? Argumentat cu dovezi biblice.",
-            "⦁ Cum am putea și noi vedea / înțelege când Domnul ne-ar cheama? Cum am putea răspunde?",
-            "⦁ Ce i-a spus Dumnezeu lui Samuel să facă? Care este atitudinea lui Dumnezeu față de rău?",
-            "⦁ De ce este Samuel un exemplu pentru noi?",
-            "Tinerii mai mari de 15 ani să se pregătescă pe tema:",
-            "Cum alegi să-ți petreci timpul? Principii, experiențe personale, versete despre cum ar trebui să ne petrecem timpul în mod potrivit."
-          ]
-        }
-      ],
+      // childrenMeeting : [
+      //   {
+      //     title: "",
+      //     subject: [ "" ]
+      //   }
+      // ],
 
       // archive list
       //add last meeting details
