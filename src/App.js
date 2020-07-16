@@ -13,19 +13,17 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      footerUpdateDate: "12.07.2020",
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200716T10&p1=202",
+      footerUpdateDate: "16.07.2020",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202",
 
 
       // next meeting
-      nextMeetingDate: "Joi, 16 Iulie",
-      nextDiscussedTitle: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
-      nextMeetingSubject: [
-        "Care element ar trebui să caracterizeze în principal atmosfera unui cămin, oricât de sărac ar fi? Pag. 529 p.1",
-        "Ce se poate aştepta de la un copil educat în mod potrivit în ceea ce priveşte consacrarea faţă de Domnul? Pag. 529 p.2",
-        "Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Pag. 530 p.1, 2"
-      ],
+      nextMeetingDate: "Joi, 23 Iulie",
+      // nextMeetingSubject:"Discuții Studiu",
+      nextMeetingSubject:"Adunare de experiențe, temă: Consacrarea",
+      // nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
+      // nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
+      nextMeetingQuestions: [],
 
 
       // announcement notes
@@ -185,7 +183,8 @@ export default class App extends React.Component {
 
               nextMeetingDate={this.state.nextMeetingDate}
               nextMeetingSubject={this.state.nextMeetingSubject}
-              nextDiscussedTitle={this.state.nextDiscussedTitle}
+              nextMeetingQuestions={this.state.nextMeetingQuestions}
+              nextDiscussedLinkText={this.state.nextDiscussedLinkText}
               nextDiscussedLink={this.state.nextDiscussedLink}
             />}
           />

@@ -96,11 +96,11 @@ export default function Intro(props) {
       <div>
         <IntroCardContainer>
           <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
-          <h2>Discuții Studiu {props.nextDiscussedVol}</h2>
+          <h2>{props.nextMeetingSubject}</h2>
           <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer"
-                             target="_blank">{props.nextDiscussedTitle}</a></DiscussedTitle>
+                             target="_blank">{props.nextDiscussedLinkText}</a></DiscussedTitle>
           <ol>
-            {props.nextMeetingSubject.map((subject, index) => {
+            {props.nextMeetingQuestions.map((subject, index) => {
               return <li key={index}><p>{subject}</p></li>
             })}
           </ol>
