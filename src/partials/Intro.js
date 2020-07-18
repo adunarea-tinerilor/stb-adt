@@ -56,13 +56,9 @@ const IntroCardContainer = styled.div`
 `;
 const LinkMeeting = styled.p`
   & img {
-    top: 5px;
-    height: 18px;
+    top: 4px;
+    height: 16px;
     position: relative;
-    
-    @media only screen and (min-width: 1080px) {
-     height: 16px;
-    }
   }
 `;
 const CardTitle = styled.h2`
@@ -84,13 +80,13 @@ export default function Intro(props) {
   return (
     <IntroContainer className="component">
       <IntroCardContainer>
-        <h2>Informații</h2>
-        <LinkMeeting>Adunarea se ține pe <img src={ZoomLogo} alt="Zoom Logo"/></LinkMeeting>
-        <p>Se solicită o parolă pentru întâlnire</p>
-        <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul adunării</a></p>
+        <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
+        <LinkMeeting><img src={ZoomLogo} alt="Zoom Logo"/> poate solicita o parolă pentru întâlnire</LinkMeeting>
+        <hr/>
+        <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
-        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
-                                                 target="_blank">{props.noteLinkTxt}</a></InfoNote>}
+
+        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank"> {props.noteLinkTxt}</a></InfoNote>}
       </IntroCardContainer>
 
       <div>

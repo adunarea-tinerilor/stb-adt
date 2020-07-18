@@ -13,14 +13,14 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      footerUpdateDate: "16.07.2020",
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202",
+      footerUpdateDate: "18.07.2020",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202&ah=2&am=30",
 
 
       // next meeting
       nextMeetingDate: "Joi, 23 Iulie",
       // nextMeetingSubject:"Discuții Studiu",
-      nextMeetingSubject:"Adunare de experiențe, temă: Consacrarea",
+      nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
       // nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       // nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [],
@@ -55,6 +55,15 @@ export default class App extends React.Component {
       // }
 
       archiveList: [
+    {
+      date: "16.07.2020",
+        subjectLabel: "Întrebări discutate:",
+      questionList: [
+      "[ 28:24 ] Care element ar trebui să caracterizeze în principal atmosfera unui cămin, oricât de sărac ar fi? (Vol. 6 pag. 529 p. 1)",
+      "[ 1:29:25 ] Ce se poate aştepta de la un copil educat în mod potrivit în ceea ce priveşte consacrarea faţă de Domnul? (Vol. 6 pag. 529 p. 2)",
+      ],
+      videoSrc: "https://www.youtube.com/watch?v=YpzLM2dp3BE"
+    },
         {
           date: "09.07.2020",
           subjectLabel: "Întrebări discutate:",

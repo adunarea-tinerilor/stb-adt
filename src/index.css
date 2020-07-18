@@ -102,3 +102,9 @@ img {
 .is-active {
   display: block;
 }
+
+hr {
+  height: 1px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
