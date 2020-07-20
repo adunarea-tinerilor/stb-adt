@@ -11,9 +11,14 @@ const CardContainer = styled.div`
    
   @media only screen and (min-width: 1080px) {
     width: 100%;
+    margin: 0 0 40px;
+  }
+`;
+
+const CardWrapper = styled.div`   
+  @media only screen and (min-width: 1080px) {
     display: flex;
     align-items: center;
-    margin: 0 0 40px;
   }
 `;
 const CardDate = styled.div`
@@ -118,33 +123,35 @@ export default function Card(props) {
       {props.filteredList && props.filteredList.map((meeting, index) => {
         return (
           <CardContainer key={index}>
-            <TextContainer>
-              <CardDate>
-                <h3>{meeting.subjectLabel}</h3>
-                <h3>{meeting.date}</h3>
-              </CardDate>
-              <ul>{
-                meeting.questionList.map((meeting, index) => {
-                  return <li key={index}>{meeting}</li>
-                })}
-              </ul>
-              {
-                meeting.button &&
-                <RefContainer>
-                  <RefButton
-                    onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ? "Închide" : meeting.button}`}</RefButton>
-                  <div className={`tooltip ${meeting.refOpen === true ? "is-active" : ""}`}>
-                    <SmallText>{meeting.referenceNote}</SmallText>
-                  </div>
-                </RefContainer>
-              }
-            </TextContainer>
-            <VideoContainer>
-              <VideoImage src={VideoImg} alt="Open Bible"/>
-              <a href={meeting.videoSrc} rel="noopener noreferrer" target="_blank">
-                <VideoBtn></VideoBtn>
-              </a>
-            </VideoContainer>
+            <CardWrapper>
+              <TextContainer>
+                <CardDate>
+                  <h3>{meeting.subjectLabel}</h3>
+                  <h3>{meeting.date}</h3>
+                </CardDate>
+                <ul>{
+                  meeting.questionList.map((meeting, index) => {
+                    return <li key={index}>{meeting}</li>
+                  })}
+                </ul>
+                {
+                  meeting.button &&
+                  <RefContainer>
+                    <RefButton
+                      onClick={() => props.handleArchiveButton(index)}>{`${meeting.refOpen === true ? "Închide" : meeting.button}`}</RefButton>
+                    <div className={`tooltip ${meeting.refOpen === true ? "is-active" : ""}`}>
+                      <SmallText>{meeting.referenceNote}</SmallText>
+                    </div>
+                  </RefContainer>
+                }
+              </TextContainer>
+              <VideoContainer>
+                <VideoImage src={VideoImg} alt="Open Bible"/>
+                <a href={meeting.videoSrc} rel="noopener noreferrer" target="_blank">
+                  <VideoBtn></VideoBtn>
+                </a>
+              </VideoContainer>
+            </CardWrapper>
           </CardContainer>
         )
       })}

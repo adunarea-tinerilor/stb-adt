@@ -13,7 +13,7 @@ export default class App extends React.Component {
 
     this.state = {
       // general
-      footerUpdateDate: "18.07.2020",
+      footerUpdateDate: "20.07.2020",
       meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202&ah=2&am=30",
 
 
@@ -34,7 +34,7 @@ export default class App extends React.Component {
       // Adunare Copii INFO
       childrenMeeting : [
         {
-          title: "Adunare pentru Tineri & Copii, 25 Iulie",
+          title: "Adunare pentru Tineri & Copii. Sâmbătă, 25 Iulie",
           subject: [
             "Toți participanții, atât copiii precum și tinerii peste 15 ani să memoreze versetul din Mana Cerească Zilnică a zilei sale de naștere.",
             "⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁",
@@ -69,12 +69,12 @@ export default class App extends React.Component {
       archiveList: [
     {
       date: "16.07.2020",
-        subjectLabel: "Întrebări discutate:",
+      subjectLabel: "Întrebări discutate:",
       questionList: [
       "[ 28:24 ] Care element ar trebui să caracterizeze în principal atmosfera unui cămin, oricât de sărac ar fi? (Vol. 6 pag. 529 p. 1)",
       "[ 1:29:25 ] Ce se poate aştepta de la un copil educat în mod potrivit în ceea ce priveşte consacrarea faţă de Domnul? (Vol. 6 pag. 529 p. 2)",
       ],
-      videoSrc: "https://www.youtube.com/watch?v=YpzLM2dp3BE"
+      videoSrc: "https://www.youtube.com/watch?v=YpzLM2dp3BE",
     },
         {
           date: "09.07.2020",
@@ -141,15 +141,35 @@ export default class App extends React.Component {
       // zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
-      value: ""
+      value: "",
+      showScroll: false
     };
   }
 
   componentDidMount() {
     this.setState({
       filteredList: this.state.archiveList
-    })
+    });
+    window.addEventListener('scroll', this.checkScrollTop)
   }
+
+  checkScrollTop = () => {
+    let showScroll = this.state.showScroll
+    if (!showScroll && window.pageYOffset > 600){
+      this.setState({
+        showScroll: true
+      })
+    } else if (showScroll && window.pageYOffset <= 600){
+      this.setState({
+        showScroll: false
+      })
+    }
+  };
+
+  handleScrollTop = () => {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
+
 
   // Toggle Reference button
   handleArchiveButton = index => {
@@ -175,7 +195,6 @@ export default class App extends React.Component {
   };
 
   handleClearSearch = () => {
-    console.log("test")
     this.setState({
       filteredList: this.state.archiveList,
       value: ""
@@ -216,6 +235,8 @@ export default class App extends React.Component {
               value={this.state.value}
               handleInput={this.handleInput}
               handleClearSearch={this.handleClearSearch}
+              scrollTop={this.handleScrollTop}
+              showScroll={this.state.showScroll}
             />}
           />
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
