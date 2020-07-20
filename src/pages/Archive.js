@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from "../partials/Card";
 import Search from "../partials/Search";
+import Arrow from "../img/arrow.png"
 
 // Styles
 const ArchiveContainer = styled.section`
@@ -30,9 +31,14 @@ const ScrollTop = styled.button`
   bottom: 20px;
   background: teal;
   border: 0;
-  color: white;
   outline: none;
-  font-size: 25px;
+  height: 32px;
+  width: 32px;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export default function Archive(props) {
@@ -50,7 +56,7 @@ export default function Archive(props) {
           filteredList={props.filteredList}
           handleArchiveButton={props.handleArchiveButton}/>
       </div>
-      {props.showScroll === true && <ScrollTop onClick={props.scrollTop}>&#x1F809;</ScrollTop>}
+      {props.showScroll === true && <ScrollTop onClick={props.scrollTop}><img src={Arrow} /></ScrollTop>}
     </ArchiveContainer>
   );
 }
