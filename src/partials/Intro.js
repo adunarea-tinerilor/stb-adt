@@ -86,7 +86,7 @@ export default function Intro(props) {
         <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
 
-        {props.note && <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank"> {props.noteLinkTxt}</a></InfoNote>}
+        {props.note && <div><hr/><InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
       </IntroCardContainer>
 
       <div>
