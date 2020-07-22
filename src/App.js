@@ -1,23 +1,26 @@
 import React from 'react';
 import {HashRouter, Route} from "react-router-dom";
-//components
+//COMPONENTS
 import Header from "./global-components/Header";
 import Footer from "./global-components/Footer";
 import Home from "./pages/Home";
 import Archive from "./pages/Archive";
-
+// DATA
+import ArchiveData from "./data/archive-data";
+import ChildrenMeeting from "./data/children-meeting-data";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      // general
-      footerUpdateDate: "20.07.2020",
+      // UPDATE DATE:
+      footerUpdateDate: "22.07.2020",
+
+      // Meeting TIME Link:
       meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202&ah=2&am=30",
 
-
-      // next meeting
+      // NEXT MEETING DATA:
       nextMeetingDate: "Joi, 23 Iulie",
       // nextMeetingSubject:"Discuții Studiu",
       nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
@@ -25,131 +28,31 @@ export default class App extends React.Component {
       // nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [],
 
-
-      // announcement notes
+      // ANNOUNCEMENTS DATA:
       note: "Adunare pentru Copii & Tineri - Sâmbătă, 25 Iulie - ",
       noteLinkTxt: "vezi ora",
-      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200725T18&p1=49",
+      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200725T11&p1=1206",
 
-      // Adunare Copii INFO
-      childrenMeeting : [
-        {
-          title: "Adunare pentru Tineri & Copii. Sâmbătă, 25 Iulie",
-          subject: [
-            "Toți participanții, atât copiii precum și tinerii peste 15 ani să memoreze versetul din Mana Cerească Zilnică a zilei sale de naștere.",
-            "⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁",
-            "Copiii până la 15 ani",
-            "⦁ Va urma un program de activități de recapitulare și continuare a subiectului despre ascultarea de părinți, de Domnul și de cei mai în vârstă.",
-            "⦁ Copiii care doresc se pot pregăti adăugător cu poezii, versete (se va aloca puțin timp pentru aceasta, însă este opțional)",
-            "⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁⦁",
-            "Tineri 15 ani +",
-            "⦁ Criteriile conform cărora ar trebui să luam decizii corecte. Cum să vedem voia Domnului în viețile nostre?",
-            "⦁ Convertirea lui Saul (Ap. Pavel), din Fapte 9:1-22 și Vestitorul Dimineții Milenare p. 70 (Saul din Tars botezat cu botezul lui Ioan). Ce lecții putem învăța de aici?",
-            "Dacă va mai rămânea timp am vrea tinerii să ne descrie: Procesul de gândire cum și la ce te-ai gândi când ai aplica în realitate, în practica personală îndemnul de a cântări costul din Luca 14:28 când vii în atingere cu gândul dacă să te predai cu totul Domnului în consacrare sau nu?",
-
-          ]
-        }
-      ],
-
-      // archive list
-      //add last meeting details
-      //always include  questionList: [], if no content leave it empty
-      // {
-      //   subjectLabel: "Întrebări discutate:",
-      //     date: "date.month.year",
-      //   questionList: [
-      //   "Question  [ start time ]"
-      // ],
-      //   refOpen: false,
-      //   button: "Vezi Referința",
-      //   referenceNote: "Reference text",
-      //   videoSrc: "Video Link"
-      // }
-
-      archiveList: [
-    {
-      date: "16.07.2020",
-      subjectLabel: "Întrebări discutate:",
-      questionList: [
-      "[ 28:24 ] Care element ar trebui să caracterizeze în principal atmosfera unui cămin, oricât de sărac ar fi? (Vol. 6 pag. 529 p. 1)",
-      "[ 1:29:25 ] Ce se poate aştepta de la un copil educat în mod potrivit în ceea ce priveşte consacrarea faţă de Domnul? (Vol. 6 pag. 529 p. 2)",
-      ],
-      videoSrc: "https://www.youtube.com/watch?v=YpzLM2dp3BE",
-    },
-        {
-          date: "09.07.2020",
-          subjectLabel: "Întrebări discutate:",
-          questionList: [
-           "[ 28:04 ] Cum să discute părinţii creştini cu copiii lor şi să-i ajute să înţeleagă cerinţele divine şi necesitatea pentru disciplină? (Vol. 6 pag. 526 p. 2)",
-           "[ 1:08:39 ] Cât de devreme poate un copil să aprecieze principiile dreptăţii şi când trebuie să înceapă un părinte clădirea caracterului în copil? (Vol. 6 pag. 527 p. 1)",
-           "[ 1:43:50 ] Care este lucrul atotimportant să ni-l amintim în educarea unui copil? (Vol. 6 pag. 528 p. 1)",
-           "[ 1:59:50 ] Care va fi pierderea precum şi experienţa amară a părinţilor care nu reuşesc să-şi educe copiii în mod potrivit? (Vol. 6 pag. 528 p. 2)"],
-          videoSrc: "https://www.youtube.com/watch?v=56H5N9KfpXo"
-        },
-        {
-          date: "02.07.2020",
-          subjectLabel: "Întrebări discutate:",
-          questionList: ["[ 23:22 ] Definiţi cuvântul ordine, care a fost numită \"prima lege a cerului\", şi arătaţi cum răsplăţile şi pedepsele sunt însoţitoarele necesare ale Legii Iubirii într-un cămin ideal. (Vol. 6 pag. 525 p. 1,2)",
-            "[ 1:47:00 ] Cum să aibă grijă părinţii atunci când corectează pe copii prin cuvânt sau faptă? (Vol. 6 pag. 526 p. 1)"],
-          videoSrc: "https://www.youtube.com/watch?v=Sela3kKs8ng"
-        },
-        {
-          date: "25.06.2020",
-          subjectLabel: "Întrebări discutate:",
-          questionList: ["[ 18:52 ] Program copii - poezii & cântări",
-            "[ 1:17:03 ] Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? (Vol. 6 pag. 524 p. 1,2)"],
-          videoSrc: "https://www.youtube.com/watch?v=Xtt-TKpBGkc"
-        },
-        {
-          date: "18.06.2020",
-          subjectLabel: "Discuții",
-          questionList: ["Adunare de experiențe"],
-          videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
-        },
-        {
-          subjectLabel: "Întrebări discutate:",
-          date: "11.06.2020",
-          questionList: ["[ 23:44 ] Cum trebuie să avem grijă de hrana și sănătatea copiilor noștri? (Vol. 6 pag. 522 - 523)"],
-          videoSrc: "https://m.youtube.com/watch?v=2Y8YjhPFXj4"
-        },
-        {
-          subjectLabel: "Întrebări discutate:",
-          date: "4.06.2020",
-          questionList: ["[ 19:20 ] Cum putem influența, educa, crește copii mai avantajos în condițiile imperfecte din prezent?"],
-          videoSrc: "https://www.youtube.com/watch?v=m_HWlMmS8EI&feature=emb_title"
-        },
-        {
-          subjectLabel: "Întrebări discutate:",
-          date: "28.05.2020",
-          questionList: ["[ 10:32 ] Program copii - poezii & cântări",
-            "[ 1:09:54 ] Rolul reproducerii în viața omenirii și a Noii creații? (Vol. 6 pag. 520 par. 2)",
-            "Responsabilitatea noastră și a Domnului în creșterea urmașilor."],
-          videoSrc: "https://www.youtube.com/watch?v=Tna0fxadpNA&feature=emb_title"
-        },
-        {
-          subjectLabel: "Întrebări discutate:",
-          date: "21.05.2020",
-          questionList: ["[ 13:54 ] Decizia de a avea copii sau nu.",
-            "[ 1:34:18 ] Câți copii să avem?"],
-          videoSrc: "https://www.youtube.com/watch?v=gnwQ7HpVqR0&feature=emb_title"
-        }
-      ],
-      filteredList: [],
-
-      // general info
+      // GENERAL INFO DATA:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
-      // zoomLink: "https://us02web.zoom.us/j/9163857157?pwd=aUxkTlBDU1dsS3ZOSHVJV01PT0NpZz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
+      showScroll: false,
       value: "",
-      showScroll: false
+      archiveList: [],
+      filteredList: [],
+      childrenMeeting: [],
     };
   }
 
   componentDidMount() {
     this.setState({
-      filteredList: this.state.archiveList
+      archiveList: ArchiveData,
+      filteredList: ArchiveData,
+      childrenMeeting: ChildrenMeeting
     });
+
+    // check page scroll
     window.addEventListener('scroll', this.checkScrollTop)
   }
 

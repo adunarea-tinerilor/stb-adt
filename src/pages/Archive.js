@@ -46,12 +46,22 @@ export default function Archive(props) {
   return (
     <ArchiveContainer className="component">
       <PageHeading>
-        <PageTitle>Arhivă Studii - Video</PageTitle>
+        <PageTitle >Arhivă Studii - Video</PageTitle>
         <Search value={props.value}
                 handleInput={props.handleInput}
                 handleClearSearch={props.handleClearSearch}/>
       </PageHeading>
       <div>
+        {props.filteredList.length === 0 &&
+          <div>
+            <h3>Nu am găsit rezultate pentru <i>"{props.value}"</i></h3>
+            <h3>Încearcă următoarele:</h3>
+            <p>⦁ Nu folosi diacritice.</p>
+            <p>⦁ Verifică dacă ai scris corect termenii.</p>
+            <p>⦁ Încearcă să folosești sinonime.</p>
+
+          </div>}
+
         <Card
           filteredList={props.filteredList}
           handleArchiveButton={props.handleArchiveButton}/>

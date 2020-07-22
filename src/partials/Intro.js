@@ -104,7 +104,7 @@ export default function Intro(props) {
 
         {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
           return (
-            <IntroCardContainer>
+            <IntroCardContainer key={index}>
               <h2>{meeting.title}</h2>
               {
                 meeting.subject.map((subj, index) => {
