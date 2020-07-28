@@ -14,26 +14,30 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      // UPDATE DATE:
-      footerUpdateDate: "22.07.2020",
+      // SITE UPDATE DATE:
+      footerUpdateDate: "24.07.2020",
 
       // Meeting TIME Link:
       meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202&ah=2&am=30",
 
-      // NEXT MEETING DATA:
-      nextMeetingDate: "Joi, 23 Iulie",
-      // nextMeetingSubject:"Discuții Studiu",
-      nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
-      // nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      // nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
-      nextMeetingQuestions: [],
+      // NEXT MEETING Details:
+      nextMeetingDate: "Joi, 30 Iulie",
+      nextMeetingSubject:"Discuții Studiu",
+      // nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
+      nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
+      nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
+      nextMeetingQuestions: [
+        "Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Pag. 530 p. 1, 2",
+        "Explicaţi cum copiii născuţi din părinţi consacraţi sunt îndreptăţiţi? Pag. 531 p. 1",
+        "Care este pregătirea harului divin în ce-i priveşte pe copii, atunci când doar unul din părinţi este credincios? Pag. 532 p. 1, 2"
+      ],
 
-      // ANNOUNCEMENTS DATA:
-      note: "Adunare pentru Copii & Tineri - Sâmbătă, 25 Iulie - ",
-      noteLinkTxt: "vezi ora",
-      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200725T11&p1=1206",
+      // ANNOUNCEMENTS:
+      // note: "Adunare pentru Copii & Tineri - Sâmbătă, 25 Iulie - ",
+      // noteLinkTxt: "vezi ora",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200725T11&p1=1206",
 
-      // GENERAL INFO DATA:
+      // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
@@ -57,7 +61,7 @@ export default class App extends React.Component {
   }
 
   checkScrollTop = () => {
-    let showScroll = this.state.showScroll
+    let showScroll = this.state.showScroll;
     if (!showScroll && window.pageYOffset > 600){
       this.setState({
         showScroll: true
@@ -76,7 +80,7 @@ export default class App extends React.Component {
 
   // Toggle Reference button
   handleArchiveButton = index => {
-    let list = this.state.archiveList
+    let list = this.state.archiveList;
     list[index].refOpen = !list[index].refOpen;
     this.setState({
       list
