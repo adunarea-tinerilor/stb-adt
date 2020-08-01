@@ -8,6 +8,14 @@
 
 const ArchiveData = [
   {
+    date: "30.07.2020",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 26:28 ] Program cu copiii - versete, poezii & cântări",
+      "[ 1:27:18 ] Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Vol. 6 Pag. 530 p. 1, 2",
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=YkBheDC9bB4",
+  },  {
     date: "16.07.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
@@ -36,7 +44,8 @@ const ArchiveData = [
   {
     date: "25.06.2020",
     subjectLabel: "Întrebări discutate:",
-    questionList: ["[ 18:52 ] Program copii - poezii & cântări",
+    questionList: [
+      "[ 18:52 ] Program cu copiii - versete, poezii & cântări",
       "[ 1:17:03 ] Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? (Vol. 6 pag. 524 p. 1,2)"],
     videoSrc: "https://www.youtube.com/watch?v=Xtt-TKpBGkc"
   },
@@ -61,7 +70,7 @@ const ArchiveData = [
   {
     subjectLabel: "Întrebări discutate:",
     date: "28.05.2020",
-    questionList: ["[ 10:32 ] Program copii - poezii & cântări",
+    questionList: ["[ 10:32 ] Program cu copiii - versete, poezii & cântări",
       "[ 1:09:54 ] Rolul reproducerii în viața omenirii și a Noii creații? (Vol. 6 pag. 520 par. 2)",
       "Responsabilitatea noastră și a Domnului în creșterea urmașilor."],
     videoSrc: "https://www.youtube.com/watch?v=Tna0fxadpNA&feature=emb_title"

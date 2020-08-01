@@ -15,27 +15,27 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "24.07.2020",
+      footerUpdateDate: "1.08.2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200723T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200806T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 30 Iulie",
+      nextMeetingDate: "Joi, 6 August",
       nextMeetingSubject:"Discuții Studiu",
       // nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [
-        "Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Pag. 530 p. 1, 2",
         "Explicaţi cum copiii născuţi din părinţi consacraţi sunt îndreptăţiţi? Pag. 531 p. 1",
-        "Care este pregătirea harului divin în ce-i priveşte pe copii, atunci când doar unul din părinţi este credincios? Pag. 532 p. 1, 2"
+        "Care este pregătirea harului divin în ce-i priveşte pe copii, atunci când doar unul din părinţi este credincios? Pag. 532 p. 1, 2",
+        "În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? Pag. 532 p. 3"
       ],
 
       // ANNOUNCEMENTS:
-      // note: "Adunare pentru Copii & Tineri - Sâmbătă, 25 Iulie - ",
-      // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200725T11&p1=1206",
+      note: "Adunare pentru Copii - Sâmbătă, 8 August - ",
+      noteLinkTxt: "vezi ora",
+      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200808T17&p1=49&ah=1",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
