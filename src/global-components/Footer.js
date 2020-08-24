@@ -37,7 +37,7 @@ export default function Footer(props) {
   return (
     <FooterContainer className="component">
       <p>Dacă ai întrebări te rugăm să ne scrii un email  <FooterEmail href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail></p>
-      <FooterDate>Actualizat: {props.footerUpdateDate}</FooterDate>
+      <FooterDate>{props.footerUpdateDate}</FooterDate>
     </FooterContainer>
   );
 }

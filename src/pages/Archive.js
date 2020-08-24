@@ -39,6 +39,11 @@ const ScrollTop = styled.button`
     height: 100%;
     width: 100%;
   }
+  
+   @media only screen and (min-width: 1080px) {
+    right: 40px;
+    bottom: 40px;
+   }
 `;
 
 export default function Archive(props) {

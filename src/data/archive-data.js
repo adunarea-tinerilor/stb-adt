@@ -7,6 +7,38 @@
 // }
 
 const ArchiveData = [
+  // {
+  //   date: "27.08.2020",
+  //   subjectLabel: "Întrebări discutate:",
+  //   questionList: [
+  //     "[] Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 20",
+  //     "[] Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? pag. 537 p.1 - pag. 538 p. 1",
+  //     "[] Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? pag. 538 p. 2"
+  //   ]
+  // },
+  // {
+  //   date: "13.08.2020",
+  //   subjectLabel: "Discuții:",
+  //   questionList: ["Adunare de experiențe"]
+  // },
+  // {
+  //   date: "13.08.2020",
+  //   subjectLabel: "Întrebări discutate:",
+  //   questionList: [
+  //     "[] În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? pag. 532 p. 3",
+  //     "[] În cazul în care soţul ar fi Noua Creatură, care trebuie să fie calea sa în privinţa familiei? pag. 533 p. 1",
+  //     "[] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p1 până la pag. 535 p. 2"
+  //   ]
+  // },
+  {
+    date: "06.08.2020",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 49:05 ] Explicaţi cum copiii născuţi din părinţi consacraţi sunt îndreptăţiţi? Vol. 6 pag. 531 p. 1",
+      "[ 1:29:26 ] Care este pregătirea harului divin în ce-i priveşte pe copii, atunci când doar unul din părinţi este credincios? Vol. 6 pag. 532 p. 1, 2"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=LTk8YDA9Nmw",
+  },
   {
     date: "30.07.2020",
     subjectLabel: "Întrebări discutate:",
@@ -15,7 +47,7 @@ const ArchiveData = [
       "[ 1:27:18 ] Cum se manifestă în părinţi şi copii influenţa rea a unui cămin în care egoismul este legea? Vol. 6 Pag. 530 p. 1, 2",
     ],
     videoSrc: "https://www.youtube.com/watch?v=YkBheDC9bB4",
-  },  {
+  }, {
     date: "16.07.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
