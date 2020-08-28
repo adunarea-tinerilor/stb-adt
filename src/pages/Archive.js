@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from "../partials/Card";
 import Search from "../partials/Search";
-import Arrow from "../img/arrow.png"
+import Arrow from "../img/Arrow-Up.png"
 
 // Styles
 const ArchiveContainer = styled.section`
@@ -29,20 +29,24 @@ const ScrollTop = styled.button`
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background: teal;
+  background: transparent;
   border: 0;
   outline: none;
-  height: 32px;
-  width: 32px;
+  transition: all .3s linear;
 
   img {
-    height: 100%;
-    width: 100%;
+    object-fit: cover;
+    width: 30px;
   }
   
    @media only screen and (min-width: 1080px) {
     right: 40px;
     bottom: 40px;
+    padding: 0;
+    
+    &:hover {
+       bottom: 48px;
+    }
    }
 `;
 

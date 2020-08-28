@@ -27,9 +27,9 @@ export default class App extends React.Component {
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [
-        "Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? pag. 539 p. 1",
-        "În ce priveşte joaca: Care sunt avantajele unei activităţi fizice potrivite şi influenţa deteriorantă a plăcerilor nefolositoare şi inutile? pag. 539 p. 2",
-        "Cum pot fi învăţaţi copiii să le placă ocupaţiile folositoare şi de ajutor? pag. 540 p. 1"
+        "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 20",
+        "Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? pag. 537 p.1 - pag. 538 p. 1",
+        "Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? pag. 538 p. 2"
       ],
 
       // ANNOUNCEMENTS:
