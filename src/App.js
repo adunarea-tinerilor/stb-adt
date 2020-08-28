@@ -15,21 +15,21 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "24 August 2020",
+      footerUpdateDate: "28 August 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200827T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200903T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 27 August",
-      nextMeetingSubject:"Discuții Studiu",
+      nextMeetingDate: "Joi, 3 Septembrie",
+      nextMeetingSubject: "Discuții Studiu",
       // nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [
-        "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 20",
-        "Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? pag. 537 p.1 - pag. 538 p. 1",
-        "Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? pag. 538 p. 2"
+        "Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? pag. 539 p. 1",
+        "În ce priveşte joaca: Care sunt avantajele unei activităţi fizice potrivite şi influenţa deteriorantă a plăcerilor nefolositoare şi inutile? pag. 539 p. 2",
+        "Cum pot fi învăţaţi copiii să le placă ocupaţiile folositoare şi de ajutor? pag. 540 p. 1"
       ],
 
       // ANNOUNCEMENTS:
@@ -62,11 +62,11 @@ export default class App extends React.Component {
 
   checkScrollTop = () => {
     let showScroll = this.state.showScroll;
-    if (!showScroll && window.pageYOffset > 600){
+    if (!showScroll && window.pageYOffset > 600) {
       this.setState({
         showScroll: true
       })
-    } else if (showScroll && window.pageYOffset <= 600){
+    } else if (showScroll && window.pageYOffset <= 600) {
       this.setState({
         showScroll: false
       })

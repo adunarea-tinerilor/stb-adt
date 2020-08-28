@@ -56,7 +56,7 @@ export default function Search(props) {
       value={props.value}
       onChange={props.handleInput}
       />
-      {props.value != "" &&
+      {props.value !== "" &&
         <Icon onClick={props.handleClearSearch} title="Șterge">✕</Icon>
       }
     </SearchContainer>

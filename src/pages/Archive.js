@@ -64,14 +64,12 @@ export default function Archive(props) {
             <p>⦁ Nu folosi diacritice.</p>
             <p>⦁ Verifică dacă ai scris corect termenii.</p>
             <p>⦁ Încearcă să folosești sinonime.</p>
-
           </div>}
-
         <Card
           filteredList={props.filteredList}
           handleArchiveButton={props.handleArchiveButton}/>
       </div>
-      {props.showScroll === true && <ScrollTop onClick={props.scrollTop}><img src={Arrow} /></ScrollTop>}
+      {props.showScroll === true && <ScrollTop onClick={props.scrollTop}><img src={Arrow} alt="Biblia deschisă" /></ScrollTop>}
     </ArchiveContainer>
   );
 }
