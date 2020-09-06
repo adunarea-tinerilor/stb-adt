@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+
 //MEDIA
 import ZoomLogo from "../img/zoom-logo.png"
+import downloadFile from "../data/Vreau-sa-ma-prezint.pdf"
 
 // Styles
 const IntroContainer = styled.section`
@@ -10,6 +12,10 @@ const IntroContainer = styled.section`
   
    & > div:first-child {
       text-align: center;
+    }
+    
+    a {
+      color: teal;
     }
   
   @media only screen and (min-width: 1080px) {
@@ -86,7 +92,10 @@ export default function Intro(props) {
         <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
         <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
 
-        {props.note && <div><hr/><InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
+        {props.note && <div>
+          <hr/>
+          <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
+                                    target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
       </IntroCardContainer>
 
       <div>
@@ -106,10 +115,10 @@ export default function Intro(props) {
           return (
             <IntroCardContainer key={index}>
               <h2>{meeting.title}</h2>
-              {
-                meeting.subject.map((subj, index) => {
-                  return <p key={index}>{subj}</p>
-                })}
+              {meeting.subject.map((subj, index) => {
+                return <p key={index}>{subj}</p>
+              })}
+              {meeting.downloadFileLabel && <a href={downloadFile} download>{meeting.downloadFileLabel}</a>}
             </IntroCardContainer>
           )
         })}

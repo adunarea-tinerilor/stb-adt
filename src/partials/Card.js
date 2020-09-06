@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+
 //Media
-import VideoImg from '../img/videoImg.jpg'
+import VideoImg from '../img/videoImg.jpg';
 
 // Styles
 const CardContainer = styled.div`

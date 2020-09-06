@@ -108,3 +108,7 @@ hr {
   border: none;
   border-bottom: 1px solid lightgray;
 }
+
+.highlight {
+  background: rgba(0, 128, 128, 0.25);
+}

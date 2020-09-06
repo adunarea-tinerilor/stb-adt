@@ -15,27 +15,27 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "28 August 2020",
+      footerUpdateDate: "6 Septembrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200903T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200910T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 3 Septembrie",
+      nextMeetingDate: "Joi, 10 Septembrie",
       nextMeetingSubject: "Discuții Studiu",
       // nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [
-        "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 20",
-        "Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? pag. 537 p.1 - pag. 538 p. 1",
-        "Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? pag. 538 p. 2"
+        "Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? Pag. 537 p1; pag. 538 p1",
+        "Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? Pag. 538 p2",
+        "Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? pag. 539 p. 1"
       ],
 
       // ANNOUNCEMENTS:
-      // note: "Adunare pentru Copii - Sâmbătă, 22 August - ",
+      // note: "Adunare pentru Copii - Sâmbătă, 5 Septembrie - ",
       // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200808T17&p1=49&ah=1",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200905T08&p1=202&ah=1",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",

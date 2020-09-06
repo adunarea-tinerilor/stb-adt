@@ -7,29 +7,26 @@
 // }
 
 const ArchiveData = [
-  // {
-  //   date: "03.09.2020",
-  //   subjectLabel: "Întrebări discutate:",
-  //   questionList: [
-  //     "[] Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 20",
-  //     "[] Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? pag. 537 p.1 - pag. 538 p. 1",
-  //     "[] Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? pag. 538 p. 2"
-  //   ]
-  // },
-  // {
-  //   date: "13.08.2020",
-  //   subjectLabel: "Discuții:",
-  //   questionList: ["Adunare de experiențe"]
-  // },
-  // {
-  //   date: "13.08.2020",
-  //   subjectLabel: "Întrebări discutate:",
-  //   questionList: [
-  //     "[] În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? pag. 532 p. 3",
-  //     "[] În cazul în care soţul ar fi Noua Creatură, care trebuie să fie calea sa în privinţa familiei? pag. 533 p. 1",
-  //     "[] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p1 până la pag. 535 p. 2"
-  //   ]
-  // },
+  {
+    date: "03.09.2020",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 28:09 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p.1 până la pag. 535 p. 2",
+      "[ 59:01 ] Care două principii în special, ar trebui să ghideze pe părinţi în educarea copiilor lor? pag. 536 p. 1",
+      "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 2"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=pX8dUCXKOpE&ab_channel=IgorGutu",
+  },
+  {
+    date: "13.08.2020",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 34:06 ] În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? pag. 532 p. 3",
+      "[ 1:00:19 ] În cazul în care soţul ar fi Noua Creatură, care trebuie să fie calea sa în privinţa familiei? pag. 533 p. 1",
+      "[ 1:50:23 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p. 1 până la pag. 535 p. 2"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=lm0jt8_1K2Y&ab_channel=IgorGutu"
+  },
   {
     date: "06.08.2020",
     subjectLabel: "Întrebări discutate:",
