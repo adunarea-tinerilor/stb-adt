@@ -6,7 +6,7 @@
 
 body {
   background: whitesmoke;
-  margin: 15px;
+  margin: 10px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -107,8 +107,4 @@ hr {
   height: 1px;
   border: none;
   border-bottom: 1px solid lightgray;
-}
-
-.highlight {
-  background: rgba(0, 128, 128, 0.25);
 }

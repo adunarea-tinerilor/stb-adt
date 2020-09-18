@@ -8,12 +8,22 @@
 
 const ArchiveData = [
   {
+    date: "10.09.2020",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 32:35 ] Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? Vol. pag. 537 p. 1 și pag. 538 p. 1",
+      "[ 1:29:49 ] Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? Vol. pag. 538 p. 2",
+      "[ 2:01:37 ] Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? Vol. pag. 539 p. 1"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=22InSjsacIs&ab_channel=IgorGutu"
+  },
+  {
     date: "03.09.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
-      "[ 28:09 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p.1 până la pag. 535 p. 2",
-      "[ 59:01 ] Care două principii în special, ar trebui să ghideze pe părinţi în educarea copiilor lor? pag. 536 p. 1",
-      "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? pag. 536 p. 2"
+      "[ 28:09 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? Vol. pag. 534 p.1 până la pag. 535 p. 2",
+      "[ 59:01 ] Care două principii în special, ar trebui să ghideze pe părinţi în educarea copiilor lor? Vol. pag. 536 p. 1",
+      "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? Vol. pag. 536 p. 2"
     ],
     videoSrc: "https://www.youtube.com/watch?v=pX8dUCXKOpE&ab_channel=IgorGutu",
   },
@@ -21,9 +31,9 @@ const ArchiveData = [
     date: "13.08.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
-      "[ 34:06 ] În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? pag. 532 p. 3",
-      "[ 1:00:19 ] În cazul în care soţul ar fi Noua Creatură, care trebuie să fie calea sa în privinţa familiei? pag. 533 p. 1",
-      "[ 1:50:23 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? pag. 534 p. 1 până la pag. 535 p. 2"
+      "[ 34:06 ] În cazul de mai înainte, asupra cărui părinte cade răspunderea de cap al familiei, dacă soţia ar fi Nouă Creatură? Vol. pag. 532 p. 3",
+      "[ 1:00:19 ] În cazul în care soţul ar fi Noua Creatură, care trebuie să fie calea sa în privinţa familiei? Vol. pag. 533 p. 1",
+      "[ 1:50:23 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? Vol. pag. 534 p. 1 până la pag. 535 p. 2"
     ],
     videoSrc: "https://www.youtube.com/watch?v=lm0jt8_1K2Y&ab_channel=IgorGutu"
   },
@@ -77,12 +87,6 @@ const ArchiveData = [
       "[ 18:52 ] Program cu copiii - versete, poezii & cântări",
       "[ 1:17:03 ] Cum trebuie conduse căminele Noilor Creaţii şi când şi cum trebuie folosită nuiaua dacă este necesar? (Vol. 6 pag. 524 p. 1,2)"],
     videoSrc: "https://www.youtube.com/watch?v=Xtt-TKpBGkc"
-  },
-  {
-    date: "18.06.2020",
-    subjectLabel: "Discuții",
-    questionList: ["Adunare de experiențe"],
-    videoSrc: "https://www.youtube.com/watch?v=Qni3WyGyUr4&feature=youtu.be"
   },
   {
     subjectLabel: "Întrebări discutate:",

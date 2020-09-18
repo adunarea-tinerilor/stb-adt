@@ -15,27 +15,27 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "6 Septembrie 2020",
+      footerUpdateDate: "18 Septembrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200910T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200917T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 10 Septembrie",
+      nextMeetingDate: "Joi, 24 Septembrie",
       nextMeetingSubject: "Discuții Studiu",
-      // nextMeetingSubject:"Adunare de experiențe. Temă: Consacrarea",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
       nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
       nextMeetingQuestions: [
-        "Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? Pag. 537 p1; pag. 538 p1",
-        "Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? Pag. 538 p2",
-        "Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? pag. 539 p. 1"
+        "În ce priveşte joaca: Care sunt avantajele unei activităţi fizice potrivite şi influenţa deteriorantă a plăcerilor nefolositoare şi inutile? pag. 539 p. 2",
+        "Cum pot fi învăţaţi copiii să le placă ocupaţiile folositoare şi de ajutor? pag. 540 p. 1",
+        "De ce trebuie să fie introduse în mintea tânără economia de timp şi de mijloace? pag. 540 p.  2"
+
       ],
 
       // ANNOUNCEMENTS:
-      // note: "Adunare pentru Copii - Sâmbătă, 5 Septembrie - ",
-      // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200905T08&p1=202&ah=1",
+      note: "Adunare pentru Copii - Sâmbătă, 19 Septembrie - ",
+      noteLinkTxt: "vezi ora",
+      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200919T08&p1=202&ah=1",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",

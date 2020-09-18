@@ -3,7 +3,54 @@ import styled from 'styled-components';
 
 //MEDIA
 import ZoomLogo from "../img/zoom-logo.png"
-import downloadFile from "../data/Vreau-sa-ma-prezint.pdf"
+// import downloadFile from "file source"
+
+export default function Intro(props) {
+
+  return (
+    <IntroContainer className="component">
+      <IntroCardContainer>
+        <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
+        <LinkMeeting><img src={ZoomLogo} alt="Zoom Logo"/> poate solicita o parolă pentru întâlnire</LinkMeeting>
+        <hr/>
+        <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
+        <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
+
+        {props.note && <div>
+          <hr/>
+          <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
+                                    target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
+      </IntroCardContainer>
+
+      <div>
+        <IntroCardContainer>
+          <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
+          <h2>{props.nextMeetingSubject}</h2>
+          <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer"
+                             target="_blank">{props.nextDiscussedLinkText}</a></DiscussedTitle>
+          <ol>
+            {props.nextMeetingQuestions.map((subject, index) => {
+              return <li key={index}><p>{subject}</p></li>
+            })}
+          </ol>
+        </IntroCardContainer>
+
+        {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
+          return (
+            <IntroCardContainer key={index}>
+              <h2>{meeting.title}</h2>
+              {meeting.subject.map((subj, index) => {
+                return <p key={index}>{subj}</p>
+              })}
+              {/*{meeting.downloadFileLabel && <a href={downloadFile} download>{meeting.downloadFileLabel}</a>}*/}
+            </IntroCardContainer>
+          )
+        })}
+      </div>
+
+    </IntroContainer>
+  );
+}
 
 // Styles
 const IntroContainer = styled.section`
@@ -80,50 +127,3 @@ const DiscussedTitle = styled.h3`
 const InfoNote = styled.p`
   font-weight: bold;
 `;
-
-export default function Intro(props) {
-
-  return (
-    <IntroContainer className="component">
-      <IntroCardContainer>
-        <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
-        <LinkMeeting><img src={ZoomLogo} alt="Zoom Logo"/> poate solicita o parolă pentru întâlnire</LinkMeeting>
-        <hr/>
-        <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
-        <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării</a></p>
-
-        {props.note && <div>
-          <hr/>
-          <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
-                                    target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
-      </IntroCardContainer>
-
-      <div>
-        <IntroCardContainer>
-          <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
-          <h2>{props.nextMeetingSubject}</h2>
-          <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer"
-                             target="_blank">{props.nextDiscussedLinkText}</a></DiscussedTitle>
-          <ol>
-            {props.nextMeetingQuestions.map((subject, index) => {
-              return <li key={index}><p>{subject}</p></li>
-            })}
-          </ol>
-        </IntroCardContainer>
-
-        {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
-          return (
-            <IntroCardContainer key={index}>
-              <h2>{meeting.title}</h2>
-              {meeting.subject.map((subj, index) => {
-                return <p key={index}>{subj}</p>
-              })}
-              {meeting.downloadFileLabel && <a href={downloadFile} download>{meeting.downloadFileLabel}</a>}
-            </IntroCardContainer>
-          )
-        })}
-      </div>
-
-    </IntroContainer>
-  );
-}
