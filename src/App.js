@@ -15,27 +15,29 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "18 Septembrie 2020",
+      footerUpdateDate: "1 Octombrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20200917T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201001T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 24 Septembrie",
+      nextMeetingDate: "Joi, 1 Octombrie",
       nextMeetingSubject: "Discuții Studiu",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "https://adevarprezent.org/obligatiile-parintesti-ale-noii-creatii/",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009344",
       nextMeetingQuestions: [
-        "În ce priveşte joaca: Care sunt avantajele unei activităţi fizice potrivite şi influenţa deteriorantă a plăcerilor nefolositoare şi inutile? pag. 539 p. 2",
         "Cum pot fi învăţaţi copiii să le placă ocupaţiile folositoare şi de ajutor? pag. 540 p. 1",
-        "De ce trebuie să fie introduse în mintea tânără economia de timp şi de mijloace? pag. 540 p.  2"
+        "De ce trebuie să fie introduse în mintea tânără economia de timp şi de mijloace? pag. 540 p.  2",
+        "Cum trebuie învăţat un copil să aleagă ce să citească şi ce să nu citească? pag. 541 p. 1",
+        "Cât de serioasă şi îndelungată este influenţa sugestiilor rele? pag. 541 p. 2",
+        "Cine trebuie să fie îndrumătorul copilului în pregătirea religioasă? Şi de ce este nedrept şi de asemenea dezavantajos să se încerce instruirea religioasă în şcolile publice? pag. 542 p. 1 - pag. 543 p. 1, 2."
 
       ],
 
       // ANNOUNCEMENTS:
-      note: "Adunare pentru Copii - Sâmbătă, 19 Septembrie - ",
-      noteLinkTxt: "vezi ora",
-      noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20200919T08&p1=202&ah=1",
+      // note: "Adunare pentru Copii - Sâmbătă, 10 Octombrie - ",
+      // noteLinkTxt: "vezi ora",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20201010T08&p1=202&ah=1",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",

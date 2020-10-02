@@ -39,9 +39,7 @@ export default function Intro(props) {
           return (
             <IntroCardContainer key={index}>
               <h2>{meeting.title}</h2>
-              {meeting.subject.map((subj, index) => {
-                return <p key={index}>{subj}</p>
-              })}
+              <div dangerouslySetInnerHTML={{__html: `${meeting.subject}`}}></div>
               {/*{meeting.downloadFileLabel && <a href={downloadFile} download>{meeting.downloadFileLabel}</a>}*/}
             </IntroCardContainer>
           )
