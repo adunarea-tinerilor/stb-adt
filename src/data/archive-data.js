@@ -11,9 +11,9 @@ const ArchiveData = [
     date: "10.09.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
-      "[ 32:35 ] Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? Vol. pag. 537 p. 1 și pag. 538 p. 1",
-      "[ 1:29:49 ] Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? Vol. pag. 538 p. 2",
-      "[ 2:01:37 ] Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? Vol. pag. 539 p. 1"
+      "[ 32:35 ] Cum trebuie privită educaţia unui copil în special în ceea ce priveşte urmarea unui colegiu? Vol. 6 pag. 537 p. 1 și pag. 538 p. 1",
+      "[ 1:29:49 ] Ce fel de educaţie trebuie privită ca mult superioară în orice privinţă faţă de cea obţinută în şcolile acestei lumi? Vol. 6 pag. 538 p. 2",
+      "[ 2:01:37 ] Care ar fi o educaţie potrivită în privinţa unei pregătiri ocupaţionale rezonabile? Şi de ce este aceasta preferabilă faţă de un curs la colegiu? Vol. 6 pag. 539 p. 1"
     ],
     videoSrc: "https://www.youtube.com/watch?v=22InSjsacIs&ab_channel=IgorGutu"
   },
@@ -21,9 +21,9 @@ const ArchiveData = [
     date: "03.09.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [
-      "[ 28:09 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? Vol. pag. 534 p.1 până la pag. 535 p. 2",
-      "[ 59:01 ] Care două principii în special, ar trebui să ghideze pe părinţi în educarea copiilor lor? Vol. pag. 536 p. 1",
-      "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? Vol. pag. 536 p. 2"
+      "[ 28:09 ] În cazul în care copiii nu au fost educaţi în mod potrivit când erau mai mici, ce încurajare şi sugestii pot fi oferite părinţilor? Vol. 6 pag. 534 p.1 până la pag. 535 p. 2",
+      "[ 59:01 ] Care două principii în special, ar trebui să ghideze pe părinţi în educarea copiilor lor? Vol. 6 pag. 536 p. 1",
+      "Cum să fie recunoscute şi luate în considerare de către părinte drepturile unui copil ajuns la maturitate? Vol. 6 pag. 536 p. 2"
     ],
     videoSrc: "https://www.youtube.com/watch?v=pX8dUCXKOpE&ab_channel=IgorGutu",
   },

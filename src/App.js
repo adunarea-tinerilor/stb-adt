@@ -15,23 +15,22 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "1 Octombrie 2020",
+      footerUpdateDate: "15 Octombrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201001T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201022T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 1 Octombrie",
+      nextMeetingDate: "Joi, 22 Octombrie",
       nextMeetingSubject: "Discuții Studiu",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009344",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009348",
       nextMeetingQuestions: [
-        "Cum pot fi învăţaţi copiii să le placă ocupaţiile folositoare şi de ajutor? pag. 540 p. 1",
-        "De ce trebuie să fie introduse în mintea tânără economia de timp şi de mijloace? pag. 540 p.  2",
-        "Cum trebuie învăţat un copil să aleagă ce să citească şi ce să nu citească? pag. 541 p. 1",
         "Cât de serioasă şi îndelungată este influenţa sugestiilor rele? pag. 541 p. 2",
-        "Cine trebuie să fie îndrumătorul copilului în pregătirea religioasă? Şi de ce este nedrept şi de asemenea dezavantajos să se încerce instruirea religioasă în şcolile publice? pag. 542 p. 1 - pag. 543 p. 1, 2."
-
+        "Cine trebuie să fie îndrumătorul copilului în pregătirea religioasă? Şi de ce este nedrept şi de asemenea dezavantajos să se încerce instruirea religioasă în şcolile publice? pag. 542 p. 1 - pag. 543 p. 1, 2.",
+        "Din ce punct de vedere poate fi considerată folositoare Şcoala duminicală? pag. 544 p. 1",
+        "În ce fel au fost Şcolile duminicale vătămătoare pentru părinţii creştini? pag. 544 p. 2",
+        "De ce este Şcoala duminicală un dezavantaj pentru copiii celor credincioşi? pag. 544 p. 3"
       ],
 
       // ANNOUNCEMENTS:
