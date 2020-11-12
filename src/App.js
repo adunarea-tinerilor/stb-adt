@@ -4,7 +4,7 @@ import {HashRouter, Route} from "react-router-dom";
 import Header from "./global-components/Header";
 import Footer from "./global-components/Footer";
 import Home from "./pages/Home";
-import Archive from "./pages/Archive";
+// import Archive from "./pages/Archive";
 // DATA
 import ArchiveData from "./data/archive-data";
 import ChildrenMeeting from "./data/children-meeting-data";
@@ -15,22 +15,24 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "15 Octombrie 2020",
+      footerUpdateDate: "12 Noiembrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201022T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201119T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 22 Octombrie",
+      nextMeetingDate: "Joi, 19 Noiembrie",
       nextMeetingSubject: "Discuții Studiu",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009348",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009369",
       nextMeetingQuestions: [
-        "Cât de serioasă şi îndelungată este influenţa sugestiilor rele? pag. 541 p. 2",
-        "Cine trebuie să fie îndrumătorul copilului în pregătirea religioasă? Şi de ce este nedrept şi de asemenea dezavantajos să se încerce instruirea religioasă în şcolile publice? pag. 542 p. 1 - pag. 543 p. 1, 2.",
-        "Din ce punct de vedere poate fi considerată folositoare Şcoala duminicală? pag. 544 p. 1",
-        "În ce fel au fost Şcolile duminicale vătămătoare pentru părinţii creştini? pag. 544 p. 2",
-        "De ce este Şcoala duminicală un dezavantaj pentru copiii celor credincioşi? pag. 544 p. 3"
+        "Care este importanţa voinţei umane şi cum este influenţată mintea copilului prin sugestii ? pag. 549 p. 1",
+        "Cum este acest principiu ilustrat în Biblie şi în toate predicile potrivite? pag. 549 p. 2",
+        "Explicaţi secretul succesului la un părinte în privinţa acestei metode a sugestiei. pag. 550 p. 1",
+        "Cum poate sugestia unei mame înţelepte anticipa descurajarea unui copil legată de o zi ploioasă? Şi cum sunt aceste sugestii folositoare şi pentru părinte? pag. 550 p. 2 şi nota de subsol.",
+        "Explicaţi cum metoda sugestiei poate fi aplicată cu folos în dieta copilului. pag. 551 p. 1",
+        "Poate sugestia fi la fel de puternică pentru copil în învăţarea lecţiilor morale? pag. 552 p. 1",
+        "Din ce punct de vedere trebuie administrată mustrarea în cazul neascultării din partea copilului? pag. 553 p. 1"
       ],
 
       // ANNOUNCEMENTS:
@@ -42,11 +44,12 @@ export default class App extends React.Component {
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
-      showScroll: false,
-      value: "",
-      archiveList: [],
-      filteredList: [],
-      childrenMeeting: [],
+      childrenMeeting: []
+
+      // showScroll: false,
+      // value: "",
+      // archiveList: [],
+      // filteredList: [],
     };
   }
 
@@ -117,36 +120,37 @@ export default class App extends React.Component {
           <Header/>
           <Route exact path="/" render={() =>
             <Home
-              note={this.state.note}
-              childrenMeeting={this.state.childrenMeeting}
-
-              noteLink={this.state.noteLink}
-              noteLinkTxt={this.state.noteLinkTxt}
-
+              // Banner
               bannerQuote={this.state.bannerQuote}
               bannerVerse={this.state.bannerVerse}
-
+              // Info Notes
               zoomLink={this.state.zoomLink}
               meetingHour={this.state.meetingHour}
-
+              // Study Announcements
               nextMeetingDate={this.state.nextMeetingDate}
               nextMeetingSubject={this.state.nextMeetingSubject}
               nextMeetingQuestions={this.state.nextMeetingQuestions}
               nextDiscussedLinkText={this.state.nextDiscussedLinkText}
               nextDiscussedLink={this.state.nextDiscussedLink}
+              // Children Meeting Announcements
+              childrenMeeting={this.state.childrenMeeting}
+              // Info Note
+              note={this.state.note}
+              noteLink={this.state.noteLink}
+              noteLinkTxt={this.state.noteLinkTxt}
             />}
           />
-          <Route path="/arhiva" render={() =>
-            <Archive
-              filteredList={this.state.filteredList}
-              handleArchiveButton={this.handleArchiveButton}
-              value={this.state.value}
-              handleInput={this.handleInput}
-              handleClearSearch={this.handleClearSearch}
-              scrollTop={this.handleScrollTop}
-              showScroll={this.state.showScroll}
-            />}
-          />
+          {/*<Route path="/arhiva" render={() =>*/}
+          {/*  <Archive*/}
+          {/*    filteredList={this.state.filteredList}*/}
+          {/*    handleArchiveButton={this.handleArchiveButton}*/}
+          {/*    value={this.state.value}*/}
+          {/*    handleInput={this.handleInput}*/}
+          {/*    handleClearSearch={this.handleClearSearch}*/}
+          {/*    scrollTop={this.handleScrollTop}*/}
+          {/*    showScroll={this.state.showScroll}*/}
+          {/*  />}*/}
+          {/*/>*/}
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>
       </HashRouter>

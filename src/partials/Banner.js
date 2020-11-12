@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 //Media
-import BannerImg from '../img/banner3.jpg'
+import BannerImg from '../img/banned-bible-cover.jpg';
 
 // Styles
 const BannerContainer = styled.section`
@@ -20,32 +20,33 @@ const BannerText = styled.div`
   width: 95%;
   padding: 0 24px;
   position: absolute;
-  top: 50%;
+  top: 24px;
   left: 50%;
   max-width: 860px;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   color: white;
   text-align: center;
   
   h3 {
     font-size: 20px;
+    text-shadow: 2px 2px 14px #000;
   }
   
   @media only screen and (min-width: 1080px) {
-    padding: 40px;
+    top: unset;
+    bottom: 0;
     
     h3 {
       font-size: 22px;
     }
   }
- 
 `;
 
 export default function Banner(props) {
 
   return (
     <BannerContainer className="component">
-      <BannerImage src={BannerImg} alt="Young people holding hands" />
+      <BannerImage src={BannerImg} alt="Opened Bible" />
       <BannerText>
         <h3>{props.bannerQuote}</h3>
         <p>{props.bannerVerse}</p>

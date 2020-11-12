@@ -10,7 +10,6 @@ export default function Home(props) {
         bannerQuote={props.bannerQuote}
         bannerVerse={props.bannerVerse}/>
       <Intro
-        childrenMeeting={props.childrenMeeting}
         note={props.note}
         noteLink={props.noteLink}
         noteLinkTxt={props.noteLinkTxt}
@@ -21,6 +20,7 @@ export default function Home(props) {
         nextDiscussedLinkText={props.nextDiscussedLinkText}
         nextDiscussedLink={props.nextDiscussedLink}
         nextMeetingQuestions={props.nextMeetingQuestions}
+        childrenMeeting={props.childrenMeeting}
       />
     </div>
   );
