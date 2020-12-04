@@ -8,8 +8,8 @@ import ZoomLogo from "../img/zoom-logo.png"
 export default function Intro(props) {
 
   return (
-    <IntroContainer className="component">
-      <IntroCardContainer>
+    <IntroContainer>
+      <IntroCardContainer className="component">
         <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
         <LinkMeeting><img src={ZoomLogo} alt="Zoom Logo"/> poate solicita o parolă pentru întâlnire</LinkMeeting>
         <hr/>
@@ -23,7 +23,7 @@ export default function Intro(props) {
       </IntroCardContainer>
 
       <div>
-        <IntroCardContainer>
+        <IntroCardContainer className="component">
           <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
           <h2>{props.nextMeetingSubject}</h2>
           <DiscussedTitle><a href={props.nextDiscussedLink} rel="noopener noreferrer"
@@ -81,7 +81,7 @@ const IntroContainer = styled.section`
   }
 `;
 const IntroCardContainer = styled.div`
-  box-shadow: 0px 0px 7px 0px #C9C9C9;
+  box-shadow: 0px 0px 10px 0px #C9C9C9;
   padding: 20px;
   margin-bottom: 40px;
   

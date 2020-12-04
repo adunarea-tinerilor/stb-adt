@@ -1,7 +1,7 @@
 import React from 'react';
 import {HashRouter, Route} from "react-router-dom";
 //COMPONENTS
-import Header from "./global-components/Header";
+// import Header from "./global-components/Header";
 import Footer from "./global-components/Footer";
 import Home from "./pages/Home";
 // import Archive from "./pages/Archive";
@@ -15,24 +15,37 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "12 Noiembrie 2020",
+      footerUpdateDate: "4 Decembrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201119T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201210T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 19 Noiembrie",
+      nextMeetingDate: "Joi, 10 Decembrie",
       nextMeetingSubject: "Discuții Studiu",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009369",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009376",
       nextMeetingQuestions: [
-        "Care este importanţa voinţei umane şi cum este influenţată mintea copilului prin sugestii ? pag. 549 p. 1",
-        "Cum este acest principiu ilustrat în Biblie şi în toate predicile potrivite? pag. 549 p. 2",
-        "Explicaţi secretul succesului la un părinte în privinţa acestei metode a sugestiei. pag. 550 p. 1",
-        "Cum poate sugestia unei mame înţelepte anticipa descurajarea unui copil legată de o zi ploioasă? Şi cum sunt aceste sugestii folositoare şi pentru părinte? pag. 550 p. 2 şi nota de subsol.",
         "Explicaţi cum metoda sugestiei poate fi aplicată cu folos în dieta copilului. pag. 551 p. 1",
         "Poate sugestia fi la fel de puternică pentru copil în învăţarea lecţiilor morale? pag. 552 p. 1",
-        "Din ce punct de vedere trebuie administrată mustrarea în cazul neascultării din partea copilului? pag. 553 p. 1"
+        "Din ce punct de vedere trebuie administrată mustrarea în cazul neascultării din partea copilului? pag. 553 p. 1",
+        "Care trebuie să fie standardul în toate sugestiile? pag. 554 p. 1",
+        "Poate Noua Creatură să se aştepte în mod rezonabil la o protecţie miraculoasă pentru copiii săi în marele timp de strâmtorare? Pag. 554 p. 2",
+        "Ce promisiune scripturală pare să se aplice atât la copii cât şi la toţi cei care iubesc dreptatea? pag. 555 p. 1",
+        "Care este neliniştea naturală a părinţilor pentru copiii lor în această perioadă şi cum trebuie ea învinsă? pag. 555 p. 2",
+        // "Explicaţi care este cea mai bună pregătire posibilă ce poate să o facă o Nouă Creatură pentru protejarea copiilor săi în timpul de strâmtorare. pag. 556 p. 1\n" +
+        // "Care trebuie să fie atitudinea Noii Creaturi faţă de distracţiile pentru copiii săi? pag. 556 p. 2",
+        // "Se aplică sfatul apostolic cu privire la căsătoria Noilor Creaţii şi pentru copiii lor neconsacraţi? pag. 557 p. 1",
+        // "Cum greşesc mulţi din Noua Creaţie în această privinţă? pag. 557 p. 2, 3, 4",
+        // "La ce vârstă ar părea potrivit ca bărbaţii şi respectiv femeile să se căsătorească? pag. 558 p. 1",
+        // "Cum pot ajuta nişte părinţi înţelepţi pe copiii lor în găsirea partenerului potrivit? pag. 558 p. 2",
+        // "Care este legătura strânsă între mintea curată şi sănătoasă şi corpul curat şi sănătos? pag. 559 p. 1",
+        // "În acest scop, cum ar trebui să procedeze părintele în privinţa aerisirii, curăţeniei şi a exerciţiului mintal şi fizic al copiilor lui? pag. 559 p. 2",
+        // "În care trei categorii se pot împărţi alimentele? Şi care este proporţia potrivită din fiecare pentru hrănire pe durata unei zile? pag. 560 p. 1-4",
+        // "Cum ar putea fi aranjată satisfăcător o dietă vegetariană dacă ar fi nevoie să facem economie? pag. 561 p. 1",
+        // "Explicaţi rezultatele dăunătoare a unei diete disproporţionate în special a hranei ce conţine amidon. pag. 561 p. 2",
+        // "Să avem grijă ca să nu facem din dietă o manie”? pag. 561 p. 3",
+        // "De ce este o discuţie veselă şi folositoare un însoţitor de dorit la masa familiei? pag. 562 p. 1"
       ],
 
       // ANNOUNCEMENTS:
@@ -117,7 +130,7 @@ export default class App extends React.Component {
     return (
       <HashRouter basename="/adunarea-tinerilor">
         <div className="App">
-          <Header/>
+          {/*<Header/>*/}
           <Route exact path="/" render={() =>
             <Home
               // Banner
