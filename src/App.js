@@ -1,5 +1,6 @@
 import React from 'react';
 import {HashRouter, Route} from "react-router-dom";
+
 //COMPONENTS
 // import Header from "./global-components/Header";
 import Footer from "./global-components/Footer";
@@ -8,6 +9,7 @@ import Home from "./pages/Home";
 // DATA
 import ArchiveData from "./data/archive-data";
 import ChildrenMeeting from "./data/children-meeting-data";
+// import downloadFile from "../data/PROGRAM-Conventie12Decembrie2020.docx"
 
 export default class App extends React.Component {
   constructor(props) {
@@ -49,6 +51,9 @@ export default class App extends React.Component {
       ],
 
       // ANNOUNCEMENTS:
+      announcement: "<h3>Anunțuri</h3><h3>Convenție: <a href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Conven%C8%9Bie+12+Decembrie+2020&iso=20201212T11&p1=2210' rel='noopener noreferrer' target='_blank'>12 Decembrie 2020, ora 11:00</a></h3>" +
+        "<p>Cornel Brie – „Ați auzit că s-a zis, dar Eu vă spun...”</p><p>Andrei Laibida – „Legarea lui Satan”</p><p>Jerry Leslie – „Un martor de piatră”</p><p>Adunare de Experiențe și Părtășie</p>",
+
       // note: "Adunare pentru Copii - Sâmbătă, 10 Octombrie - ",
       // noteLinkTxt: "vezi ora",
       // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20201010T08&p1=202&ah=1",
@@ -79,11 +84,12 @@ export default class App extends React.Component {
 
   checkScrollTop = () => {
     let showScroll = this.state.showScroll;
-    if (!showScroll && window.pageYOffset > 600) {
+    let offsetSize = 700;
+    if (!showScroll && window.pageYOffset > offsetSize) {
       this.setState({
         showScroll: true
       })
-    } else if (showScroll && window.pageYOffset <= 600) {
+    } else if (showScroll && window.pageYOffset <= offsetSize) {
       this.setState({
         showScroll: false
       })
@@ -151,6 +157,9 @@ export default class App extends React.Component {
               note={this.state.note}
               noteLink={this.state.noteLink}
               noteLinkTxt={this.state.noteLinkTxt}
+              announcement={this.state.announcement}
+              scrollTop={this.handleScrollTop}
+              showScroll={this.state.showScroll}
             />}
           />
           {/*<Route path="/arhiva" render={() =>*/}

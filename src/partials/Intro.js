@@ -18,8 +18,12 @@ export default function Intro(props) {
 
         {props.note && <div>
           <hr/>
-          <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer"
-                                    target="_blank"> {props.noteLinkTxt}</a></InfoNote></div>}
+          <InfoNote>{props.note} <a href={props.noteLink} rel="noopener noreferrer" target="_blank"> {props.noteLinkTxt}</a></InfoNote>
+        </div>}
+        {props.announcement && <div>
+          <hr/>
+          <div dangerouslySetInnerHTML={{ __html: `${props.announcement}` }}></div>
+        </div>}
       </IntroCardContainer>
 
       <div>
