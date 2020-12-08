@@ -51,8 +51,18 @@ export default class App extends React.Component {
       ],
 
       // ANNOUNCEMENTS:
-      announcement: "<h3>Anunțuri</h3><h3>Convenție: <a href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Conven%C8%9Bie+12+Decembrie+2020&iso=20201212T11&p1=2210' rel='noopener noreferrer' target='_blank'>12 Decembrie 2020, ora 11:00</a></h3>" +
-        "<p>Cornel Brie – „Ați auzit că s-a zis, dar Eu vă spun...”</p><p>Andrei Laibida – „Legarea lui Satan”</p><p>Jerry Leslie – „Un martor de piatră”</p><p>Adunare de Experiențe și Părtășie</p>",
+      announcement: "<h3>Anunțuri</h3><h3>Convenție: <a href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Conven%C8%9Bie+12+Decembrie+2020&iso=20201212T11&p1=2210' rel='noopener noreferrer' target='_blank'>12 Decembrie 2020, ora 11:00 <small>- click pentru a afla ora în zona ta</small></a></h3>" +
+        "<p><strong>„Răscumpărați vremea, căci zilele sunt rele.” - Efeseni 5:16</strong></p>" +
+        "<div style='text-align: left'>" +
+        "<p>Program:</p>" +
+        "<p>11:00 - Deschidere</p>" +
+        "<p>11:30 - Cornel Brie <i>„Ați auzit că s-a zis, dar Eu vă spun...”</i></p>" +
+        "<p>12:30 - Pauză</p>" +
+        "<p>14:00 - Andrei Laibida <i>„Legarea lui Satan”</i></p>" +
+        "<p>15:00 - Pauză</p>" +
+        "<p>16:00 - Jerry Leslie <i>„Un martor de piatră”</i></p>" +
+        "<p>17:30 -Pauză</p>" +
+        "<p>17:45 - 20:00 - Adunare de Experiențe și Părtășie</p></div>",
 
       // note: "Adunare pentru Copii - Sâmbătă, 10 Octombrie - ",
       // noteLinkTxt: "vezi ora",
