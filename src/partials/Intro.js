@@ -10,11 +10,13 @@ export default function Intro(props) {
   return (
     <IntroContainer>
       <div>
+        {props.announcement &&
         <IntroCardContainer className="component">
-          {props.announcement && <div>
+          <div>
             <div dangerouslySetInnerHTML={{__html: `${props.announcement}`}}></div>
-          </div>}
+          </div>
         </IntroCardContainer>
+        }
         <IntroCardContainer className="component">
           <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
           <LinkMeeting>Zoom poate solicita o parolă pentru întâlnire</LinkMeeting>
@@ -30,7 +32,8 @@ export default function Intro(props) {
                 {props.noteLinkTxt}
               </a>
             </InfoNote>
-          </div>}
+          </div>
+          }
         </IntroCardContainer>
       </div>
       <div>

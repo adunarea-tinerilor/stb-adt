@@ -17,26 +17,27 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "4 Decembrie 2020",
+      footerUpdateDate: "17 Decembrie 2020",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor&iso=20201210T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20201217T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 10 Decembrie",
+      nextMeetingDate: "Joi, 24 Decembrie",
+      // nextMeetingSubject: "Adunare de Expreriențe",
+
       nextMeetingSubject: "Discuții Studiu",
       nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009376",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009380",
       nextMeetingQuestions: [
-        "Explicaţi cum metoda sugestiei poate fi aplicată cu folos în dieta copilului. pag. 551 p. 1",
-        "Poate sugestia fi la fel de puternică pentru copil în învăţarea lecţiilor morale? pag. 552 p. 1",
         "Din ce punct de vedere trebuie administrată mustrarea în cazul neascultării din partea copilului? pag. 553 p. 1",
         "Care trebuie să fie standardul în toate sugestiile? pag. 554 p. 1",
         "Poate Noua Creatură să se aştepte în mod rezonabil la o protecţie miraculoasă pentru copiii săi în marele timp de strâmtorare? Pag. 554 p. 2",
         "Ce promisiune scripturală pare să se aplice atât la copii cât şi la toţi cei care iubesc dreptatea? pag. 555 p. 1",
         "Care este neliniştea naturală a părinţilor pentru copiii lor în această perioadă şi cum trebuie ea învinsă? pag. 555 p. 2",
-        // "Explicaţi care este cea mai bună pregătire posibilă ce poate să o facă o Nouă Creatură pentru protejarea copiilor săi în timpul de strâmtorare. pag. 556 p. 1\n" +
-        // "Care trebuie să fie atitudinea Noii Creaturi faţă de distracţiile pentru copiii săi? pag. 556 p. 2",
+        "Explicaţi care este cea mai bună pregătire posibilă ce poate să o facă o Nouă Creatură pentru protejarea copiilor săi în timpul de strâmtorare. pag. 556 p. 1",
+        "Care trebuie să fie atitudinea Noii Creaturi faţă de distracţiile pentru copiii săi? pag. 556 p. 2",
+
         // "Se aplică sfatul apostolic cu privire la căsătoria Noilor Creaţii şi pentru copiii lor neconsacraţi? pag. 557 p. 1",
         // "Cum greşesc mulţi din Noua Creaţie în această privinţă? pag. 557 p. 2, 3, 4",
         // "La ce vârstă ar părea potrivit ca bărbaţii şi respectiv femeile să se căsătorească? pag. 558 p. 1",
@@ -51,18 +52,7 @@ export default class App extends React.Component {
       ],
 
       // ANNOUNCEMENTS:
-      announcement: "<h3>Anunțuri</h3><h3>Convenție: <a href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Conven%C8%9Bie+12+Decembrie+2020&iso=20201212T11&p1=2210' rel='noopener noreferrer' target='_blank'>12 Decembrie 2020, ora 11:00 <small>- click pentru a afla ora în zona ta</small></a></h3>" +
-        "<p><strong>„Răscumpărați vremea, căci zilele sunt rele.” - Efeseni 5:16</strong></p>" +
-        "<div style='text-align: left'>" +
-        "<p>Program:</p>" +
-        "<p>11:00 - Deschidere</p>" +
-        "<p>11:30 - Cornel Brie <i>„Ați auzit că s-a zis, dar Eu vă spun...”</i></p>" +
-        "<p>12:30 - Pauză</p>" +
-        "<p>14:00 - Andrei Laibida <i>„Legarea lui Satan”</i></p>" +
-        "<p>15:00 - Pauză</p>" +
-        "<p>16:00 - Jerry Leslie <i>„Un martor de piatră”</i></p>" +
-        "<p>17:30 -Pauză</p>" +
-        "<p>17:45 - 20:00 - Adunare de Experiențe și Părtășie</p></div>",
+      // announcement: "<h3>RTE</h3>",
 
       // note: "Adunare pentru Copii - Sâmbătă, 10 Octombrie - ",
       // noteLinkTxt: "vezi ora",
