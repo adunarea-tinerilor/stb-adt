@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css",
-    "main.js": "/adunarea-tinerilor/stb-adt/static/js/main.62b0ab1d.chunk.js",
-    "main.js.map": "/adunarea-tinerilor/stb-adt/static/js/main.62b0ab1d.chunk.js.map",
-    "runtime-main.js": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js",
-    "runtime-main.js.map": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js.map",
-    "static/js/2.d3f3d49d.chunk.js": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js",
-    "static/js/2.d3f3d49d.chunk.js.map": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.map",
-    "index.html": "/adunarea-tinerilor/stb-adt/index.html",
-    "precache-manifest.f56b4f9d337cd0ceb46263fb98dd5988.js": "/adunarea-tinerilor/stb-adt/precache-manifest.f56b4f9d337cd0ceb46263fb98dd5988.js",
-    "service-worker.js": "/adunarea-tinerilor/stb-adt/service-worker.js",
-    "static/css/main.ec304789.chunk.css.map": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css.map",
-    "static/js/2.d3f3d49d.chunk.js.LICENSE.txt": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.LICENSE.txt",
-    "static/media/CC-logo.png": "/adunarea-tinerilor/stb-adt/static/media/CC-logo.2fe9ae31.png",
-    "static/media/banned-bible-cover.jpg": "/adunarea-tinerilor/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg"
+    "main.css": "/stb-adt/static/css/main.ec304789.chunk.css",
+    "main.js": "/stb-adt/static/js/main.533e2ee9.chunk.js",
+    "main.js.map": "/stb-adt/static/js/main.533e2ee9.chunk.js.map",
+    "runtime-main.js": "/stb-adt/static/js/runtime-main.f8ef5923.js",
+    "runtime-main.js.map": "/stb-adt/static/js/runtime-main.f8ef5923.js.map",
+    "static/js/2.06de4107.chunk.js": "/stb-adt/static/js/2.06de4107.chunk.js",
+    "static/js/2.06de4107.chunk.js.map": "/stb-adt/static/js/2.06de4107.chunk.js.map",
+    "index.html": "/stb-adt/index.html",
+    "precache-manifest.ba6247e97e58fd92d290a72dc0c47a7f.js": "/stb-adt/precache-manifest.ba6247e97e58fd92d290a72dc0c47a7f.js",
+    "service-worker.js": "/stb-adt/service-worker.js",
+    "static/css/main.ec304789.chunk.css.map": "/stb-adt/static/css/main.ec304789.chunk.css.map",
+    "static/js/2.06de4107.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.06de4107.chunk.js.LICENSE.txt",
+    "static/media/CC-logo.png": "/stb-adt/static/media/CC-logo.2fe9ae31.png",
+    "static/media/banned-bible-cover.jpg": "/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7eea6256.js",
-    "static/js/2.d3f3d49d.chunk.js",
+    "static/js/runtime-main.f8ef5923.js",
+    "static/js/2.06de4107.chunk.js",
     "static/css/main.ec304789.chunk.css",
-    "static/js/main.62b0ab1d.chunk.js"
+    "static/js/main.533e2ee9.chunk.js"
   ]
 }
