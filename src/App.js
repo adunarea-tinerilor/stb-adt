@@ -168,9 +168,9 @@ export default class App extends React.Component {
               showScroll={this.state.showScroll}
             />}
           />
-          <Route path="/studyformat" render={() => <StudyFormat
-            {...meetingDetails}
-          />}
+          {/*<Route path="/studyformat" render={() => <StudyFormat*/}
+          {/*  {...meetingDetails}*/}
+          {/*/>}*/}
           />
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>
