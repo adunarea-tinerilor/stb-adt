@@ -18,11 +18,9 @@ export default function Intro(props) {
         </IntroCardContainer>
         }
         <IntroCardContainer className="component">
-          <p><a href={props.zoomLink} rel="noopener noreferrer" target="_blank"> Linkul Adunării</a></p>
-          <LinkMeeting>Zoom poate solicita o parolă pentru întâlnire</LinkMeeting>
+          <p>Adunarea tinerilor se ține pe Zoom în fiecare joi. Fă click în linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Intră la Adunare</a></p>
           <hr/>
-          <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:</p>
-          <p><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
+          <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
           {props.note && <div>
             <hr/>
             <InfoNote>{props.note}
@@ -114,13 +112,6 @@ const IntroCardContainer = styled.div`
  @media only screen and (min-width: 1080px) {
    margin: 0 0 40px;
  }
-`;
-const LinkMeeting = styled.p`
-  & img {
-    top: 4px;
-    height: 16px;
-    position: relative;
-  }
 `;
 const CardTitle = styled.h2`
   border-bottom: 1px solid lightgray;

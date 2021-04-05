@@ -5,10 +5,12 @@ import {HashRouter, Route} from "react-router-dom";
 // import Header from "./global-components/Header";
 import Footer from "./global-components/Footer";
 import Home from "./pages/Home";
-// import Archive from "./pages/Archive";
+import Archive from "./pages/Archive";
 // DATA
 import ArchiveData from "./data/archive-data";
 import ChildrenMeeting from "./data/children-meeting-data";
+import Header from "./global-components/Header";
+import StudyFormat from "./pages/StudyFormat";
 // import downloadFile from "../data/PROGRAM-Conventie12Decembrie2020.docx"
 
 export default class App extends React.Component {
@@ -20,7 +22,7 @@ export default class App extends React.Component {
       footerUpdateDate: "5 Aprilie 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210107T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210408T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
       nextMeetingDate: "Joi, 8 Aprilie",
@@ -35,7 +37,7 @@ export default class App extends React.Component {
         "În care trei categorii se pot împărţi alimentele? Şi care este proporţia potrivită din fiecare pentru hrănire pe durata unei zile? pag. 560 p. 1-4",
         "Cum ar putea fi aranjată satisfăcător o dietă vegetariană dacă ar fi nevoie să facem economie? pag. 561 p. 1",
         "Explicaţi rezultatele dăunătoare a unei diete disproporţionate în special a hranei ce conţine amidon. pag. 561 p. 2",
-        "Să avem grijă ca să nu facem din dietă o manie”? pag. 561 p. 3",
+        "Să avem grijă ca să nu facem din dietă o manie? pag. 561 p. 3",
         "De ce este o discuţie veselă şi folositoare un însoţitor de dorit la masa familiei? pag. 562 p. 1"
       ],
 
@@ -121,10 +123,14 @@ export default class App extends React.Component {
 
 
   render() {
+    const meetingDetails = {
+      nextMeetingQuestions: this.state.nextMeetingQuestions,
+      nextDiscussedLink: this.state.nextDiscussedLink
+    };
     return (
-      <HashRouter basename="/adunarea-tinerilor">
+      <HashRouter basename="/stb-adt">
         <div className="App">
-          {/*<Header/>*/}
+          <Header/>
           <Route exact path="/" render={() =>
             <Home
               // Banner
@@ -138,7 +144,8 @@ export default class App extends React.Component {
               nextMeetingSubject={this.state.nextMeetingSubject}
               nextMeetingQuestions={this.state.nextMeetingQuestions}
               nextDiscussedLinkText={this.state.nextDiscussedLinkText}
-              nextDiscussedLink={this.state.nextDiscussedLink}
+              {...meetingDetails}
+
               // Children Meeting Announcements
               childrenMeeting={this.state.childrenMeeting}
               // Info Note
@@ -150,17 +157,21 @@ export default class App extends React.Component {
               showScroll={this.state.showScroll}
             />}
           />
-          {/*<Route path="/arhiva" render={() =>*/}
-          {/*  <Archive*/}
-          {/*    filteredList={this.state.filteredList}*/}
-          {/*    handleArchiveButton={this.handleArchiveButton}*/}
-          {/*    value={this.state.value}*/}
-          {/*    handleInput={this.handleInput}*/}
-          {/*    handleClearSearch={this.handleClearSearch}*/}
-          {/*    scrollTop={this.handleScrollTop}*/}
-          {/*    showScroll={this.state.showScroll}*/}
-          {/*  />}*/}
-          {/*/>*/}
+          <Route path="/arhiva" render={() =>
+            <Archive
+              filteredList={this.state.filteredList}
+              handleArchiveButton={this.handleArchiveButton}
+              value={this.state.value}
+              handleInput={this.handleInput}
+              handleClearSearch={this.handleClearSearch}
+              scrollTop={this.handleScrollTop}
+              showScroll={this.state.showScroll}
+            />}
+          />
+          <Route path="/studyformat" render={() => <StudyFormat
+            {...meetingDetails}
+          />}
+          />
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>
       </HashRouter>

@@ -1,21 +1,38 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 import styled from 'styled-components';
-import LogoImg from "../img/CC-logo.png"
+import LogoImg from "../img/CC-logo.png";
 
 // Styles
 const HeaderContainer = styled.header`
-  text-align: center;
+  text-align: right;
   padding: 24px;
   margin-bottom: 40px;
   
   @media only screen and (min-width: 1080px) {
-    padding: 40px;
+    display: flex;
+    justify-content: space-between;
   }
 `;
+
+const Menu = styled.ul`
+display flex;
+ justify-content: center;
+
+ @media only screen and (min-width: 1080px) {
+    justify-content: flex-end;
+  }
+`;
+
+const Item = styled.li`
+padding: 0 10px;
+`;
 const Logo = styled.div`
+  // position: absolute;
+  // top: 20px;
+  // left: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
   
   & h3 {
     text-align: left;
@@ -40,6 +57,17 @@ export default function Header() {
           <h3>Adunarea Tinerilor</h3>
         </div>
       </Logo>
+      <Menu>
+        <Item>
+          <NavLink exact to="/">Acasă</NavLink>
+        </Item>
+        <Item>
+          <NavLink to="/studyformat">Format Studiu</NavLink>
+        </Item>
+        <Item>
+          <NavLink to="/arhiva">Arhivă</NavLink>
+        </Item>
+      </Menu>
     </HeaderContainer>
   );
 }
