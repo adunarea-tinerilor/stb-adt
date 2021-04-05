@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css",
+    "main.js": "/adunarea-tinerilor/stb-adt/static/js/main.c8fe6ed7.chunk.js",
+    "main.js.map": "/adunarea-tinerilor/stb-adt/static/js/main.c8fe6ed7.chunk.js.map",
+    "runtime-main.js": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js",
+    "runtime-main.js.map": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js.map",
+    "static/js/2.d3f3d49d.chunk.js": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js",
+    "static/js/2.d3f3d49d.chunk.js.map": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.map",
+    "index.html": "/adunarea-tinerilor/stb-adt/index.html",
+    "precache-manifest.2c946c66b35d49399efabe706ae03438.js": "/adunarea-tinerilor/stb-adt/precache-manifest.2c946c66b35d49399efabe706ae03438.js",
+    "service-worker.js": "/adunarea-tinerilor/stb-adt/service-worker.js",
+    "static/css/main.ec304789.chunk.css.map": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css.map",
+    "static/js/2.d3f3d49d.chunk.js.LICENSE.txt": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.LICENSE.txt",
+    "static/media/CC-logo.png": "/adunarea-tinerilor/stb-adt/static/media/CC-logo.2fe9ae31.png",
+    "static/media/banned-bible-cover.jpg": "/adunarea-tinerilor/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7eea6256.js",
+    "static/js/2.d3f3d49d.chunk.js",
+    "static/css/main.ec304789.chunk.css",
+    "static/js/main.c8fe6ed7.chunk.js"
+  ]
+}
