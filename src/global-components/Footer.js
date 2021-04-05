@@ -4,7 +4,7 @@ import styled from 'styled-components';
 // Styles
 const FooterContainer = styled.footer`
   text-align: center;
-  padding: 40px;
+  padding: 35px;
   margin-top: 40px;
   
   & a {
@@ -28,15 +28,18 @@ const FooterEmail = styled.a`
   }
 `;
 const FooterDate = styled.p`
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 `;
+const FooterAddress = styled.p`
+ font-size: 14px;
+;`
 
 export default function Footer(props) {
 
   return (
     <FooterContainer className="component">
-      <p>Dacă ai întrebări te rugăm să ne scrii un email  <FooterEmail href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail></p>
+      <FooterAddress>Dacă ai întrebări te rugăm să ne scrii un email  <FooterEmail href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail></FooterAddress>
       <FooterDate> 3 August 2020 - {props.footerUpdateDate}</FooterDate>
     </FooterContainer>
   );
