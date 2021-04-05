@@ -1,4 +1,4 @@
 
 ## Adunarea Tinerilor
 
-Informatii despre adunarea tinerilor.
+Informatii despre adunarea tinerilor."# stb-adt" 
