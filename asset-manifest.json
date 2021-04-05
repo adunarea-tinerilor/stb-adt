@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css",
-    "main.js": "/adunarea-tinerilor/stb-adt/static/js/main.c8fe6ed7.chunk.js",
-    "main.js.map": "/adunarea-tinerilor/stb-adt/static/js/main.c8fe6ed7.chunk.js.map",
+    "main.js": "/adunarea-tinerilor/stb-adt/static/js/main.62b0ab1d.chunk.js",
+    "main.js.map": "/adunarea-tinerilor/stb-adt/static/js/main.62b0ab1d.chunk.js.map",
     "runtime-main.js": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js",
     "runtime-main.js.map": "/adunarea-tinerilor/stb-adt/static/js/runtime-main.7eea6256.js.map",
     "static/js/2.d3f3d49d.chunk.js": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js",
     "static/js/2.d3f3d49d.chunk.js.map": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.map",
     "index.html": "/adunarea-tinerilor/stb-adt/index.html",
-    "precache-manifest.2c946c66b35d49399efabe706ae03438.js": "/adunarea-tinerilor/stb-adt/precache-manifest.2c946c66b35d49399efabe706ae03438.js",
+    "precache-manifest.f56b4f9d337cd0ceb46263fb98dd5988.js": "/adunarea-tinerilor/stb-adt/precache-manifest.f56b4f9d337cd0ceb46263fb98dd5988.js",
     "service-worker.js": "/adunarea-tinerilor/stb-adt/service-worker.js",
     "static/css/main.ec304789.chunk.css.map": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css.map",
     "static/js/2.d3f3d49d.chunk.js.LICENSE.txt": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.7eea6256.js",
     "static/js/2.d3f3d49d.chunk.js",
     "static/css/main.ec304789.chunk.css",
-    "static/js/main.c8fe6ed7.chunk.js"
+    "static/js/main.62b0ab1d.chunk.js"
   ]
 }

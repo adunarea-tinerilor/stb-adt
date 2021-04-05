@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f5cf7aa363352c56f504d86d926d8f5c",
+    "revision": "5ecb85b9dc0ebe0a5823ed0882f93d68",
     "url": "/adunarea-tinerilor/stb-adt/index.html"
   },
   {
-    "revision": "3f61cf072a93949c8d56",
+    "revision": "ed72eb862e589e14f5ae",
     "url": "/adunarea-tinerilor/stb-adt/static/css/main.ec304789.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/adunarea-tinerilor/stb-adt/static/js/2.d3f3d49d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3f61cf072a93949c8d56",
-    "url": "/adunarea-tinerilor/stb-adt/static/js/main.c8fe6ed7.chunk.js"
+    "revision": "ed72eb862e589e14f5ae",
+    "url": "/adunarea-tinerilor/stb-adt/static/js/main.62b0ab1d.chunk.js"
   },
   {
     "revision": "341a9c4e12594345513b",

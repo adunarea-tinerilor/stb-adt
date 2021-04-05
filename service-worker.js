@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/adunarea-tinerilor/stb-adt/precache-manifest.2c946c66b35d49399efabe706ae03438.js"
+  "/adunarea-tinerilor/stb-adt/precache-manifest.f56b4f9d337cd0ceb46263fb98dd5988.js"
 );
 
 self.addEventListener('message', (event) => {
