@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/stb-adt/static/css/main.ec304789.chunk.css",
-    "main.js": "/stb-adt/static/js/main.669da761.chunk.js",
-    "main.js.map": "/stb-adt/static/js/main.669da761.chunk.js.map",
+    "main.js": "/stb-adt/static/js/main.9f414991.chunk.js",
+    "main.js.map": "/stb-adt/static/js/main.9f414991.chunk.js.map",
     "runtime-main.js": "/stb-adt/static/js/runtime-main.f8ef5923.js",
     "runtime-main.js.map": "/stb-adt/static/js/runtime-main.f8ef5923.js.map",
-    "static/js/2.be55cb28.chunk.js": "/stb-adt/static/js/2.be55cb28.chunk.js",
-    "static/js/2.be55cb28.chunk.js.map": "/stb-adt/static/js/2.be55cb28.chunk.js.map",
+    "static/js/2.b3aa2c10.chunk.js": "/stb-adt/static/js/2.b3aa2c10.chunk.js",
+    "static/js/2.b3aa2c10.chunk.js.map": "/stb-adt/static/js/2.b3aa2c10.chunk.js.map",
     "index.html": "/stb-adt/index.html",
-    "precache-manifest.ab25ec92f746e345d7971511e903d10c.js": "/stb-adt/precache-manifest.ab25ec92f746e345d7971511e903d10c.js",
+    "precache-manifest.bd8d4f6aaca8e7cc3bee13885b097a1c.js": "/stb-adt/precache-manifest.bd8d4f6aaca8e7cc3bee13885b097a1c.js",
     "service-worker.js": "/stb-adt/service-worker.js",
     "static/css/main.ec304789.chunk.css.map": "/stb-adt/static/css/main.ec304789.chunk.css.map",
-    "static/js/2.be55cb28.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.be55cb28.chunk.js.LICENSE.txt",
+    "static/js/2.b3aa2c10.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.b3aa2c10.chunk.js.LICENSE.txt",
     "static/media/CC-logo.png": "/stb-adt/static/media/CC-logo.2fe9ae31.png",
     "static/media/banned-bible-cover.jpg": "/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg",
     "static/media/videoImg.jpg": "/stb-adt/static/media/videoImg.22b9e510.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f8ef5923.js",
-    "static/js/2.be55cb28.chunk.js",
+    "static/js/2.b3aa2c10.chunk.js",
     "static/css/main.ec304789.chunk.css",
-    "static/js/main.669da761.chunk.js"
+    "static/js/main.9f414991.chunk.js"
   ]
 }
