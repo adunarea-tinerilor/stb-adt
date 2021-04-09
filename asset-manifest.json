@@ -1,25 +1,26 @@
 {
   "files": {
     "main.css": "/stb-adt/static/css/main.ec304789.chunk.css",
-    "main.js": "/stb-adt/static/js/main.94900fac.chunk.js",
-    "main.js.map": "/stb-adt/static/js/main.94900fac.chunk.js.map",
+    "main.js": "/stb-adt/static/js/main.2e5437a2.chunk.js",
+    "main.js.map": "/stb-adt/static/js/main.2e5437a2.chunk.js.map",
     "runtime-main.js": "/stb-adt/static/js/runtime-main.f8ef5923.js",
     "runtime-main.js.map": "/stb-adt/static/js/runtime-main.f8ef5923.js.map",
-    "static/js/2.b3aa2c10.chunk.js": "/stb-adt/static/js/2.b3aa2c10.chunk.js",
-    "static/js/2.b3aa2c10.chunk.js.map": "/stb-adt/static/js/2.b3aa2c10.chunk.js.map",
+    "static/js/2.36774380.chunk.js": "/stb-adt/static/js/2.36774380.chunk.js",
+    "static/js/2.36774380.chunk.js.map": "/stb-adt/static/js/2.36774380.chunk.js.map",
     "index.html": "/stb-adt/index.html",
-    "precache-manifest.23a5708d81eb0f030ce9fe9b3050732b.js": "/stb-adt/precache-manifest.23a5708d81eb0f030ce9fe9b3050732b.js",
+    "precache-manifest.24c6cab0b34e0c2fa542e26fc9ea7298.js": "/stb-adt/precache-manifest.24c6cab0b34e0c2fa542e26fc9ea7298.js",
     "service-worker.js": "/stb-adt/service-worker.js",
     "static/css/main.ec304789.chunk.css.map": "/stb-adt/static/css/main.ec304789.chunk.css.map",
-    "static/js/2.b3aa2c10.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.b3aa2c10.chunk.js.LICENSE.txt",
+    "static/js/2.36774380.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.36774380.chunk.js.LICENSE.txt",
+    "static/media/8104.jpg": "/stb-adt/static/media/8104.ebc239f2.jpg",
     "static/media/CC-logo.png": "/stb-adt/static/media/CC-logo.2fe9ae31.png",
     "static/media/banned-bible-cover.jpg": "/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg",
     "static/media/videoImg.jpg": "/stb-adt/static/media/videoImg.22b9e510.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f8ef5923.js",
-    "static/js/2.b3aa2c10.chunk.js",
+    "static/js/2.36774380.chunk.js",
     "static/css/main.ec304789.chunk.css",
-    "static/js/main.94900fac.chunk.js"
+    "static/js/main.2e5437a2.chunk.js"
   ]
 }
