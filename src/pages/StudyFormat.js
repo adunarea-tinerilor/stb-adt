@@ -1,45 +1,90 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from "../img/8104.jpg";
 
 export default function StudyFormat(props) {
 
   return (
-    <IntroContainer>
+    <div>
+    {props.studyResource && <IntroContainer>
         <IntroCardContainer className="component">
           <p>Întrebări:</p>
           <ol>
-           {props.nextMeetingQuestions.map((question, index) => {
-            return <li key={index}><p>{question}</p></li>
-          })}
+            {props.nextMeetingQuestions.map((question, index) => {
+              return <li key={index}><p>{question}</p></li>
+            })}
           </ol>
         </IntroCardContainer>
-      <IntroCardContainer className="component">
-        <div id="iframe_wrapper">
-          <iframe src={props.nextDiscussedLink} name="htdb" width="100%" height="650" frameborder="0"></iframe>
+        <IntroCardContainer className="component">
+          <div className="card-wrapper">
+            <div className="card-content">
+              <div dangerouslySetInnerHTML={{__html: `${props.studyResource}`}}></div>
+            </div>
+          </div>
+        </IntroCardContainer>
+
+    </IntroContainer>}
+    {!props.studyResource && <div>
+      <IntroCardContainer className="component" style={{backgroundColor:"#eff2d5"}}>
+        {/*<div dangerouslySetInnerHTML={{__html: `${props.noResourceMessage}`}}></div>*/}
+        <br/>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center"}}>
+          <h4 style={{marginBottom: "0"}}>Această pagină este în construcție.</h4>
+          <p><small>Vei găsi aici resursele pentru studii.<br/>Te rugăm să revii mai târziu.</small></p>
+          <img src={Image} alt="page under construction" style={{maxHeight: "450px", width:"100%", maxWidth: "450px"}}/>
+          <small style={{fontSize: "7px"}}><a href="https://www.freepik.com/vectors/house">House vector created by macrovector - www.freepik.com</a></small>
         </div>
+
       </IntroCardContainer>
-    </IntroContainer>
+    </div>}
+    </div>
   );
 }
 
 // Styles
 const IntroContainer = styled.section`
   margin: 40px 0;
-
+  
    ol > li:first-child {
     color: #016666;
     }
+    
+    .card-wrapper {
+      height: 85vh;
+      overflow: hidden;
+      padding: 0 20px
+    }
+    
+    .card-content {
+     height: 85vh;
+      overflow: auto;
+    }
+    
+    .card-content::-webkit-scrollbar {
+    width: 7px;
+    }
+    .card-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #00808029;
+  }
+ 
+   .card-content::-webkit-scrollbar-thumb {
+    background-color: teal;
+  }
+
   
   @media only screen and (min-width: 1080px) {
     display: flex;
     justify-content: space-between;
-    & > div {
-      width: 50%;
-    }
     
+ 
     & > div:first-child {
+      width: 42%;
       margin: 0 40px 0 0;
       align-self: flex-start;
+    }
+    
+    & > div:last-child {
+    width: 58%;
     }
   }
 `;
@@ -53,23 +98,8 @@ const IntroCardContainer = styled.div`
   height: 600px;
   }
   
-  iframe {
-   height: 400px; /* new height (400 * (1/0.8) ) */
-   width: 67%; /* new width (100 * (1/0.8) )*/
-   transform: scale(1.5); 
-   transform-origin: 0 0;
-  }
-    
    @media only screen and (min-width: 1080px) {
     padding: 20px;
     margin: 0 0 40px;
-    
-    #iframe_wrapper {
-      height: 730px;
-    }
-    
-    iframe {
-     height: 490px;
-    }
   }
 `;

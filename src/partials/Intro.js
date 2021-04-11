@@ -37,7 +37,8 @@ export default function Intro(props) {
       <div>
         <IntroCardContainer className="component">
           <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
-          <h2>{props.nextMeetingSubject}</h2>
+          {props.nextMeetingSubject && <h2>{props.nextMeetingSubject}</h2>}
+          {props.nextMeetingAnnouncement && <div dangerouslySetInnerHTML={{__html: `${props.nextMeetingAnnouncement}`}}></div>}
           <DiscussedTitle>
             <a href={props.nextDiscussedLink}
                rel="noopener noreferrer"

@@ -62,6 +62,7 @@ export default function Archive(props) {
                 handleClearSearch={props.handleClearSearch}/>
       </PageHeading>
       <div>
+        {console.log(props.filteredList)}
         {props.filteredList.length === 0 &&
           <div>
             <h3>Nu am găsit rezultate pentru <i>"{props.value}"</i></h3>

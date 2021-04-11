@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 //Media
 import BannerImg from '../img/banned-bible-cover.jpg';
-import LogoImg from "../img/CC-logo.png";
-
 
 // Styles
 const BannerContainer = styled.section`

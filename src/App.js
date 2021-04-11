@@ -2,15 +2,15 @@ import React from 'react';
 import {HashRouter, Route} from "react-router-dom";
 
 //COMPONENTS
-// import Header from "./global-components/Header";
-import Footer from "./global-components/Footer";
+import Header from "./global-components/Header";
 import Home from "./pages/Home";
+import StudyFormat from "./pages/StudyFormat";
 import Archive from "./pages/Archive";
+import Footer from "./global-components/Footer";
 // DATA
 import ArchiveData from "./data/archive-data";
+import StudyResource from "./data/resource-text";
 import ChildrenMeeting from "./data/children-meeting-data";
-import Header from "./global-components/Header";
-import StudyFormat from "./pages/StudyFormat";
 // import downloadFile from "../data/PROGRAM-Conventie12Decembrie2020.docx"
 
 export default class App extends React.Component {
@@ -19,32 +19,29 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "5 Aprilie 2021",
+      footerUpdateDate: "8 Aprilie 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210408T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210415T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 8 Aprilie",
+      nextMeetingDate: "Joi, 15 Aprilie",
       // nextMeetingSubject: "Adunare de Expreriențe",
 
       nextMeetingSubject: "Discuții Studiu",
-      nextDiscussedLinkText: "Volumul 6, Obligațiile Părintești ale Noii Creații",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C13.htm#z0009396",
+      nextDiscussedLinkText: "",
+      nextDiscussedLink: "",
+      nextMeetingAnnouncement: "<p>Întrebări și răspunsuri din capitolul studiat: Volumul 6, Obligațiile Părintești ale Noii Creații, și alte întrebări.</p>" +
+        "<p>Va fi de ajutor dacă poți scrie întrebările tale în grupul de pe WhatsApp pentru a ne pregăti.</p>" +
+        "<p>Se vor propune subiecte pentru următoarele studii.</p>",
       nextMeetingQuestions: [
-        "Care este legătura strânsă între mintea curată şi sănătoasă şi corpul curat şi sănătos? pag. 559 p. 1",
-        "În acest scop, cum ar trebui să procedeze părintele în privinţa aerisirii, curăţeniei şi a exerciţiului mintal şi fizic al copiilor lui? pag. 559 p. 2",
-        "În care trei categorii se pot împărţi alimentele? Şi care este proporţia potrivită din fiecare pentru hrănire pe durata unei zile? pag. 560 p. 1-4",
-        "Cum ar putea fi aranjată satisfăcător o dietă vegetariană dacă ar fi nevoie să facem economie? pag. 561 p. 1",
-        "Explicaţi rezultatele dăunătoare a unei diete disproporţionate în special a hranei ce conţine amidon. pag. 561 p. 2",
-        "Să avem grijă ca să nu facem din dietă o manie? pag. 561 p. 3",
-        "De ce este o discuţie veselă şi folositoare un însoţitor de dorit la masa familiei? pag. 562 p. 1"
+
       ],
 
       // ANNOUNCEMENTS:
       // announcement: "<h3>RTE</h3>",
 
-      // note: "Adunare pentru Copii - Sâmbătă, 10 Octombrie - ",
+      // note: "Adunare pentru Copii - Sâmbătă, 10 Aprilie",
       // noteLinkTxt: "vezi ora",
       // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20201010T08&p1=202&ah=1",
 
@@ -52,20 +49,26 @@ export default class App extends React.Component {
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
-      childrenMeeting: []
+      childrenMeeting: [],
 
       // showScroll: false,
       // value: "",
-      // archiveList: [],
-      // filteredList: [],
+      archiveList: [],
+      filteredList: [],
+      studyResource: "",
+      noResourceMessage: "",
     };
   }
 
   componentDidMount() {
+    console.log(StudyResource);
+    console.log(ArchiveData);
+
     this.setState({
       archiveList: ArchiveData,
       filteredList: ArchiveData,
-      childrenMeeting: ChildrenMeeting
+      childrenMeeting: ChildrenMeeting,
+      studyResource: StudyResource
     });
 
     // check page scroll
@@ -144,6 +147,7 @@ export default class App extends React.Component {
               nextMeetingSubject={this.state.nextMeetingSubject}
               nextMeetingQuestions={this.state.nextMeetingQuestions}
               nextDiscussedLinkText={this.state.nextDiscussedLinkText}
+              nextMeetingAnnouncement={this.state.nextMeetingAnnouncement}
               {...meetingDetails}
 
               // Children Meeting Announcements
@@ -168,9 +172,11 @@ export default class App extends React.Component {
               showScroll={this.state.showScroll}
             />}
           />
-          {/*<Route path="/studyformat" render={() => <StudyFormat*/}
-          {/*  {...meetingDetails}*/}
-          {/*/>}*/}
+          <Route path="/studyformat" render={() => <StudyFormat
+            {...meetingDetails}
+            studyResource={this.state.studyResource}
+            noResourceMessage={this.state.noResourceMessage}
+          />}
           />
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>

@@ -49,6 +49,7 @@ export default function Home(props) {
         nextDiscussedLinkText={props.nextDiscussedLinkText}
         nextDiscussedLink={props.nextDiscussedLink}
         nextMeetingQuestions={props.nextMeetingQuestions}
+        nextMeetingAnnouncement={props.nextMeetingAnnouncement}
         childrenMeeting={props.childrenMeeting}
       />
       {props.showScroll === true && <ScrollTop onClick={props.scrollTop}><img src={Arrow} alt="Biblia deschisă" /></ScrollTop>}

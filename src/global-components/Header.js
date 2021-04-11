@@ -25,7 +25,8 @@ display flex;
 `;
 
 const Item = styled.li`
-padding: 0 10px;
+  padding: 0 10px;
+  text-align: center;
 `;
 const Logo = styled.div`
   display: flex;
@@ -58,9 +59,9 @@ export default function Header() {
         <Item>
           <NavLink exact to="/">Acasă</NavLink>
         </Item>
-        {/*<Item>*/}
-        {/*  <NavLink to="/studyformat">Format Studiu</NavLink>*/}
-        {/*</Item>*/}
+        <Item>
+          <NavLink to="/studyformat">Format Studiu</NavLink>
+        </Item>
         <Item>
           <NavLink to="/arhiva">Arhivă</NavLink>
         </Item>
