@@ -10,29 +10,14 @@ export default function Intro(props) {
   return (
     <IntroContainer>
       <div>
-        {props.announcement &&
         <IntroCardContainer className="component">
-          <div>
-            <div dangerouslySetInnerHTML={{__html: `${props.announcement}`}}></div>
-          </div>
-        </IntroCardContainer>
-        }
-        <IntroCardContainer className="component">
-          <p>Adunarea tinerilor se ține pe Zoom în fiecare joi. Fă click în linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Intră la Adunare</a></p>
+          <p>Adunarea tinerilor se ține pe Zoom în fiecare joi. Fă click în linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Linkul Adunării</a></p>
           <hr/>
           <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
-          {props.note && <div>
-            <hr/>
-            <InfoNote>{props.note}
-              <a href={props.noteLink}
-                 rel="noopener noreferrer"
-                 target="_blank">
-                {props.noteLinkTxt}
-              </a>
-            </InfoNote>
-          </div>
-          }
         </IntroCardContainer>
+        {props.announcementsNotes && <IntroCardContainer className="component">
+          <div dangerouslySetInnerHTML={{__html: `${props.announcementsNotes}`}}></div>
+        </IntroCardContainer>}
       </div>
       <div>
         <IntroCardContainer className="component">
@@ -46,7 +31,6 @@ export default function Intro(props) {
               {props.nextDiscussedLinkText}
             </a>
           </DiscussedTitle>
-
           <ol>
             {props.nextMeetingQuestions.map((subject, index) => {
               return <li key={index}><p>{subject}</p></li>
@@ -55,7 +39,7 @@ export default function Intro(props) {
         </IntroCardContainer>
         {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
           return (
-            <IntroCardContainer key={index}>
+            <IntroCardContainer key={index} className="component">
               <h2>{meeting.title}</h2>
               <div dangerouslySetInnerHTML={{__html: `${meeting.subject}`}}></div>
             </IntroCardContainer>
@@ -125,5 +109,4 @@ const DiscussedTitle = styled.h3`
   }  
 `;
 const InfoNote = styled.p`
-  font-weight: bold;
 `;

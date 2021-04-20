@@ -66,6 +66,19 @@ img {
   background: white;
 }
 
+.active {
+  color: teal;
+  text-decoration: underline;
+}
+
+.section-container {
+  display: none;
+}
+
+.activeSection {
+  display: block;
+}
+
 .tooltip {
   display: none;
   position: absolute;

@@ -19,31 +19,46 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "8 Aprilie 2021",
+      footerUpdateDate: "20 Aprilie 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210415T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210422T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 15 Aprilie",
-      // nextMeetingSubject: "Adunare de Expreriențe",
+      nextMeetingDate: "Joi, 22 Aprilie",
 
-      nextMeetingSubject: "Discuții Studiu",
+      // nextMeetingSubject: "Discuții Studiu",
+      nextMeetingSubject: "Program cu Copiii și Adunare de Expreriențe",
       nextDiscussedLinkText: "",
       nextDiscussedLink: "",
-      nextMeetingAnnouncement: "<p>Întrebări și răspunsuri din capitolul studiat: Volumul 6, Obligațiile Părintești ale Noii Creații, și alte întrebări.</p>" +
-        "<p>Va fi de ajutor dacă poți scrie întrebările tale în grupul de pe WhatsApp pentru a ne pregăti.</p>" +
-        "<p>Se vor propune subiecte pentru următoarele studii.</p>",
+      nextMeetingAnnouncement: "<br/>" +
+        "<p><strong>Subiectele ce vor fi votate pentru următoarele studii:</strong></p>" +
+        "<p>1. Vrăjmaşii şi Atacurile Împotriva Noii Creaţii (vol. 6 capitolul 15) <br>" +
+        "2. Botezul <br>" +
+        "3. Legămintele <br>" +
+        "4. Apărarea adevărului - cum o facem noi și cum ne învățăm copiii să o facă <br>" +
+        "5. Relația dintre soț și soție, influența acesteia în familie </p><hr/>" +
+        "<p>Adunarea din 29 Aprilie: Discurs fr. Jerry Leslie -  <i>Dincolo de ferestrele lor</i></p><hr/>",
+      // "<p>Întrebări din capitolul studiat: <a href='http://www.acsib.com/HTDB/Volume6/V6C13.htm' rel=\"noopener noreferrer\" target=\"_blank\"> Volumul 6, Obligațiile Părintești ale Noii Creații</a>, și alte întrebări. Va fi de ajutor dacă poți scrie întrebările tale în grupul de pe WhatsApp pentru a ne pregăti cu toții.</p>",
       nextMeetingQuestions: [
-
+        // "Cine, când, unde și cum poate avea copii?",
+        // "Cum practicăm rugăciunea în familie, soț - soție, în armonie cu cea individuală? Exemple prin experiențele fraților care au reușit să le armonizeze pe cele două în practica de zi cu zi.",
+        // "Deși capitolul studiat se referă la noile creații, tinerii,  cuplurile care au sau vor copii, totuși ce sfaturi și recomandări am învățat din capitolul studiat pentru familiile fără copii?",
+        // "Ce să facem în calitate de părinți atunci când ni se pare că copii nu ne ascultă și ne întorc vorba sau vorbesc cum nu ne-am aștepta?",
+        // "Ce să facem în calitate de copii atunci când ni se pare că părinții nu ne ascultă sau vorbesc cum nu ne-am aștepta?",
+        // "Cînd părinții își pedepsesc copiii pentru neascultare de ce nu trebuie să fie furioși?",
+        // "Cum trebuie să fie atmosfera în familie, ca copiii după ce vor crește mari și vor pleca de acasă să le fie dor și să-și amintească cu drag de casa și familia unde au crescut?",
+        // "De la ce vîrstă putem îndrumă copiii spre consacrare?",
+        // "Cum sunt copiii îndreptățiți prin părinții consacrati? 1 Corinteni 7:14",
       ],
 
-      // ANNOUNCEMENTS:
-      // announcement: "<h3>RTE</h3>",
-
-      // note: "Adunare pentru Copii - Sâmbătă, 10 Aprilie",
+      //ANNOUNCEMENTS
+      // note: "Adunare pentru Copii - 24 Aprilie | ",
       // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20201010T08&p1=202&ah=1",
+      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210424T1730&p1=177",
+
+      announcementsNotes: "<h3>Alte Anunțuri</h3><p>Adunare pentru Copii - 24 Aprilie, <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210424T1730&p1=177' >vezi ora</a></p>" +
+        "<p>Convenție Italia 24 - 25 Aprilie, <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Italian+Convention+24th+-+25th+April&iso=20210424T0930&p1=254' >vezi ora</a></p>",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
@@ -61,9 +76,6 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log(StudyResource);
-    console.log(ArchiveData);
-
     this.setState({
       archiveList: ArchiveData,
       filteredList: ArchiveData,
@@ -72,7 +84,7 @@ export default class App extends React.Component {
     });
 
     // check page scroll
-    window.addEventListener('scroll', this.checkScrollTop)
+    window.addEventListener('scroll', this.checkScrollTop);
   }
 
   checkScrollTop = () => {
@@ -153,10 +165,7 @@ export default class App extends React.Component {
               // Children Meeting Announcements
               childrenMeeting={this.state.childrenMeeting}
               // Info Note
-              note={this.state.note}
-              noteLink={this.state.noteLink}
-              noteLinkTxt={this.state.noteLinkTxt}
-              announcement={this.state.announcement}
+              announcementsNotes={this.state.announcementsNotes}
               scrollTop={this.handleScrollTop}
               showScroll={this.state.showScroll}
             />}

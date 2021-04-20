@@ -8,6 +8,35 @@
 
 const ArchiveData = [
   {
+    date: "15.04.2021",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 19:17 ] Când și cum putem aplica nuiaua ca pedeapsă în educarea copiilor noștri?",
+      "[ 31:43 ] Cum corectăm copiii mai mici ( până la 2 ani )?",
+      "[ 1:00:06 ] Cum ajutăm copiii să conștientizeze, să respecte, să înțeleagă și să aprecieze instrucțiunile părinților?"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=PbjozbRWSPw&ab_channel=IgorGutu"
+  },
+  {
+    date: "08.04.2021",
+    subjectLabel: "Întrebări discutate:",
+    questionList: [
+      "[ 36:44 ] În acest scop, cum ar trebui să procedeze părintele în privinţa aerisirii, curăţeniei şi a exerciţiului mintal şi fizic al copiilor lui? La ce se referă aerul cețos? Vol. 6 pag. 559 p. 2",
+      "[ 1:06:13 ] Împărțirea alimentolor în trei categorii. Vol. 6 pag. 560 p. 1-4",
+      "[ 1:38:47 ] O alimentație sănătoasă.  Vol. 6 pag. 561 - 562"
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=-egtUFHKzqc&ab_channel=IgorGutu"
+  },
+  {
+    date: "25.03.2021",
+    subjectLabel: "Discurs:",
+    questionList: [
+      "[ 17:56 ] fr. Jerry Leslie - Pregătirea Paștelor & Cina de Amintire",
+      "[ 1:13:16 ] Întrebări și dicuții",
+    ],
+    videoSrc: "https://www.youtube.com/watch?v=-egtUFHKzqc&ab_channel=IgorGutu"
+  },
+  {
     date: "10.09.2020",
     subjectLabel: "Întrebări discutate:",
     questionList: [

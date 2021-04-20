@@ -38,10 +38,7 @@ export default function Home(props) {
         bannerQuote={props.bannerQuote}
         bannerVerse={props.bannerVerse}/>
       <Intro
-        note={props.note}
-        announcement={props.announcement}
-        noteLink={props.noteLink}
-        noteLinkTxt={props.noteLinkTxt}
+        announcementsNotes={props.announcementsNotes}
         zoomLink={props.zoomLink}
         meetingHour={props.meetingHour}
         nextMeetingDate={props.nextMeetingDate}
