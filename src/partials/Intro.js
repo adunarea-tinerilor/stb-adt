@@ -23,7 +23,6 @@ export default function Intro(props) {
         <IntroCardContainer className="component">
           <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
           {props.nextMeetingSubject && <h2>{props.nextMeetingSubject}</h2>}
-          {props.nextMeetingAnnouncement && <div dangerouslySetInnerHTML={{__html: `${props.nextMeetingAnnouncement}`}}></div>}
           <DiscussedTitle>
             <a href={props.nextDiscussedLink}
                rel="noopener noreferrer"
@@ -36,6 +35,7 @@ export default function Intro(props) {
               return <li key={index}><p>{subject}</p></li>
             })}
           </ol>
+          {props.nextMeetingAnnouncement && <div dangerouslySetInnerHTML={{__html: `${props.nextMeetingAnnouncement}`}}></div>}
         </IntroCardContainer>
         {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
           return (

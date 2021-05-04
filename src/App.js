@@ -19,28 +19,32 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "20 Aprilie 2021",
+      footerUpdateDate: "5 Mai 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210422T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210506T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 22 Aprilie",
+      nextMeetingDate: "Joi, 6 Mai",
 
-      // nextMeetingSubject: "Discuții Studiu",
-      nextMeetingSubject: "Program cu Copiii și Adunare de Expreriențe",
-      nextDiscussedLinkText: "",
-      nextDiscussedLink: "",
-      nextMeetingAnnouncement: "<br/>" +
-        "<p><strong>Subiectele ce vor fi votate pentru următoarele studii:</strong></p>" +
-        "<p>1. Vrăjmaşii şi Atacurile Împotriva Noii Creaţii (vol. 6 capitolul 15) <br>" +
-        "2. Botezul <br>" +
-        "3. Legămintele <br>" +
-        "4. Apărarea adevărului - cum o facem noi și cum ne învățăm copiii să o facă <br>" +
-        "5. Relația dintre soț și soție, influența acesteia în familie </p><hr/>" +
-        "<p>Adunarea din 29 Aprilie: Discurs fr. Jerry Leslie -  <i>Dincolo de ferestrele lor</i></p><hr/>",
-      // "<p>Întrebări din capitolul studiat: <a href='http://www.acsib.com/HTDB/Volume6/V6C13.htm' rel=\"noopener noreferrer\" target=\"_blank\"> Volumul 6, Obligațiile Părintești ale Noii Creații</a>, și alte întrebări. Va fi de ajutor dacă poți scrie întrebările tale în grupul de pe WhatsApp pentru a ne pregăti cu toții.</p>",
+      nextMeetingSubject: "Discuții Studiu",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C12.htm",
+      nextDiscussedLinkText: "Volumul 6, cap. 12 - Privilegiile şi obligaţiile Noii Creaţii cu privire la căsătorie, precum şi la alte lucruri",
+      nextMeetingAnnouncement: "<hr><p>Întrebări adiționale:<br/>" +
+        "1. Cum practicăm rugăciunea în familie soț-soție, în armonie cu cea individuala? Mi-ar placea să aud frați care au pus în practică, în armonie cele două." +
+        "<br>2. Ce înțelegem prin adulter? Matei 5:27,28 în armonie cu Matei 5:32 - Care este curățenia care trebuie să o urmărească noua creație? Prin adulter se înțelege doar \"fapta\" sau și alte acțiuni? (pot sa aduc exemplu mai concret la adunare)" +
+        "<br>3. În caz de adulter, cuplu ar trebui să se consulte cu bătrânul de adunare sau cu părinții?" +
+        "<br>4. Care este diferența între curvie și preacurvie?</p>",
       nextMeetingQuestions: [
+        "Care sunt diferitele obligaţii impuse Noilor Creaturi de către Legea Iubirii, şi în ce mod îşi pot găsi ele manifestare? Pag. 485 p. 1",
+        "Chiar dacă corpul uman ar fi perfect, ce limitări ar întâlni Noua Creatură în împlinirea Legământului de sacrificiu? Pag. 485 p. 2",
+        "Cum pot deveni sacrificii acceptabile corpurile noastre umane imperfecte? Pag. 486 p. 1",
+        "Când şi în ce condiţii şi-a început existenţa Noua Creatură? Pag. 486 p. 2",
+        "În ce condiţii pot fi considerate corpurile noastre muritoare un înlocuitor temporar pentru corpurile noastre spirituale viitoare? Pag. 487 p. 1",
+        "De ce această chestiune a socotirii în ceea ce priveşte Noua Creatură apare ca nebunie şi ceva nereal pentru lume? Pag. 487 p. 2",
+        "Poate Noua Creatură să ignore obligaţiile corpului său muritor faţă de alte fiinţe umane? Pag. 488 p. 1",
+        "Explicaţi cele trei faze ale grelei sarcini puse înaintea noii Voinţe. Pag. 488 p. 2 prima parte",
+        "Cum poate carnea să profite de orice îngăduinţă din partea noastră, şi cum trebuie să ne ţinem corpurile noastre supuse”? Pag. 488 ultima parte şi Pag. 489 p. 1",
         // "Cine, când, unde și cum poate avea copii?",
         // "Cum practicăm rugăciunea în familie, soț - soție, în armonie cu cea individuală? Exemple prin experiențele fraților care au reușit să le armonizeze pe cele două în practica de zi cu zi.",
         // "Deși capitolul studiat se referă la noile creații, tinerii,  cuplurile care au sau vor copii, totuși ce sfaturi și recomandări am învățat din capitolul studiat pentru familiile fără copii?",
@@ -53,12 +57,7 @@ export default class App extends React.Component {
       ],
 
       //ANNOUNCEMENTS
-      // note: "Adunare pentru Copii - 24 Aprilie | ",
-      // noteLinkTxt: "vezi ora",
-      // noteLink: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210424T1730&p1=177",
-
-      announcementsNotes: "<h3>Alte Anunțuri</h3><p>Adunare pentru Copii - 24 Aprilie, <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210424T1730&p1=177' >vezi ora</a></p>" +
-        "<p>Convenție Italia 24 - 25 Aprilie, <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Italian+Convention+24th+-+25th+April&iso=20210424T0930&p1=254' >vezi ora</a></p>",
+      announcementsNotes: "<h3>Alte Anunțuri</h3><p>Adunare pentru Copii - 8 Mai <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210508T1730&p1=177' >vezi ora</a></p>",
 
       // GENERAL INFO:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",

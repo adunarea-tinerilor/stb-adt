@@ -48,7 +48,7 @@ export default class StudyFormat extends React.Component {
           <IntroContainer>
             <IntroCardContainer className="component">
               <p>Întrebări:</p>
-              <ol>
+              <ol className="study-format__qlist">
                 {nextMeetingQuestions.map((question, index) => {
                   return <li className="card-question" key={index} onClick={this.handleActiveSection}>
                     <p data-id={`section-${index}`}>{question}</p></li>
@@ -90,17 +90,16 @@ const IntroContainer = styled.section`
   margin: 40px 0;
   
   .card-wrapper {
-    height: 85vh;
     overflow: hidden;
     padding: 0 20px
   }
   
   .card-content {
-    height: 85vh;
+    height: 620px;
     overflow: auto;
+    padding-right: 10px;
   }
 
-  
   .card-content::-webkit-scrollbar {
     width: 7px;
   }
@@ -125,7 +124,8 @@ const IntroContainer = styled.section`
     }
     
     & > div.section-container {
-    width: 58%;
+      width: 58%;
+      height: 660px;
     }
   }
 `;
@@ -137,6 +137,23 @@ const IntroCardContainer = styled.div`
   #iframe_wrapper {
   overflow: hidden;
   height: 600px;
+  }
+  
+  .study-format__qlist {
+    height: 540px;
+    overflow: auto;
+    padding-right: 10px;
+  }
+  
+   .study-format__qlist::-webkit-scrollbar {
+    width: 7px;
+  }
+  .study-format__qlist::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #00808029;
+  }
+  
+  .study-format__qlist::-webkit-scrollbar-thumb {
+    background-color: teal;
   }
         
   .card-question:hover {
