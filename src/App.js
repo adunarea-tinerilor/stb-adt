@@ -5,12 +5,14 @@ import {HashRouter, Route} from "react-router-dom";
 import Header from "./global-components/Header";
 import Home from "./pages/Home";
 import StudyFormat from "./pages/StudyFormat";
+import ChildrenMeeting from "./pages/Children-meeting";
 import Archive from "./pages/Archive";
 import Footer from "./global-components/Footer";
 // DATA
 import ArchiveData from "./data/archive-data";
 import StudyResource from "./data/resource-text";
-import ChildrenMeeting from "./data/children-meeting-data";
+import ChildrenMeetingData from "./data/children-meeting-data";
+import QuestionsList from "./data/questions-list";
 // import downloadFile from "../data/PROGRAM-Conventie12Decembrie2020.docx"
 
 export default class App extends React.Component {
@@ -19,56 +21,63 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "5 Mai 2021",
+      footerUpdateDate: "8 Iunie 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210506T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210610T10&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 6 Mai",
+      nextMeetingDate: "Joi, 10 Iunie",
 
+      // nextMeetingSubject: "Adunare de Experiențe și Program Pentru Copii",
       nextMeetingSubject: "Discuții Studiu",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C12.htm",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C12.htm#z0009243",
       nextDiscussedLinkText: "Volumul 6, cap. 12 - Privilegiile şi obligaţiile Noii Creaţii cu privire la căsătorie, precum şi la alte lucruri",
-      nextMeetingAnnouncement: "<hr><p>Întrebări adiționale:<br/>" +
-        "1. Cum practicăm rugăciunea în familie soț-soție, în armonie cu cea individuala? Mi-ar placea să aud frați care au pus în practică, în armonie cele două." +
-        "<br>2. Ce înțelegem prin adulter? Matei 5:27,28 în armonie cu Matei 5:32 - Care este curățenia care trebuie să o urmărească noua creație? Prin adulter se înțelege doar \"fapta\" sau și alte acțiuni? (pot sa aduc exemplu mai concret la adunare)" +
-        "<br>3. În caz de adulter, cuplu ar trebui să se consulte cu bătrânul de adunare sau cu părinții?" +
-        "<br>4. Care este diferența între curvie și preacurvie?</p>",
-      nextMeetingQuestions: [
-        "Care sunt diferitele obligaţii impuse Noilor Creaturi de către Legea Iubirii, şi în ce mod îşi pot găsi ele manifestare? Pag. 485 p. 1",
-        "Chiar dacă corpul uman ar fi perfect, ce limitări ar întâlni Noua Creatură în împlinirea Legământului de sacrificiu? Pag. 485 p. 2",
-        "Cum pot deveni sacrificii acceptabile corpurile noastre umane imperfecte? Pag. 486 p. 1",
-        "Când şi în ce condiţii şi-a început existenţa Noua Creatură? Pag. 486 p. 2",
-        "În ce condiţii pot fi considerate corpurile noastre muritoare un înlocuitor temporar pentru corpurile noastre spirituale viitoare? Pag. 487 p. 1",
-        "De ce această chestiune a socotirii în ceea ce priveşte Noua Creatură apare ca nebunie şi ceva nereal pentru lume? Pag. 487 p. 2",
-        "Poate Noua Creatură să ignore obligaţiile corpului său muritor faţă de alte fiinţe umane? Pag. 488 p. 1",
-        "Explicaţi cele trei faze ale grelei sarcini puse înaintea noii Voinţe. Pag. 488 p. 2 prima parte",
-        "Cum poate carnea să profite de orice îngăduinţă din partea noastră, şi cum trebuie să ne ţinem corpurile noastre supuse”? Pag. 488 ultima parte şi Pag. 489 p. 1",
-        // "Cine, când, unde și cum poate avea copii?",
-        // "Cum practicăm rugăciunea în familie, soț - soție, în armonie cu cea individuală? Exemple prin experiențele fraților care au reușit să le armonizeze pe cele două în practica de zi cu zi.",
-        // "Deși capitolul studiat se referă la noile creații, tinerii,  cuplurile care au sau vor copii, totuși ce sfaturi și recomandări am învățat din capitolul studiat pentru familiile fără copii?",
-        // "Ce să facem în calitate de părinți atunci când ni se pare că copii nu ne ascultă și ne întorc vorba sau vorbesc cum nu ne-am aștepta?",
-        // "Ce să facem în calitate de copii atunci când ni se pare că părinții nu ne ascultă sau vorbesc cum nu ne-am aștepta?",
-        // "Cînd părinții își pedepsesc copiii pentru neascultare de ce nu trebuie să fie furioși?",
-        // "Cum trebuie să fie atmosfera în familie, ca copiii după ce vor crește mari și vor pleca de acasă să le fie dor și să-și amintească cu drag de casa și familia unde au crescut?",
-        // "De la ce vîrstă putem îndrumă copiii spre consacrare?",
-        // "Cum sunt copiii îndreptățiți prin părinții consacrati? 1 Corinteni 7:14",
+
+      // nextMeetingAnnouncement: "<hr/><p>Întrebări adiționale:<br/><br/>" +
+        // "1. Cum practicăm rugăciunea în familie soț-soție, în armonie cu cea individuala? Mi-ar placea să aud frați care au pus în practică, în armonie cele două.</p>",
+
+      nextMeetingQuestionsStudyFormat: [
+        "Cum înțelegem pedeapsa dată femeii, \"bărbatul va stăpâni peste tine\"? Pag. 492, 493",
+        "Ce lecții pentru familie putem extrage din Efeseni 5:22-33? Pag. 494, 495",
+        "Ce îndatoriri are soțul credincios în calitate de cap al familiei? Pag. 496, 497",
+        // "Din 1 Cor. 11:7: Cum, prin ce sau în ce fel este femeia slava bărbatului, în același fel cum bărbatul este slava lui Dumnezeu? / Care este învăţătura apostolului în 1 Cor. 11:3 cu privire la poziţia de cap? Pag. 491 p. 1",
+        // "Se aplică acest argument în ceea ce priveşte relaţiile dintre sexe în general sau în particular? Pag. 491 p. 2",
+        //
+        // "Care sunt dovezile scripturale că poziţia de cap nu implică tiranie? Şi ce responasabilităţi impune asupra bărbătului această poziţie? Pag. 491 p. 3",
+        // "Cum a continuat blestemul mamei Eva (Gen. 3:16, ultima parte) asupra fiicelor ei? Pag. 492 p. 1",
+        // "Cum a acţionat folosirea nepotrivită a puterii fizice şi mintale din partea bărbatului asupra propriei lui nefericiri şi asupra degradării generale a rasei? Pag. 492 p. 2 şi Pag. 493 p. 1",
+        // "Arătaţi cum indică apostolul că relaţia de căsătorie este o ilustraţie a relaţiei dintre Cristos şi Biserică? Pag. 494 p. 2, 3",
+        // "Cum trebuie să considere Noile Creaţii în Isus Cristos relaţia de căsătorie din tip, soţul şi respectiv soţia? Pag. 495 p. 1",
+        // "În cazul în care soţia posedă calităţi superioare soţului, ar trebui inversată această ordine a poziţiei de cap? Ce reguli generale n-ar trebui niciodată desconsiderate de către cei ce vor să se căsătorească? Pag. 495 p. 2",
+        //
+        // "Cum trebuie un adevărat soţ creştin să se îngrijească de interesele soţiei sale, atât naturale cât şi spirituale? Pag. 496 p. 1",
+        // "Exercitarea poziţiei de cap implică ignorarea sfatului, sugestiilor sau cooperării soţiei? Pag. 497 p. 1, 2",
+        // "Cum trebuie să-şi recunoască o adevărată soţie creştină îndatoririle şi privilegiile? Şi care este porunca specială a apostolului Pavel în această privinţă? Pag. 497 p. 3",
+        // "Care este sfatul apostolului Petru? Pag. 498 p. 1",
+        // "Cum trebuie să exercite soţia respectul potrivit faţă de soţ în administrarea tuturor lucrurilor casei? Pag. 498 p. 2",
+        // "În cazul în care două creaturi noi nu se potrivesc bine, unde soţia este mai superioară, ce dificultăţi vor întâmpina soţul şi soţia? Pag. 499 p. 1, 2",
+        // "Într-un astfel de caz ce curs ar trebui să urmeze soţul? Pag. 500 p. 1",
       ],
 
-      //ANNOUNCEMENTS
-      announcementsNotes: "<h3>Alte Anunțuri</h3><p>Adunare pentru Copii - 8 Mai <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210508T1730&p1=177' >vezi ora</a></p>",
 
-      // GENERAL INFO:
+      //ANNOUNCEMENTS
+      // announcementsNotes: "<h3>Alte Anunțuri</h3>" +
+      //   "<p>Adunare pentru Copii - 5 Iunie, " +
+      //   " <a rel='noopener noreferrer' target='_blank' href='https://www.timeanddate.com/worldclock/fixedtime.html?msg=Adunare+pentru+Copii&iso=20210605T1730&p1=177'>vezi ora</a>" +
+      //   "</p>",
+
+      // GENERAL:
       zoomLink: "https://us02web.zoom.us/j/88287573616?pwd=WGtCUjdEZWFmb1ZPNkZLcHpvMHBNdz09",
       bannerQuote: "Caută să te înfăţişezi înaintea lui Dumnezeu ca un om încercat, ca un lucrător care n-are de ce să-i fie ruşine şi care împarte drept Cuvântul adevărului.",
       bannerVerse: "2 Timotei 2:15",
-      childrenMeeting: [],
+      childrenMeetingData: [],
 
       // showScroll: false,
       // value: "",
       archiveList: [],
       filteredList: [],
+      nextMeetingQuestions: [],
       studyResource: "",
       noResourceMessage: "",
     };
@@ -78,8 +87,9 @@ export default class App extends React.Component {
     this.setState({
       archiveList: ArchiveData,
       filteredList: ArchiveData,
-      childrenMeeting: ChildrenMeeting,
-      studyResource: StudyResource
+      childrenMeetingData: ChildrenMeetingData,
+      studyResource: StudyResource,
+      nextMeetingQuestions: QuestionsList
     });
 
     // check page scroll
@@ -161,8 +171,6 @@ export default class App extends React.Component {
               nextMeetingAnnouncement={this.state.nextMeetingAnnouncement}
               {...meetingDetails}
 
-              // Children Meeting Announcements
-              childrenMeeting={this.state.childrenMeeting}
               // Info Note
               announcementsNotes={this.state.announcementsNotes}
               scrollTop={this.handleScrollTop}
@@ -181,10 +189,14 @@ export default class App extends React.Component {
             />}
           />
           <Route path="/studyformat" render={() => <StudyFormat
-            {...meetingDetails}
+            nextMeetingQuestionsStudyFormat={this.state.nextMeetingQuestionsStudyFormat}
             studyResource={this.state.studyResource}
             noResourceMessage={this.state.noResourceMessage}
           />}
+          />
+          <Route path="/adunarecopii" render={() => <ChildrenMeeting
+            // Children Meeting Announcements
+            childrenMeetingData={this.state.childrenMeetingData}/>}
           />
           <Footer footerUpdateDate={this.state.footerUpdateDate}/>
         </div>

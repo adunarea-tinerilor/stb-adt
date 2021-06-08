@@ -63,6 +63,9 @@ export default function Header() {
           <NavLink to="/studyformat">Format Studiu</NavLink>
         </Item>
         <Item>
+          <NavLink to="/adunarecopii">Adunare Copii</NavLink>
+        </Item>
+        <Item>
           <NavLink to="/arhiva">Arhivă</NavLink>
         </Item>
       </Menu>

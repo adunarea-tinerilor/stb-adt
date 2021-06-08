@@ -33,13 +33,15 @@ const FooterDate = styled.p`
 `;
 const FooterAddress = styled.p`
  font-size: 14px;
-;`
+;`;
 
 export default function Footer(props) {
 
   return (
     <FooterContainer className="component">
-      <FooterAddress>Dacă ai întrebări te rugăm să ne scrii un email  <FooterEmail href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail></FooterAddress>
+      <FooterAddress>Dacă ai întrebări sau sugestii te rugăm să ne scrii un email <FooterEmail
+        href="mailTo:adunarea.tinerilor@gmail.com">adunarea.tinerilor@gmail.com</FooterEmail>
+      </FooterAddress>
       <FooterDate> 3 August 2020 - {props.footerUpdateDate}</FooterDate>
     </FooterContainer>
   );

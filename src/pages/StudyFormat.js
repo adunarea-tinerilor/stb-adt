@@ -40,16 +40,16 @@ export default class StudyFormat extends React.Component {
   };
 
   render() {
-    const { studyResource, nextMeetingQuestions } = this.props;
+    const { studyResource, nextMeetingQuestionsStudyFormat } = this.props;
     return (
 
       <div>
-        {nextMeetingQuestions.length !== 0 && <div className="study-format">
+        {nextMeetingQuestionsStudyFormat.length !== 0 && <div className="study-format">
           <IntroContainer>
             <IntroCardContainer className="component">
-              <p>Întrebări:</p>
+              <p>Întrebări din Volumul 6:</p>
               <ol className="study-format__qlist">
-                {nextMeetingQuestions.map((question, index) => {
+                {nextMeetingQuestionsStudyFormat.map((question, index) => {
                   return <li className="card-question" key={index} onClick={this.handleActiveSection}>
                     <p data-id={`section-${index}`}>{question}</p></li>
                 })}
@@ -68,7 +68,7 @@ export default class StudyFormat extends React.Component {
           </IntroContainer>
         </div>}
 
-        {nextMeetingQuestions.length === 0 && <section>
+        {nextMeetingQuestionsStudyFormat.length === 0 && <section>
           <h3>Încă nu este nimic aici.</h3>
           <div  style={{display: "flex", flexDirection: "column"}}>
             <NoStudyImg className="" src={Image} alt="Watercolor Painted Books"/>

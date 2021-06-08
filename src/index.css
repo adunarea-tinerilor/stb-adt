@@ -32,7 +32,7 @@ a:hover {
 
 a:active,
 a.active {
-  color: teal;
+  color: #008080;
 }
 
 ul {
@@ -44,7 +44,7 @@ ul li {
 }
 
 ol {
-  padding-left: 22px;
+  padding-left: 30px;
 }
 
 li, p {
@@ -67,7 +67,7 @@ img {
 }
 
 .active {
-  color: teal;
+  color: #008080;
   text-decoration: underline;
 }
 
@@ -80,36 +80,44 @@ img {
 }
 
 .tooltip {
+  color: #008080;
+  position: relative;
+}
+
+.tooltip__text {
   display: none;
-  position: absolute;
-  z-index: 3;
-  top: 36px;
-  left: 0;
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
   background: white;
+  border: 1px solid #008080;
+  padding: 10px;
   width: 100%;
-  border: 1px solid teal;
-  padding: 24px;
-  max-height: 280px;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+  max-width: 420px;
+  box-shadow: 0 0 10px 0 #C9C9C9;
+}
+.tooltip:hover .tooltip__text {
+    display: inline-block;
 }
 
-.tooltip::-webkit-scrollbar {
-  width: 5px;
-}
+/*.tooltip::-webkit-scrollbar {*/
+/*  width: 5px;*/
+/*}*/
 
-.tooltip::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px #dadada;
-  border-radius: 10px;
-}
+/*.tooltip::-webkit-scrollbar-track {*/
+/*  box-shadow: inset 0 0 5px #dadada;*/
+/*  border-radius: 10px;*/
+/*}*/
 
-.tooltip::-webkit-scrollbar-thumb {
-  background: teal;
-}
+/*.tooltip::-webkit-scrollbar-thumb {*/
+/*  background: teal;*/
+/*}*/
 
-.tooltip::-webkit-scrollbar-thumb:hover {
-  background: teal;
-}
+/*.tooltip::-webkit-scrollbar-thumb:hover {*/
+/*  background: teal;*/
+/*}*/
 
 .is-active {
   display: block;

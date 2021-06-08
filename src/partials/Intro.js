@@ -1,19 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-//MEDIA
-// import ZoomLogo from "../img/zoom-logo.png"
-// import downloadFile from "file source"
-
 export default function Intro(props) {
 
   return (
     <IntroContainer>
       <div>
         <IntroCardContainer className="component">
-          <p>Adunarea tinerilor se ține pe Zoom în fiecare joi. Fă click în linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Linkul Adunării</a></p>
+          <p>Adunarea tinerilor are loc în fiecare joi pe Zoom. Fă click pe linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Linkul Adunării</a></p>
           <hr/>
-          <p>Click în linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
+          <p>Click pe linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
         </IntroCardContainer>
         {props.announcementsNotes && <IntroCardContainer className="component">
           <div dangerouslySetInnerHTML={{__html: `${props.announcementsNotes}`}}></div>
@@ -37,14 +33,6 @@ export default function Intro(props) {
           </ol>
           {props.nextMeetingAnnouncement && <div dangerouslySetInnerHTML={{__html: `${props.nextMeetingAnnouncement}`}}></div>}
         </IntroCardContainer>
-        {props.childrenMeeting && props.childrenMeeting.map((meeting, index) => {
-          return (
-            <IntroCardContainer key={index} className="component">
-              <h2>{meeting.title}</h2>
-              <div dangerouslySetInnerHTML={{__html: `${meeting.subject}`}}></div>
-            </IntroCardContainer>
-          )
-        })}
       </div>
     </IntroContainer>
   );
@@ -106,7 +94,5 @@ const DiscussedTitle = styled.h3`
   text-align: center;
   & a {
     color: teal;
-  }  
-`;
-const InfoNote = styled.p`
+  }
 `;
