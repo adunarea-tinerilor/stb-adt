@@ -21,43 +21,38 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "8 Iunie 2021",
+      footerUpdateDate: "24 Septembrie 2021",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210610T10&p1=202&ah=2&am=30",
+      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210930T1030&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 10 Iunie",
+      nextMeetingDate: "Joi, 30 Septembrie",
 
-      // nextMeetingSubject: "Adunare de Experiențe și Program Pentru Copii",
+      // testimonyMeeting: "Adunare de Experiențe și Program Pentru Copii",
       nextMeetingSubject: "Discuții Studiu",
-      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C12.htm#z0009243",
-      nextDiscussedLinkText: "Volumul 6, cap. 12 - Privilegiile şi obligaţiile Noii Creaţii cu privire la căsătorie, precum şi la alte lucruri",
+      nextDiscussedLink: "http://www.acsib.com/HTDB/Volume6/V6C15.htm#z0009509",
+      nextDiscussedLinkText: "Volumul 6, cap. 15 - Vrăjmaşii şi Atacurile Împotriva Noii Creaţii",
 
       // nextMeetingAnnouncement: "<hr/><p>Întrebări adiționale:<br/><br/>" +
         // "1. Cum practicăm rugăciunea în familie soț-soție, în armonie cu cea individuala? Mi-ar placea să aud frați care au pus în practică, în armonie cele două.</p>",
 
       nextMeetingQuestionsStudyFormat: [
-        "Cum înțelegem pedeapsa dată femeii, \"bărbatul va stăpâni peste tine\"? Pag. 492, 493",
-        "Ce lecții pentru familie putem extrage din Efeseni 5:22-33? Pag. 494, 495",
-        "Ce îndatoriri are soțul credincios în calitate de cap al familiei? Pag. 496, 497",
-        // "Din 1 Cor. 11:7: Cum, prin ce sau în ce fel este femeia slava bărbatului, în același fel cum bărbatul este slava lui Dumnezeu? / Care este învăţătura apostolului în 1 Cor. 11:3 cu privire la poziţia de cap? Pag. 491 p. 1",
-        // "Se aplică acest argument în ceea ce priveşte relaţiile dintre sexe în general sau în particular? Pag. 491 p. 2",
-        //
-        // "Care sunt dovezile scripturale că poziţia de cap nu implică tiranie? Şi ce responasabilităţi impune asupra bărbătului această poziţie? Pag. 491 p. 3",
-        // "Cum a continuat blestemul mamei Eva (Gen. 3:16, ultima parte) asupra fiicelor ei? Pag. 492 p. 1",
-        // "Cum a acţionat folosirea nepotrivită a puterii fizice şi mintale din partea bărbatului asupra propriei lui nefericiri şi asupra degradării generale a rasei? Pag. 492 p. 2 şi Pag. 493 p. 1",
-        // "Arătaţi cum indică apostolul că relaţia de căsătorie este o ilustraţie a relaţiei dintre Cristos şi Biserică? Pag. 494 p. 2, 3",
-        // "Cum trebuie să considere Noile Creaţii în Isus Cristos relaţia de căsătorie din tip, soţul şi respectiv soţia? Pag. 495 p. 1",
-        // "În cazul în care soţia posedă calităţi superioare soţului, ar trebui inversată această ordine a poziţiei de cap? Ce reguli generale n-ar trebui niciodată desconsiderate de către cei ce vor să se căsătorească? Pag. 495 p. 2",
-        //
-        // "Cum trebuie un adevărat soţ creştin să se îngrijească de interesele soţiei sale, atât naturale cât şi spirituale? Pag. 496 p. 1",
-        // "Exercitarea poziţiei de cap implică ignorarea sfatului, sugestiilor sau cooperării soţiei? Pag. 497 p. 1, 2",
-        // "Cum trebuie să-şi recunoască o adevărată soţie creştină îndatoririle şi privilegiile? Şi care este porunca specială a apostolului Pavel în această privinţă? Pag. 497 p. 3",
-        // "Care este sfatul apostolului Petru? Pag. 498 p. 1",
-        // "Cum trebuie să exercite soţia respectul potrivit faţă de soţ în administrarea tuturor lucrurilor casei? Pag. 498 p. 2",
-        // "În cazul în care două creaturi noi nu se potrivesc bine, unde soţia este mai superioară, ce dificultăţi vor întâmpina soţul şi soţia? Pag. 499 p. 1, 2",
-        // "Într-un astfel de caz ce curs ar trebui să urmeze soţul? Pag. 500 p. 1",
+        "Care este vrăjmaşul principal al Noii Creaţii? Are Noua creatură două minţi sau este controlată de două voinţe? Pag. 599, p. 1 ",
+        "Este moartea corpului pământesc cu voinţa lui şi învierea ulterioară un fapt real sau socotit? Şi cum trebuie menţinute aceste condiţii ale „morţii” şi „învierii” de către Noua Creatură? Pag. 600, p.1",
+        "Care este declaraţia Scripturii cu privire la inima naturală? Şi cum este diferită inima Noii Creaturi? Pag. 600, p.2",
+        "Cum este asaltată şi înşelată inima nouă de către inima veche cu dispoziţia egoistă? Pag. 601, p.1",
+        "Care este unul dintre argumentele favo­rite şi înşelătoare ale acestei inimi vechi? Pag. 601, p.2",
+        "Cum trebuie să întâmpine inima nouă aceste atacuri? Pag. 602, p.1, 2",
+        "Ce este fanatismul şi cum trebuie evitat? şi ce este absolut necesar pentru a aplica potrivit principiile dreptăţii în vieţile noastre zilnice? Pag. 603 p. 1",
+        "Ce gând ar trebui ţinut constant în minte de Noua Creatură? Şi care este singura restricţie ce trebuie s-o recunoaştem în această direcţie? Pag. 603 p. 2",
+        "De ce este spiritul lumii în general opus standardului Noii Creaţii? Pag. 604 p. 1, 2",
+        "De ce este lumea unul dintre cei mai mari vrăjmaşi ai Noii Creaţii şi de ce un antagonism este inevitabil? Pag. 604 p. 3",
+        "Explicaţi de ce şi cele mai nobile obiective şi scopuri ale lumii în general sunt contrare standardelor Noii Creaţii? Pag. 605 p. 1",
+        "Cu ce spirit ar trebui primite de către noi ura şi opoziţia din partea lumii? Pag. 605 p. 2",
+        "Explicaţi îndemnul Scripturii nu iubiţi lumea” etc. ( Ioan 2:15) Pag. 606 p. 1, 2",
+        "A stabilit Domnul pentru noi lucrarea herculeană de a reforma lumea? Şi ar fi potrivit pentru noi să ne înrolăm în denunţarea ordinii prezente a lucrurilor? Pag. 607 p. 1, 2",
+        "Ce exemple scripturale putem urma în această direcţie? Pag. 608 p. 1",
       ],
 
 
@@ -165,6 +160,7 @@ export default class App extends React.Component {
               meetingHour={this.state.meetingHour}
               // Study Announcements
               nextMeetingDate={this.state.nextMeetingDate}
+              testimonyMeeting={this.state.testimonyMeeting}
               nextMeetingSubject={this.state.nextMeetingSubject}
               nextMeetingQuestions={this.state.nextMeetingQuestions}
               nextDiscussedLinkText={this.state.nextDiscussedLinkText}

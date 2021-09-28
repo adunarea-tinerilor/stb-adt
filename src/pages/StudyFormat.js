@@ -69,7 +69,7 @@ export default class StudyFormat extends React.Component {
         </div>}
 
         {nextMeetingQuestionsStudyFormat.length === 0 && <section>
-          <h3>Încă nu este nimic aici.</h3>
+          <h3>Încă nu avem detalii aici.</h3>
           <div  style={{display: "flex", flexDirection: "column"}}>
             <NoStudyImg className="" src={Image} alt="Watercolor Painted Books"/>
             <a href='https://www.freepik.com/vectors/watercolor' style={{fontSize: "7px"}}>Watercolor vector created by pikisuperstar - www.freepik.com</a>
@@ -99,18 +99,6 @@ const IntroContainer = styled.section`
     overflow: auto;
     padding-right: 10px;
   }
-
-  .card-content::-webkit-scrollbar {
-    width: 7px;
-  }
-  .card-content::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #00808029;
-  }
-  
-  .card-content::-webkit-scrollbar-thumb {
-    background-color: teal;
-  }
-
   
   @media only screen and (min-width: 1080px) {
     display: flex;
@@ -143,17 +131,6 @@ const IntroCardContainer = styled.div`
     height: 540px;
     overflow: auto;
     padding-right: 10px;
-  }
-  
-   .study-format__qlist::-webkit-scrollbar {
-    width: 7px;
-  }
-  .study-format__qlist::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px #00808029;
-  }
-  
-  .study-format__qlist::-webkit-scrollbar-thumb {
-    background-color: teal;
   }
         
   .card-question:hover {

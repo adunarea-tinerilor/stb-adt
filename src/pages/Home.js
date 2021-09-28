@@ -42,6 +42,7 @@ export default function Home(props) {
         zoomLink={props.zoomLink}
         meetingHour={props.meetingHour}
         nextMeetingDate={props.nextMeetingDate}
+        testimonyMeeting={props.testimonyMeeting}
         nextMeetingSubject={props.nextMeetingSubject}
         nextDiscussedLinkText={props.nextDiscussedLinkText}
         nextDiscussedLink={props.nextDiscussedLink}

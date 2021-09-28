@@ -17,7 +17,10 @@ export default function Intro(props) {
       </div>
       <div>
         <IntroCardContainer className="component">
-          <CardTitle>Următoarea întâlnire va fi {props.nextMeetingDate}</CardTitle>
+          <CardTitle>
+            Următoarea întâlnire va fi {props.nextMeetingDate}
+            {props.testimonyMeeting && <span><br/>{props.testimonyMeeting}</span>}
+          </CardTitle>
           {props.nextMeetingSubject && <h2>{props.nextMeetingSubject}</h2>}
           <DiscussedTitle>
             <a href={props.nextDiscussedLink}
@@ -26,6 +29,7 @@ export default function Intro(props) {
               {props.nextDiscussedLinkText}
             </a>
           </DiscussedTitle>
+          <h3>Întrăbări Bereene la Studii în Scripturi</h3>
           <ol>
             {props.nextMeetingQuestions.map((subject, index) => {
               return <li key={index}><p>{subject}</p></li>
@@ -78,7 +82,7 @@ const IntroCardContainer = styled.div`
     color: teal;
   }
   
-  & h2 {
+  & h2, h3 {
   text-align: center;
  }
    
