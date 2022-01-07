@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import styled from 'styled-components';
-import LogoImg from "../img/";
+import LogoImg from "../img/CC-logo.png";
 
 // Styles
 const HeaderContainer = styled.header`
@@ -62,9 +62,9 @@ export default function Header() {
         <Item>
           <NavLink to="/studyformat">Format Studiu</NavLink>
         </Item>
-        <Item>
-          <NavLink to="/adunarecopii">Adunare Copii</NavLink>
-        </Item>
+        {/*<Item>*/}
+        {/*  <NavLink to="/adunarecopii">Adunare Copii</NavLink>*/}
+        {/*</Item>*/}
         <Item>
           <NavLink to="/arhiva">Arhivă</NavLink>
         </Item>

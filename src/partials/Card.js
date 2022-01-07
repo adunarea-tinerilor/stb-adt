@@ -130,8 +130,8 @@ export default function Card(props) {
                   <h3>{meeting.subjectLabel}</h3>
                   <h3>{meeting.date}</h3>
                 </CardDate>
-                <ul>{
-                  meeting.questionList.map((meeting, index) => {
+                <ul>
+                  {meeting.questionList.map((meeting, index) => {
                     return <li key={index}>{meeting}</li>
                   })}
                 </ul>

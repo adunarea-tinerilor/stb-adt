@@ -8,8 +8,8 @@ export default function Intro(props) {
       <div>
         <IntroCardContainer className="component">
           <p>Adunarea tinerilor are loc în fiecare joi pe Zoom. Fă click pe linkul de mai jos pentru a intra la adunare:<br/><a href={props.zoomLink} rel="noopener noreferrer" target="_blank">Linkul Adunării</a></p>
-          <hr/>
-          <p>Click pe linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>
+          {/*<hr/>*/}
+          {/*<p>Click pe linkul de mai jos pentru a afla ora adunării în zona ta:<br/><a href={props.meetingHour} rel="noopener noreferrer" target="_blank">Ora Adunării de Joi</a></p>*/}
         </IntroCardContainer>
         {props.announcementsNotes && <IntroCardContainer className="component">
           <div dangerouslySetInnerHTML={{__html: `${props.announcementsNotes}`}}></div>
@@ -17,10 +17,10 @@ export default function Intro(props) {
       </div>
       <div>
         <IntroCardContainer className="component">
-          <CardTitle>
-            Următoarea întâlnire va fi {props.nextMeetingDate}
-            {props.testimonyMeeting && <span><br/>{props.testimonyMeeting}</span>}
-          </CardTitle>
+          {/*<CardTitle>*/}
+          {/*  Următoarea întâlnire va fi {props.nextMeetingDate}*/}
+          {/*  {props.testimonyMeeting && <span><br/>{props.testimonyMeeting}</span>}*/}
+          {/*</CardTitle>*/}
           {props.nextMeetingSubject && <h2>{props.nextMeetingSubject}</h2>}
           <DiscussedTitle>
             <a href={props.nextDiscussedLink}
