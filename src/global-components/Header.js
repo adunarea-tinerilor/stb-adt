@@ -52,7 +52,7 @@ export default function Header() {
         <img src={LogoImg} alt="Bible Students Logo: Cross & Crown"/>
         <div>
           <h3>Studenții Bibliei</h3>
-          <h3>Adunarea Tinerilor</h3>
+          <h3>Studiul Online de Joi</h3>
         </div>
       </Logo>
       <Menu>

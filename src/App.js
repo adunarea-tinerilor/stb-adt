@@ -12,7 +12,6 @@ import Footer from "./global-components/Footer";
 import ArchiveData from "./data/archive-data";
 import StudyResource from "./data/resource-text";
 import ChildrenMeetingData from "./data/children-meeting-data";
-import QuestionsList from "./data/questions-list";
 // import downloadFile from "../data/PROGRAM-Conventie12Decembrie2020.docx"
 
 export default class App extends React.Component {
@@ -21,13 +20,13 @@ export default class App extends React.Component {
 
     this.state = {
       // SITE UPDATE DATE:
-      footerUpdateDate: "24 Septembrie 2021",
+      footerUpdateDate: "11 Ianuarie 2022",
 
       // Meeting TIME Link:
-      meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210930T1030&p1=202&ah=2&am=30",
+      // meetingHour: "https://www.timeanddate.com/worldclock/fixedtime.html?msg=%C3%8Ent%C3%A2lnirea+Tinerilor+de+Joi&iso=20210930T1030&p1=202&ah=2&am=30",
 
       // NEXT MEETING Details:
-      nextMeetingDate: "Joi, 30 Septembrie",
+      // nextMeetingDate: "Joi, 30 Septembrie",
 
       // testimonyMeeting: "Adunare de Experiențe și Program Pentru Copii",
       nextMeetingSubject: "Discuții Studiu",
@@ -42,7 +41,7 @@ export default class App extends React.Component {
         "Citaţi dovezi Scripturale ale caracterului lui Satan. Pag. 609 până la pag. 611",
         "Ce dovadă Scripturală avem că Satan nu este numai vrăjmaşul Bisericii, ci şi al întregii omeniri? Pag. 611 p. 1",
         "Explicaţi cum opoziţia lui Satan faţă de Noua Creaţie diferă de cea a lumii şi a propriei noastre cărni? Pag. 611 p. 2",
-        "Ce Scriptură declară că Satan a fost cel care a început revolta împotriva lui Dumnezeu şi i-a condus pe primii noştrii părinţi în păcat şi moarte? Pag. 612 p. 1 primele 13 rânduri --- Daţi dovadă Scripturală că Satan a fost creat perfect şi drept. Pag. 612 p. 1, ultima parte",
+        "Ce Scriptură declară că Satan a fost cel care a început revolta împotriva lui Dumnezeu şi i-a condus pe primii noştrii părinţi în păcat şi moarte? Pag. 612 p. 1 (primele două fraze) --- Daţi dovadă Scripturală că Satan a fost creat perfect şi drept. Pag. 612 p. 1 (ultima parte)",
         "Cum a creat Dumnezeu toate creaturile Sale inteligente astfel încât a fi perfect nu garantează a rămâne în perfecţiune? Pag. 612 p. 2",
         "Sunt între îngeri diferite ranguri şi poziţii? Şi cum au privit îngerii crearea omului? Pag. 613 p. 1",
         "Care a fost probabil gândul lui Satan în ceea ce-i priveşte pe primii noştrii părinţi? Pag. 613 p. 2; pag. 614 p. 1",
@@ -63,6 +62,11 @@ export default class App extends React.Component {
         "Care a fost efectul degradant al acestor lucrări ale diavolului asupra păgânilor? Pag. 624 p. 3",
         "Care au fost experienţele Domnului şi ale apostolilor cu aceşti îngeri căzuţi? Pag. 625 p. 1, 2",
         "Înţelegând deci influenţa mare şi demoralizatoare a acestor spirite rele asupra omenirii, de ce le permite Dumnezeu să-şi exercite puterile lor rele? Şi, în consecinţă, care sunt cele trei lecţii mari pe care le va fi învăţat omenirea la sfârşitul Veacului Milenar? Pag. 626, 627",
+
+        // new
+        "Între timp, care au fost rezultatele be­nefice ale permisiunii răului? Pag. 627 p. 1; Pag. 628 p. 1",
+        "Între oameni, cine sunt cei mai mari împotrivitori ai lui Dumnezeu şi ai Împăcării, din punctul de vedere popular şi din punctul de vedere divin? Pag. 629 p. 1",
+        "Care este speranţa noastră pentru unii dintre cei mai violenţi dar ignoranţi împotrivitori ai Adevărului? Şi care este poziţia mai gravă ocupată de împotrivitorii cu bună ştiinţă ai Adevărului din prezent, şi care ar trebui să fie atitudinea noastră faţă de aceştia? Pag. 629 p. 2",
       ],
 
 
@@ -85,6 +89,7 @@ export default class App extends React.Component {
       nextMeetingQuestions: [],
       studyResource: "",
       noResourceMessage: "",
+      bereanQuestions: [],
     };
   }
 
@@ -94,7 +99,7 @@ export default class App extends React.Component {
       filteredList: ArchiveData,
       childrenMeetingData: ChildrenMeetingData,
       studyResource: StudyResource,
-      nextMeetingQuestions: QuestionsList
+      nextMeetingQuestions: this.state.nextMeetingQuestionsStudyFormat,
     });
 
     // check page scroll
@@ -150,8 +155,8 @@ export default class App extends React.Component {
     });
   };
 
-
   render() {
+    console.log()
     const meetingDetails = {
       nextMeetingQuestions: this.state.nextMeetingQuestions,
       nextDiscussedLink: this.state.nextDiscussedLink

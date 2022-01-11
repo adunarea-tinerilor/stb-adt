@@ -95,7 +95,7 @@ const IntroContainer = styled.section`
   }
   
   .card-content {
-    height: 620px;
+    height: 490px;
     overflow: auto;
     padding-right: 10px;
   }
@@ -115,6 +115,10 @@ const IntroContainer = styled.section`
       width: 58%;
       height: 660px;
     }
+    
+    .card-content {
+      height: 620px;
+    }
   }
 `;
 const IntroCardContainer = styled.div`
@@ -124,11 +128,12 @@ const IntroCardContainer = styled.div`
   
   #iframe_wrapper {
   overflow: hidden;
-  height: 600px;
+   height: 210px;
   }
   
   .study-format__qlist {
-    height: 540px;
+  height: 150px;
+
     overflow: auto;
     padding-right: 10px;
   }
@@ -136,10 +141,15 @@ const IntroCardContainer = styled.div`
   .card-question:hover {
     cursor: pointer;     
     text-decoration: underline;
-  }
-           
+  }           
    @media only screen and (min-width: 1080px) {
     padding: 20px;
     margin: 0 0 40px;
+     #iframe_wrapper {
+        height: 600px;
+     }
+    .study-format__qlist {
+         height: 540px;
+    }
   }
 `;
