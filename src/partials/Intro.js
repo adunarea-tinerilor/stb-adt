@@ -29,7 +29,7 @@ export default function Intro(props) {
               {props.nextDiscussedLinkText}
             </a>
           </DiscussedTitle>
-          <h3>Întrăbări Bereene la Studii în Scripturi</h3>
+          {/* <h3>Întrăbări Bereene la Studii în Scripturi</h3> */}
           <ol>
             {props.nextMeetingQuestions.map((subject, index) => {
               return <li key={index}><p>{subject}</p></li>
