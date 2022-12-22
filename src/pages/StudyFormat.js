@@ -47,7 +47,7 @@ export default class StudyFormat extends React.Component {
         {meetingQuestionsStudyFormat.length !== 0 && <div className="study-format">
           <IntroContainer>
             <IntroCardContainer className="component">
-              <p>Întrebări din Volumul 6:</p>
+              <p>Întrebări din Dezvoltarea Caracterului - Rugăciunea:</p>
               <ul className="study-format__qlist">
                 {meetingQuestionsStudyFormat.map((question, index) => {
                   return <li className="card-question" key={index} onClick={this.handleActiveSection}>
