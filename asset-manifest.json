@@ -1,27 +1,18 @@
 {
   "files": {
-    "main.css": "/stb-adt/static/css/main.8322957e.chunk.css",
-    "main.js": "/stb-adt/static/js/main.03714ad0.chunk.js",
-    "main.js.map": "/stb-adt/static/js/main.03714ad0.chunk.js.map",
-    "runtime-main.js": "/stb-adt/static/js/runtime-main.f8ef5923.js",
-    "runtime-main.js.map": "/stb-adt/static/js/runtime-main.f8ef5923.js.map",
-    "static/js/2.0c5f40ff.chunk.js": "/stb-adt/static/js/2.0c5f40ff.chunk.js",
-    "static/js/2.0c5f40ff.chunk.js.map": "/stb-adt/static/js/2.0c5f40ff.chunk.js.map",
+    "main.css": "/stb-adt/static/css/main.fb0fa207.css",
+    "main.js": "/stb-adt/static/js/main.eb6f50ac.js",
+    "static/media/carticica.png": "/stb-adt/static/media/carticica.d32e1d4419d1b227c1e8.png",
+    "static/media/5064489.png": "/stb-adt/static/media/5064489.1cb72117c8aa12f8c8e6.png",
+    "static/media/videoImg.jpg": "/stb-adt/static/media/videoImg.33fc31f5024b301f2156.jpg",
+    "static/media/banned-bible-cover.jpg": "/stb-adt/static/media/banned-bible-cover.cf020be2102a38a794ab.jpg",
+    "static/media/CC-logo.png": "/stb-adt/static/media/CC-logo.cbf7c1986cd6fa3fd6dc.png",
     "index.html": "/stb-adt/index.html",
-    "precache-manifest.af97a55665c39bf7d8bcbef3a55e109d.js": "/stb-adt/precache-manifest.af97a55665c39bf7d8bcbef3a55e109d.js",
-    "service-worker.js": "/stb-adt/service-worker.js",
-    "static/css/main.8322957e.chunk.css.map": "/stb-adt/static/css/main.8322957e.chunk.css.map",
-    "static/js/2.0c5f40ff.chunk.js.LICENSE.txt": "/stb-adt/static/js/2.0c5f40ff.chunk.js.LICENSE.txt",
-    "static/media/5064489.png": "/stb-adt/static/media/5064489.80795c5b.png",
-    "static/media/CC-logo.png": "/stb-adt/static/media/CC-logo.2fe9ae31.png",
-    "static/media/banned-bible-cover.jpg": "/stb-adt/static/media/banned-bible-cover.a8e0a7ab.jpg",
-    "static/media/carticica.png": "/stb-adt/static/media/carticica.b0f54c92.png",
-    "static/media/videoImg.jpg": "/stb-adt/static/media/videoImg.22b9e510.jpg"
+    "main.fb0fa207.css.map": "/stb-adt/static/css/main.fb0fa207.css.map",
+    "main.eb6f50ac.js.map": "/stb-adt/static/js/main.eb6f50ac.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8ef5923.js",
-    "static/js/2.0c5f40ff.chunk.js",
-    "static/css/main.8322957e.chunk.css",
-    "static/js/main.03714ad0.chunk.js"
+    "static/css/main.fb0fa207.css",
+    "static/js/main.eb6f50ac.js"
   ]
 }
